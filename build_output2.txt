@@ -1,0 +1,22 @@
+
+> website@0.1.0 build
+> next build
+
+▲ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 3.0s
+  Running TypeScript ...
+Failed to compile.
+
+./src/app/services/factory-sourcing/page.tsx:111:57
+Type error: Cannot find name 'Layers'.
+
+[0m [90m 109 |[39m                 [33m<[39m[33mul[39m className[33m=[39m[32m"space-y-6"[39m[33m>[39m
+ [90m 110 |[39m                   {[
+[31m[1m>[22m[39m[90m 111 |[39m                     { title[33m:[39m [32m"Product category"[39m[33m,[39m icon[33m:[39m [33m<[39m[33mLayers[39m className[33m=[39m[32m"w-4 h-4"[39m [33m/[39m[33m>[39m }[33m,[39m
+ [90m     |[39m                                                         [31m[1m^[22m[39m
+ [90m 112 |[39m                     { title[33m:[39m [32m"Target market or intended positioning"[39m[33m,[39m icon[33m:[39m [33m<[39m[33mTarget[39m className[33m=[39m[32m"w-4 h-4"[39m [33m/[39m[33m>[39m }[33m,[39m
+ [90m 113 |[39m                     { title[33m:[39m [32m"Available specs or references"[39m[33m,[39m icon[33m:[39m [33m<[39m[33mLinkIcon[39m className[33m=[39m[32m"w-4 h-4"[39m [33m/[39m[33m>[39m }[33m,[39m
+ [90m 114 |[39m                     { title[33m:[39m [32m"Estimated volume or development stage"[39m[33m,[39m icon[33m:[39m [33m<[39m[33mBarChart[39m className[33m=[39m[32m"w-4 h-4"[39m [33m/[39m[33m>[39m }[33m,[39m[0m
+Next.js build worker exited with code: 1 and signal: null
