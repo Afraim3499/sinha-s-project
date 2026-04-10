@@ -65,7 +65,44 @@ export default function SamplingCoordinationPage() {
         </div>
       </section>
 
-      {/* 3. WHY BRANDS NEED THIS */}
+      {/* 3. PROCESS IN ACTION (The Extension) */}
+      <section className="py-24 bg-background border-b border-border">
+        <div className="container mx-auto px-4 md:px-8">
+           <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
+              <div className="space-y-4 max-w-2xl">
+                 <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Visual Verification</span>
+                 <h2 className="text-3xl md:text-5xl font-serif font-bold italic leading-tight">The Sampling Process in Action</h2>
+                 <p className="text-foreground/60 text-lg font-light leading-relaxed">
+                    Seeing the detail matters. We oversee sampling across categories—from initial product development to final size measurement verification.
+                 </p>
+              </div>
+           </div>
+
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { title: "Product Sampling", desc: "Verifying construction and material intent.", image: "/images/services/product-sampling-1.jpg" },
+                { title: "Size Measurement", desc: "Ensuring tech pack compliance at every point.", image: "/images/services/size-measurement.jpg" },
+                { title: "Material Review", desc: "Checking weight, hand-feel, and trim stability.", image: "/images/materials/threads-variety.jpg" }
+              ].map((item, i) => (
+                <div key={i} className="group relative aspect-[4/5] bg-stone-100 overflow-hidden rounded-2xl">
+                   <Image 
+                     src={item.image} 
+                     alt={item.title} 
+                     fill 
+                     className="object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" 
+                   />
+                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                   <div className="absolute bottom-6 left-6 right-6">
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-accent mb-2">{item.title}</p>
+                      <p className="text-white/80 text-xs font-light">{item.desc}</p>
+                   </div>
+                </div>
+              ))}
+           </div>
+        </div>
+      </section>
+
+      {/* 4. WHY BRANDS NEED THIS */}
       <section className="py-32 bg-background">
         <div className="container mx-auto px-4 md:px-8">
           <div className="max-w-4xl mx-auto text-center space-y-10">

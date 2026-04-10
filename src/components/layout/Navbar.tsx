@@ -64,17 +64,20 @@ export function Navbar() {
         <div className="container mx-auto px-6 md:px-12 flex items-center justify-between relative z-10 gap-8">
           <Link href="/" className="flex items-center gap-4 group shrink-0">
             <motion.div 
-               whileHover={{ rotate: 90 }}
+               whileHover={{ scale: 1.05 }}
                transition={{ duration: 0.6, ease: PREMIUM_EASE }}
-               className="w-10 h-10 border border-accent/80 flex items-center justify-center text-accent font-serif text-2xl font-bold bg-stone-950 shadow-2xl"
+               className="w-10 h-10 bg-linear-to-br from-accent-highlight to-accent flex items-center justify-center relative overflow-hidden"
             >
-              S
+              <div className="w-7 h-7 border border-stone-950/20 rounded-full" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-4 h-4 border border-stone-950/30 rounded-full" />
+              </div>
             </motion.div>
             <div className="flex flex-col">
-              <span className="text-[12px] font-bold tracking-[0.2em] uppercase text-white leading-none whitespace-nowrap">
-                Sinha Sourcing <span className="text-accent italic font-serif normal-case tracking-normal ml-0.5">Hub</span>
+              <span className="text-[14px] font-serif font-bold text-transparent bg-clip-text bg-linear-to-r from-accent via-accent-highlight to-accent leading-none whitespace-nowrap tracking-tight pb-0.5">
+                Sinha Sourcing Hub <span className="italic font-normal">Ltd</span>
               </span>
-              <span className="text-[8px] uppercase tracking-[0.4em] text-white/50 mt-1.5 font-mono whitespace-nowrap hidden sm:block">LONDON / DHAKA</span>
+              <span className="text-[8px] uppercase tracking-[0.4em] text-white/40 mt-1 font-mono whitespace-nowrap hidden sm:block">EST. 1993 — LONDON / DHAKA</span>
             </div>
           </Link>
 
@@ -139,7 +142,7 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-8 shrink-0">
             <Button 
               variant="outline" 
-              className="rounded-none border-accent text-white hover:bg-accent hover:text-stone-950 px-8 text-[10px] font-bold uppercase tracking-[0.3em] h-11 transition-all duration-300 border-2" 
+              className="rounded-none border-accent text-accent hover:bg-accent hover:text-stone-950 px-8 text-[10px] font-bold uppercase tracking-[0.3em] h-11 transition-all duration-300 border-2" 
               asChild
             >
               <Link href="/contact">

@@ -126,7 +126,7 @@ export default function CategoriesPage() {
                      src={cat.img} 
                      alt={cat.title} 
                      fill 
-                     className="object-cover max-md:grayscale-0 max-md:opacity-60 max-md:scale-100 grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-60 group-hover:scale-105 transition-all duration-[2000ms] ease-out"
+                     className="object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 md:opacity-30 group-hover:opacity-60 group-hover:scale-105 transition-all duration-[2000ms] ease-out"
                   />
                   {/* Complex Gradients for text legibility and deep cinematic contrast */}
                   <div className={`absolute inset-0 bg-gradient-to-r ${idx % 2 === 0 ? 'from-stone-950 via-stone-950/90' : 'from-transparent via-stone-950/90 to-stone-950'} to-transparent opacity-95`} />

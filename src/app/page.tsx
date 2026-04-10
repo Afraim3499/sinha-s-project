@@ -119,18 +119,18 @@ export default function HomePage() {
                            <p className="text-[8px] font-bold uppercase tracking-widest text-white/60">Cat_03 // Bags</p>
                         </div>
                      </div>
-                    {/* Home Textiles */}
-                    <div className="col-span-1 md:col-span-4 row-span-1 relative overflow-hidden">
-                       <Image src="/home-category-home.png" alt="Home Textiles" fill className="object-cover" />
+                    {/* Denim Sourcing (New Variation) */}
+                    <div className="col-span-1 md:col-span-4 row-span-1 relative overflow-hidden group">
+                       <Image src="/images/apparel/denim-pants-1.jpg" alt="Denim Sourcing" fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
                        <div className="absolute bottom-4 left-4">
-                          <p className="text-[8px] font-bold uppercase tracking-widest text-white/60">Cat_04 // Home</p>
+                          <p className="text-[8px] font-bold uppercase tracking-widest text-white/60">Cat_04 // Denim</p>
                        </div>
                     </div>
-                    {/* Eco Products */}
-                    <div className="col-span-1 md:col-span-2 row-span-1 relative overflow-hidden">
-                       <Image src="/home-category-eco.png" alt="Eco Sourcing" fill className="object-cover" />
+                    {/* Casual Sourcing (New Variation) */}
+                    <div className="col-span-1 md:col-span-2 row-span-1 relative overflow-hidden group">
+                       <Image src="/images/apparel/casual-clothing-1.jpg" alt="Casual Clothings" fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
                        <div className="absolute bottom-4 left-4">
-                          <p className="text-[8px] font-bold uppercase tracking-widest text-white/60">Cat_05 // Eco</p>
+                          <p className="text-[8px] font-bold uppercase tracking-widest text-white/60">Cat_05 // Casual</p>
                        </div>
                     </div>
                  </div>
@@ -258,7 +258,7 @@ export default function HomePage() {
                   src="/about-detail.png" 
                   alt="Product Development" 
                   fill 
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                  className="object-cover grayscale-0 md:grayscale md:hover:grayscale-0 transition-all duration-1000"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
              </MotionSection>
@@ -296,15 +296,15 @@ export default function HomePage() {
 
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
               {[
-                { title: "Product Development & Tech Packs", desc: "We help refine product concepts into clearer technical instructions, supported by specification details, measurements, construction notes, and development coordination.", icon: <Zap className="w-5 h-5" />, image: "/home-service-pd.png" },
-                { title: "Factory Sourcing", desc: "We identify and align suitable manufacturing partners based on product category, scale, quality needs, and operational fit.", icon: <Factory className="w-5 h-5" />, image: "/home-service-factory.png" },
-                { title: "Materials & Trims", desc: "We support sourcing for fabrics, components, trims, and accessories with attention to quality, suitability, pricing, and availability.", icon: <Globe className="w-5 h-5" />, image: "/home-service-materials.png" },
-                { title: "Quality Control & Compliance", desc: "We coordinate inspections, production checks, and compliance-related support to reduce avoidable risk before goods move forward.", icon: <ShieldCheck className="w-5 h-5" />, image: "/home-service-qc.png" },
+                { title: "Product Development & Tech Packs", desc: "We help refine product concepts into clearer technical instructions, supported by specification details, measurements, construction notes, and development coordination.", icon: <Zap className="w-5 h-5" />, image: "/images/apparel/casual-clothing-1.jpg" },
+                { title: "Factory Sourcing", desc: "We identify and align suitable manufacturing partners based on product category, scale, quality needs, and operational fit.", icon: <Factory className="w-5 h-5" />, image: "/images/apparel/denim-storage.jpg" },
+                { title: "Materials & Trims", desc: "We support sourcing for fabrics, components, trims, and accessories with attention to quality, suitability, pricing, and availability.", icon: <Globe className="w-5 h-5" />, image: "/images/materials/threads-variety.jpg" },
+                { title: "Quality Control & Compliance", desc: "We coordinate inspections, production checks, and compliance-related support to reduce avoidable risk before goods move forward.", icon: <ShieldCheck className="w-5 h-5" />, image: "/images/apparel/denim-qc-inspection.jpg" },
                 { title: "Production & Delivery Support", desc: "We help manage communication around production planning, documentation, and delivery readiness so execution remains organised.", icon: <Ship className="w-5 h-5" />, image: "/home-service-logistics.png" }
               ].map((service, i) => (
                 <MotionSection key={i} delay={i * 0.1} className="relative p-12 space-y-6 group overflow-hidden min-h-[380px] flex flex-col justify-end bg-stone-900">
                    <div className="absolute inset-0 z-0">
-                     <Image src={service.image} alt={service.title} fill className="object-cover max-md:opacity-70 max-md:grayscale-0 opacity-50 grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-70" />
+                     <Image src={service.image} alt={service.title} fill className="object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 md:opacity-50 group-hover:opacity-70 transition-all duration-700 group-hover:scale-105" />
                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/40 to-stone-950/10" />
                    </div>
                    <div className="relative z-10 space-y-6">
@@ -354,7 +354,7 @@ export default function HomePage() {
               ].map((cat, i) => (
                 <MotionSection key={i} delay={i * 0.1} className="relative p-8 group overflow-hidden bg-stone-900 min-h-[360px] flex flex-col justify-end">
                    <div className="absolute inset-0 z-0">
-                     <Image src={cat.image} alt={cat.title} fill className="object-cover max-md:opacity-80 max-md:grayscale-0 opacity-50 grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-80" />
+                     <Image src={cat.image} alt={cat.title} fill className="object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 md:opacity-50 group-hover:opacity-80 transition-all duration-700 group-hover:scale-105" />
                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/50 to-stone-950/10" />
                    </div>
                    <div className="relative z-10">

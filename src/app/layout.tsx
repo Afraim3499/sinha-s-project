@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Inter, Fraunces } from "next/font/google"
+import { Inter, Crimson_Text } from "next/font/google"
 import "./globals.css"
 import { Navbar } from "@/components/layout/Navbar"
 import { Footer } from "@/components/layout/Footer"
@@ -14,9 +14,10 @@ const inter = Inter({
   variable: "--font-inter",
 })
 
-const fraunces = Fraunces({
+const crimsonText = Crimson_Text({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  weight: ["400", "600", "700"],
+  variable: "--font-crimson",
 })
 
 export const metadata: Metadata = {
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     title: "Sinha Sourcing Hub Ltd | Global Sourcing & Product Development",
     description: "Your One-Stop Global Sourcing & Product Development Partner.",
     url: "https://sinhasourcinghub.com",
-    siteName: "Sinha Sourcing Hub",
+    siteName: "Sinha Sourcing Hub Ltd",
     locale: "en_US",
     type: "website",
   },
@@ -83,7 +84,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${inter.variable} ${fraunces.variable} scroll-smooth`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${crimsonText.variable} scroll-smooth`} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"

@@ -30,8 +30,8 @@ export function Footer() {
           <div className="lg:col-span-5 space-y-12">
             <div className="space-y-6">
               <Link href="/" className="inline-block group">
-                <span className="text-3xl font-serif font-bold tracking-tight">
-                  Sinha Sourcing <span className="text-accent italic font-normal">Hub Ltd.</span>
+                <span className="text-3xl font-serif font-bold tracking-tight text-transparent bg-clip-text bg-linear-to-r from-accent via-accent-highlight to-accent pb-1">
+                  Sinha Sourcing Hub <span className="italic font-normal">Ltd</span>
                 </span>
               </Link>
               <p className="text-stone-400 text-xl font-light leading-relaxed max-w-md">
@@ -60,7 +60,7 @@ export function Footer() {
                 {[
                   { name: "Concept Hub", city: "London, UK", coords: "51.50° N, 0.12° W" },
                   { name: "Production Axis", city: "Dhaka, BD", coords: "23.81° N, 90.41° E" },
-                  { name: "Material Hub", city: "Shanghai, CN", coords: "31.23° N, 121.47° E" }
+                  { name: "Regional Hub", city: "Melbourne, AU", coords: "37.81° S, 144.96° E" }
                 ].map((hub) => (
                   <li key={hub.city} className="group cursor-default">
                     <p className="text-[9px] font-mono text-accent/60 group-hover:text-accent transition-colors">{hub.coords}</p>
@@ -138,7 +138,7 @@ export function Footer() {
             <MusicPlayer />
             <div className="flex items-center gap-6">
               <span className="text-[8px] font-mono text-white/10 uppercase tracking-[0.5em]">Est. 1993 — London</span>
-              <div className="w-2 h-2 bg-accent/40 rounded-full" />
+              <div className="w-2 h-2 bg-accent rounded-full" />
             </div>
           </div>
         </div>

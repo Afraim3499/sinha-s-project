@@ -13,25 +13,29 @@ const APPAREL_CATEGORIES = [
     title: "Casual & Sportswear",
     items: ["Sweatshirts", "T-shirts", "Tops", "Polo Shirts"],
     desc: "Everyday essentials that require high-volume consistency and material stability.",
-    icon: <Zap className="w-5 h-5 text-accent" />
+    icon: <Zap className="w-5 h-5 text-accent" />,
+    images: ["/images/apparel/casual-clothing-1.jpg", "/category-apparel-variety.png"]
   },
   {
     title: "Formal & Corporate",
     items: ["Formal Shirts", "Casual Shirts", "Structured Tops"],
     desc: "Technical construction for shirts where collar stability and stitching precision are paramount.",
-    icon: <Scissors className="w-5 h-5 text-accent" />
+    icon: <Scissors className="w-5 h-5 text-accent" />,
+    images: ["/images/apparel/shirts-formal-varied-1.jpg", "/images/apparel/shirts-formal-varied-2.jpg"]
   },
   {
     title: "Bottoms & Denim",
     items: ["Baggy Pants", "Jeans (Denim)", "Casual Trousers"],
     desc: "Durable construction handling heavier fabric weights and complex wash treatments.",
-    icon: <ShieldCheck className="w-5 h-5 text-accent" />
+    icon: <ShieldCheck className="w-5 h-5 text-accent" />,
+    images: ["/images/apparel/denim-pants-1.jpg", "/images/apparel/denim-jackets-1.jpg", "/images/apparel/denim-qc-inspection.jpg", "/images/apparel/denim-storage.jpg"]
   },
   {
     title: "Specialized Segments",
     items: ["Child Cloths", "Jackets", "Outerwear"],
     desc: "Niche production requirements for safety compliance (kids) and weather-resistant finishing.",
-    icon: <Factory className="w-5 h-5 text-accent" />
+    icon: <Factory className="w-5 h-5 text-accent" />,
+    images: ["/category-childrens-wear.png", "/category-outerwear.png"]
   }
 ]
 
@@ -110,21 +114,39 @@ export default function ApparelPage() {
 
                {/* Right Product Grid */}
                <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                  {APPAREL_CATEGORIES.map((cat, i) => (
-                    <MotionSection key={i} delay={i * 0.1} className="bg-stone-50 p-8 lg:p-10 rounded-3xl border border-stone-100 hover:border-accent/30 transition-all duration-500 group shadow-sm hover:shadow-xl">
-                       <div className="w-12 h-12 mb-8 rounded-2xl bg-white flex items-center justify-center shadow-sm border border-stone-100 group-hover:scale-110 transition-transform">
-                          {cat.icon}
+                   {APPAREL_CATEGORIES.map((cat: any, i) => (
+                    <MotionSection key={i} delay={i * 0.1} className="bg-stone-50 p-8 lg:p-10 rounded-3xl border border-stone-100 hover:border-accent/30 transition-all duration-500 group shadow-sm hover:shadow-xl flex flex-col h-full">
+                       <div className="flex-1">
+                          <div className="w-12 h-12 mb-8 rounded-2xl bg-white flex items-center justify-center shadow-sm border border-stone-100 group-hover:scale-110 transition-transform">
+                             {cat.icon}
+                          </div>
+                          <h3 className="text-2xl font-serif font-bold mb-4 text-stone-950">{cat.title}</h3>
+                          <p className="text-stone-500 text-sm leading-relaxed mb-8 font-light">{cat.desc}</p>
+                          
+                          {/* NEW: Multi-image Grid */}
+                          <div className={`grid ${cat.images.length > 2 ? 'grid-cols-2 gap-2' : 'grid-cols-1 gap-2'} mb-8`}>
+                             {cat.images.map((img: string, idx: number) => (
+                                <div key={idx} className="relative aspect-[4/3] rounded-xl overflow-hidden bg-stone-100">
+                                   <Image 
+                                     src={img} 
+                                     alt={`${cat.title} variation ${idx + 1}`} 
+                                     fill 
+                                     className="object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-700"
+                                     sizes="(max-width: 768px) 50vw, 20vw"
+                                   />
+                                </div>
+                             ))}
+                          </div>
+
+                          <ul className="space-y-3 border-t border-stone-100 pt-8">
+                             {cat.items.map((item: string, idx: number) => (
+                               <li key={idx} className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-widest text-stone-400 group-hover:text-accent transition-colors">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-accent/30" />
+                                  {item}
+                               </li>
+                             ))}
+                          </ul>
                        </div>
-                       <h3 className="text-2xl font-serif font-bold mb-4 text-stone-950">{cat.title}</h3>
-                       <p className="text-stone-500 text-sm leading-relaxed mb-8 font-light">{cat.desc}</p>
-                       <ul className="space-y-3 border-t border-stone-100 pt-8">
-                          {cat.items.map((item, idx) => (
-                            <li key={idx} className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-widest text-stone-400 group-hover:text-accent transition-colors">
-                               <div className="w-1.5 h-1.5 rounded-full bg-accent/30" />
-                               {item}
-                            </li>
-                          ))}
-                       </ul>
                     </MotionSection>
                   ))}
                </div>

@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-serif: var(--font-fraunces);
+  --font-serif: var(--font-crimson);
   --font-sans: var(--font-inter);
   
   --color-border: hsl(var(--border));
@@ -27,6 +27,8 @@
   --color-muted-foreground: hsl(var(--muted-foreground));
 
   --color-accent: hsl(var(--accent));
+  --color-accent-highlight: hsl(var(--accent-highlight));
+  --color-accent-shadow: hsl(var(--accent-shadow));
   --color-accent-foreground: hsl(var(--accent-foreground));
 
   --color-popover: hsl(var(--popover));
@@ -71,8 +73,10 @@
   --muted: 210 10% 90%;
   --muted-foreground: 220 10% 40%;
 
-  /* Brass Accent (Jute Era) */
-  --accent: 35 40% 50%;
+  /* Premium Gold Palette (Sampled from Logo) */
+  --accent: 46 63% 52%;          /* #D4AF37 - Mid-tone */
+  --accent-highlight: 52 88% 75%; /* #F7E987 - Highlight */
+  --accent-shadow: 45 54% 35%;    /* #8B732A - Shadow */
   --accent-foreground: 40 20% 98%;
 
   --destructive: 0 84.2% 60.2%;
@@ -105,7 +109,9 @@
   --muted: 217.2 32.6% 17.5%;
   --muted-foreground: 215 20.2% 65.1%;
 
-  --accent: 35 40% 50%;
+  --accent: 46 63% 52%;
+  --accent-highlight: 52 88% 75%;
+  --accent-shadow: 45 54% 35%;
   --accent-foreground: 40 20% 98%;
 
   --destructive: 0 62.8% 30.6%;
@@ -178,13 +184,13 @@ body::after {
   margin-right: 0.75rem;
   margin-top: 0.5rem;
   color: var(--blog-accent);
-  font-family: var(--font-fraunces), serif;
+  font-family: var(--font-crimson), serif;
 }
 
 .blog-content-premium h1, 
 .blog-content-premium h2, 
 .blog-content-premium h3 {
-  font-family: var(--font-fraunces), serif;
+  font-family: var(--font-crimson), serif;
   color: var(--blog-heading);
   font-weight: 700;
   line-height: 1.2;
@@ -212,7 +218,7 @@ body::after {
   padding: 3rem;
   background-color: var(--blog-bg-alt);
   border-left: 4px solid var(--blog-accent);
-  font-family: var(--font-fraunces), serif;
+  font-family: var(--font-crimson), serif;
   font-style: italic;
   font-size: 1.5rem;
   color: var(--blog-heading);
