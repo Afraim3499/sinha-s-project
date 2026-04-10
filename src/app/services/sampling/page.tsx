@@ -7,11 +7,30 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Sampling & Development Coordination | Sinha Sourcing Hub Ltd",
   description: "Identify and resolve issues before production. We support sample planning, revision handling, and pre-production readiness.",
+  alternates: { canonical: "/services/sampling" },
+  openGraph: {
+    title: "Sampling & Development Coordination | Sinha Sourcing Hub Ltd",
+    description: "Identify and resolve issues before production. We support sample planning, revision handling, and pre-production readiness.",
+    url: "https://sinhasourcinghub.com/services/sampling",
+    images: [{ url: "/images/services/product-sampling-1.jpg", width: 1200, height: 630, alt: "Sampling Coordination" }],
+  },
 }
 
 export default function SamplingCoordinationPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sinhasourcinghub.com" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://sinhasourcinghub.com/services" },
+      { "@type": "ListItem", "position": 3, "name": "Sampling Coordination", "item": "https://sinhasourcinghub.com/services/sampling" }
+    ]
+  }
+
   return (
-    <div className="pt-24 bg-background">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <div className="pt-24 bg-background">
       {/* 1. HERO */}
       <section className="py-24 border-b border-border bg-stone-50">
         <div className="container mx-auto px-4 md:px-8">
@@ -37,7 +56,7 @@ export default function SamplingCoordinationPage() {
       {/* 2. WHAT WE SUPPORT */}
       <section className="py-32 bg-stone-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-15">
-          <Image src="/category-knitwear.png" alt="Sampling Process" fill className="object-cover scale-105" />
+          <Image src="/category-knitwear.png" alt="Sampling Process" fill className="object-cover scale-105" sizes="100vw" />
           <div className="absolute inset-0 bg-stone-900/60" />
         </div>
         <div className="container mx-auto px-4 md:px-8 relative z-10">
@@ -90,6 +109,7 @@ export default function SamplingCoordinationPage() {
                      alt={item.title} 
                      fill 
                      className="object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" 
+                     sizes="(max-width: 768px) 100vw, 33vw"
                    />
                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
                    <div className="absolute bottom-6 left-6 right-6">
@@ -131,5 +151,6 @@ export default function SamplingCoordinationPage() {
         </div>
       </section>
     </div>
+    </>
   )
 }

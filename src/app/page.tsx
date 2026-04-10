@@ -16,6 +16,7 @@ import { getTestimonials } from "@/app/actions/testimonials"
 const HERO_SLIDES = [
   {
     src: "/hero-pd.webp",
+    alt: "Product development meeting with technical fabric samples",
     eyebrow: "Global sourcing & product development",
     heading: "From concept to \nbulk production.",
     subheading: "We help brands source, develop, and manage production with clarity.",
@@ -24,6 +25,7 @@ const HERO_SLIDES = [
   },
   {
     src: "/hero-factory.webp",
+    alt: "Modern garment factory production line in Bangladesh",
     eyebrow: "Factory Sourcing",
     heading: "Matching capability \nto requirements.",
     subheading: "Identifying and aligning suitable manufacturing partners based on your specific quality and scale.",
@@ -32,6 +34,7 @@ const HERO_SLIDES = [
   },
   {
     src: "/hero-materials.webp",
+    alt: "Selection of high-quality textile threads and fabric swatches",
     eyebrow: "Materials & Trims",
     heading: "Sourced with \ntechnical precision.",
     subheading: "Guiding material selection so design intent matches production reality.",
@@ -40,6 +43,7 @@ const HERO_SLIDES = [
   },
   {
     src: "/hero-qc.webp",
+    alt: "Quality control specialist inspecting finished apparel",
     eyebrow: "Quality & Compliance",
     heading: "Verification throughout \nthe process.",
     subheading: "Pre-production planning, in-line reviews, and final inspection verification before shipment.",
@@ -48,6 +52,7 @@ const HERO_SLIDES = [
   },
   {
     src: "/hero-logistics.webp",
+    alt: "Organized shipping containers at a global logistics hub",
     eyebrow: "Logistics & Handover",
     heading: "Controlled handover \nof goods.",
     subheading: "Coordinating documentation and delivery readiness so execution remains organized to the end.",
@@ -57,6 +62,7 @@ const HERO_SLIDES = [
   {
     type: "collage",
     src: "/home-category-apparel.png",
+    alt: "Collage of different apparel categories from denim to casual wear",
     eyebrow: "Product Specialization",
     heading: "Multi-category \nsourcing support.",
     subheading: "From structured apparel to technical footwear and travel gear. We align your product needs with expert manufacturing.",
@@ -128,7 +134,7 @@ export default function HomePage() {
                     </div>
                     {/* Casual Sourcing (New Variation) */}
                     <div className="col-span-1 md:col-span-2 row-span-1 relative overflow-hidden group">
-                       <Image src="/images/apparel/casual-clothing-1.jpg" alt="Casual Clothings" fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
+                       <Image src="/images/apparel/casual-clothing-1.jpg" alt="Casual Clothing Range" fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
                        <div className="absolute bottom-4 left-4">
                           <p className="text-[8px] font-bold uppercase tracking-widest text-white/60">Cat_05 // Casual</p>
                        </div>
@@ -145,14 +151,16 @@ export default function HomePage() {
                 transition={{ duration: 12, ease: "linear" }}
                 className="relative w-full h-full"
               >
-                 <Image
-                   src={slide.src!}
-                   alt="Sinha Sourcing Hub"
-                   fill
-                   priority={idx <= 1}
-                   sizes="100vw"
-                   className="object-cover"
-                 />
+                 {(idx <= 1 || currentSlide === idx || Math.abs(currentSlide - idx) === 1) && (
+                   <Image
+                     src={slide.src!}
+                     alt={slide.alt || "Sinha Sourcing Hub"}
+                     fill
+                     priority={idx <= 1}
+                     sizes="100vw"
+                     className="object-cover"
+                   />
+                 )}
                 <div className={`absolute inset-0 ${slide.gradient} pointer-events-none`} />
               </motion.div>
             )}
@@ -220,9 +228,9 @@ export default function HomePage() {
                 <div className={`relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border transition-all duration-700 ${currentSlide === idx ? 'border-accent scale-110 ring-2 ring-accent/20' : 'border-white/10 scale-90 grayscale opacity-40 hover:opacity-100 hover:scale-100'}`}>
                   <Image 
                     src={slide.src} 
-                    alt={`View ${idx + 1}`} 
+                    alt={`View ${slide.eyebrow}`} 
                     fill 
-                    unoptimized
+                    sizes="48px"
                     className="object-cover"
                   />
                   <div className={`absolute inset-0 bg-black/40 ${currentSlide === idx ? 'opacity-0' : 'group-hover:opacity-0'} transition-opacity`} />

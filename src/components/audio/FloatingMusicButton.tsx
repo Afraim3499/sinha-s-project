@@ -21,7 +21,7 @@ export const FloatingMusicButton: React.FC = () => {
         }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="w-10 h-10 flex items-center justify-center rounded-full bg-black/80 backdrop-blur-lg border border-white/10 text-white shadow-2xl hover:border-accent/40 hover:bg-black/90 transition-all group relative"
+        className="w-12 h-12 flex items-center justify-center rounded-full bg-black/80 backdrop-blur-lg border border-white/10 text-white shadow-2xl hover:border-accent/40 hover:bg-black/90 transition-all group relative"
         aria-label={isPlaying ? "Pause background music" : "Play background music"}
       >
         <AnimatePresence mode="wait">

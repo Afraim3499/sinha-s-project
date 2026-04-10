@@ -23,7 +23,7 @@ export default function SustainabilityPage() {
       {/* 4. VERIFIED INFORMATION CARD (Visual/Editorial Split) */}
       <section className="py-24 md:py-32 bg-white overflow-hidden">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
               
               <div className="relative aspect-square lg:aspect-[4/5] bg-stone-100 rounded-3xl overflow-hidden shadow-2xl group order-2 lg:order-1">
                  <Image 
@@ -31,6 +31,7 @@ export default function SustainabilityPage() {
                    alt="Verified textile audit tag" 
                    fill 
                    className="object-cover group-hover:scale-105 transition-transform duration-[3000ms]" 
+                   sizes="(max-width: 1024px) 100vw, 50vw" 
                  />
                  <div className="absolute inset-x-0 bottom-0 p-12 bg-gradient-to-t from-black/80 via-black/30 to-transparent">
                     <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-emerald-400 mb-4 flex items-center gap-2">
@@ -70,7 +71,7 @@ export default function SustainabilityPage() {
         <div className="absolute -bottom-24 -left-24 w-[30%] aspect-square bg-[#f59e0b]/[0.02] rounded-full blur-[100px] pointer-events-none" />
         
         <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
             
             <div className="lg:col-span-5 space-y-12">
               <div className="space-y-6">
@@ -128,6 +129,7 @@ export default function SustainabilityPage() {
                          alt="Bangladeshi students receiving books" 
                          fill 
                          className="object-cover group-hover:scale-105 transition-transform duration-[4000ms] brightness-[1.02]" 
+                         sizes="(max-width: 1024px) 100vw, 33vw" 
                        />
                        <div className="absolute inset-0 bg-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
                     </div>
@@ -141,6 +143,7 @@ export default function SustainabilityPage() {
                          alt="Modern sunlit specialized classroom" 
                          fill 
                          className="object-cover group-hover:scale-105 transition-transform duration-[4000ms] brightness-[1.02]" 
+                         sizes="(max-width: 1024px) 100vw, 33vw" 
                        />
                        <div className="absolute inset-x-0 bottom-0 p-8 md:p-10 bg-gradient-to-t from-black/20 via-black/5 to-transparent backdrop-blur-[2px]">
                           <div className="flex items-center gap-4">
@@ -178,7 +181,7 @@ export default function SustainabilityPage() {
                <h2 className="text-4xl md:text-6xl font-serif font-bold italic leading-tight text-stone-900">Ethical Sourcing & Compliance</h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto flex flex-col justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
                {[
                  {
                    q: "How do you verify sustainability claims in manufacturing?",
@@ -223,6 +226,7 @@ export default function SustainabilityPage() {
            alt="Lush green landscapes of sourcing origin" 
            fill 
            className="object-cover group-hover:scale-105 transition-transform duration-[4000ms] brightness-[0.85] saturate-[1.2]" 
+           sizes="100vw" 
          />
          {/* Overlays for textual pop */}
          <div className="absolute inset-0 bg-stone-950/20 max-md:backdrop-blur-none backdrop-blur-[1px] group-hover:backdrop-blur-none transition-all duration-1000" />

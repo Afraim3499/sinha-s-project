@@ -63,6 +63,7 @@ export default function CategoriesPage() {
             fill 
             className="object-cover opacity-30 grayscale" 
             priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-stone-950/80 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-b from-stone-950 via-stone-950/20 to-stone-950" />
@@ -127,6 +128,7 @@ export default function CategoriesPage() {
                      alt={cat.title} 
                      fill 
                      className="object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 md:opacity-30 group-hover:opacity-60 group-hover:scale-105 transition-all duration-[2000ms] ease-out"
+                     sizes="100vw"
                   />
                   {/* Complex Gradients for text legibility and deep cinematic contrast */}
                   <div className={`absolute inset-0 bg-gradient-to-r ${idx % 2 === 0 ? 'from-stone-950 via-stone-950/90' : 'from-transparent via-stone-950/90 to-stone-950'} to-transparent opacity-95`} />
@@ -176,7 +178,7 @@ export default function CategoriesPage() {
       {/* 3. CINEMATIC FINAL CTA */}
       <section className="py-32 lg:py-48 bg-stone-950 text-white text-center relative overflow-hidden selection:bg-accent selection:text-white">
         <div className="absolute inset-0 z-0 opacity-15">
-           <Image src="/hero-factory.webp" alt="Factory Sourcing" fill className="object-cover scale-105 grayscale" />
+           <Image src="/hero-factory.webp" alt="Factory Sourcing" fill className="object-cover scale-105 grayscale" sizes="100vw" />
            <div className="absolute inset-0 bg-stone-950/60 mix-blend-multiply" />
         </div>
         

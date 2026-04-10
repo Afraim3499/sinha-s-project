@@ -86,6 +86,7 @@ export default async function InsightsPage() {
             fill
             className="object-cover opacity-30"
             priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/95 to-stone-950/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-stone-950/40" />
@@ -140,6 +141,7 @@ export default async function InsightsPage() {
                         alt={posts[0].title}
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        sizes="(max-width: 1024px) 100vw, 40vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 to-transparent" />
                       <span className="absolute top-4 left-4 text-[9px] font-bold uppercase tracking-widest bg-accent text-white px-3 py-1">
@@ -173,7 +175,7 @@ export default async function InsightsPage() {
       {/* 2. REFINED FEATURED PATHWAYS */}
       <section className="py-32 bg-stone-950 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <Image src="/hero-factory.webp" alt="Insights Background" fill className="object-cover scale-105" />
+          <Image src="/hero-factory.webp" alt="Insights Background" fill className="object-cover scale-105" sizes="100vw" />
           <div className="absolute inset-0 bg-stone-950/80" />
         </div>
         <div className="container mx-auto px-4 md:px-8 relative z-10">

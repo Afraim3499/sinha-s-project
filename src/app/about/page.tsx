@@ -11,7 +11,7 @@ import { TechnicalOverlay } from "@/components/ui/technical-overlay"
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-background text-foreground overflow-hidden">
+    <div className="min-h-screen bg-background text-foreground overflow-hidden">
       {/* 1. NARRATIVE HERO (Locked to Viewport) */}
       <section className="relative h-screen flex items-center pt-24 overflow-hidden bg-stone-50 border-b border-border">
         {/* Subtle Background Pattern */}
@@ -50,7 +50,8 @@ export default function AboutPage() {
                  src="/heritage_expert_worker.png" 
                  alt="Heritage Fabric" 
                  fill 
-                 className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                 className="object-cover grayscale-0 md:grayscale md:hover:grayscale-0 transition-all duration-1000"
+                 sizes="(max-width: 1024px) 100vw, 50vw"
                />
                <TechnicalOverlay label="ORIGIN_AXIS" coordinates="23.7104° N, 90.4074° E" />
                <div className="absolute inset-x-0 bottom-0 p-12 bg-gradient-to-t from-black/80 to-transparent">
@@ -277,6 +278,6 @@ export default function AboutPage() {
           </MotionSection>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

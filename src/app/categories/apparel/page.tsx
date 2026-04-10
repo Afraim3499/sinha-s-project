@@ -45,7 +45,7 @@ export default function ApparelPage() {
   const opacityHero = useTransform(scrollYProgress, [0, 0.3], [1, 0])
 
   return (
-    <main className="min-h-screen bg-stone-50 text-stone-900 overflow-hidden">
+    <div className="min-h-screen bg-stone-50 text-stone-900 overflow-hidden">
       {/* 1. CINEMATIC HERO SECTION */}
       <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-stone-950">
          <motion.div 
@@ -185,7 +185,7 @@ export default function ApparelPage() {
       {/* 4. FINAL CTA SECTION */}
       <section className="py-32 lg:py-48 bg-stone-950 text-white text-center relative overflow-hidden">
          <div className="absolute inset-0 opacity-10 grayscale">
-            <Image src="/images/sustainability/artisans-manual-precision.png" alt="Sourcing focus" fill className="object-cover" />
+            <Image src="/images/sustainability/artisans-manual-precision.png" alt="Sourcing focus" fill className="object-cover" sizes="100vw" />
          </div>
          <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-4xl space-y-12">
             <h2 className="text-3xl md:text-6xl font-serif font-bold italic leading-tight shadow-xl">
@@ -201,6 +201,6 @@ export default function ApparelPage() {
             </div>
          </div>
       </section>
-    </main>
+    </div>
   )
 }

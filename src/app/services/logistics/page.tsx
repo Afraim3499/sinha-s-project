@@ -7,11 +7,30 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Production & Delivery Support | Sinha Sourcing Hub Ltd",
   description: "Communication, documentation, and coordination to ensure production timelines and shipment readiness.",
+  alternates: { canonical: "/services/logistics" },
+  openGraph: {
+    title: "Production & Delivery Support | Sinha Sourcing Hub Ltd",
+    description: "Communication, documentation, and coordination to ensure production timelines and shipment readiness.",
+    url: "https://sinhasourcinghub.com/services/logistics",
+    images: [{ url: "/service-logistics.png", width: 1200, height: 630, alt: "Logistics Support" }],
+  },
 }
 
 export default function ProductionDeliveryPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sinhasourcinghub.com" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://sinhasourcinghub.com/services" },
+      { "@type": "ListItem", "position": 3, "name": "Production & Delivery", "item": "https://sinhasourcinghub.com/services/logistics" }
+    ]
+  }
+
   return (
-    <div className="pt-24 bg-background">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <div className="pt-24 bg-background">
       {/* 1. HERO */}
       <section className="py-24 border-b border-border bg-stone-50">
         <div className="container mx-auto px-4 md:px-8">
@@ -37,7 +56,7 @@ export default function ProductionDeliveryPage() {
       {/* 2. WHAT WE SUPPORT */}
       <section className="py-32 bg-stone-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-15">
-          <Image src="/service-logistics.png" alt="Logistics Network" fill className="object-cover scale-105" />
+          <Image src="/service-logistics.png" alt="Logistics Network" fill className="object-cover scale-105" sizes="100vw" />
           <div className="absolute inset-0 bg-stone-900/60" />
         </div>
         <div className="container mx-auto px-4 md:px-8 relative z-10">
@@ -94,5 +113,6 @@ export default function ProductionDeliveryPage() {
         </div>
       </section>
     </div>
+    </>
   )
 }

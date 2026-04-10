@@ -138,7 +138,7 @@ export default function ProcessPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 1.2, ease: [0.19, 1, 0.22, 1] }}
-            className="text-5xl md:text-9xl lg:text-[9rem] font-serif font-black leading-[0.85] tracking-tight text-white mb-16"
+            className="text-4xl md:text-9xl lg:text-[9rem] font-serif font-black leading-[0.85] tracking-tight text-white mb-16"
           >
             Sourcing <br />
             <span className="italic font-normal text-stone-500 block mt-4">Architected.</span>
@@ -310,7 +310,7 @@ export default function ProcessPage() {
                  "Architecture is not just about lines; it&apos;s about the strength of the foundation. We build your supply chain to last."
                </p>
                <div className="pt-16 flex flex-col md:flex-row items-center justify-center gap-10">
-                  <Button variant="outline" size="lg" className="px-24 h-20 text-[12px] uppercase font-black tracking-[0.5em] border-white/20 text-white hover:bg-accent hover:text-stone-950 hover:border-accent transition-all rounded-none backdrop-blur-md shadow-3xl" asChild>
+                  <Button variant="outline" size="lg" className="px-24 h-20 text-[12px] uppercase font-black tracking-[0.5em] border-white/20 text-white hover:bg-accent hover:text-stone-950 hover:border-accent transition-all rounded-none backdrop-blur-md shadow-2xl" asChild>
                      <Link href="/contact">Architect Your Project</Link>
                   </Button>
                </div>
@@ -318,14 +318,14 @@ export default function ProcessPage() {
          </div>
       </section>
 
-      <footer className="pt-32 pb-32 text-center border-t border-stone-50 bg-white">
-         <p className="text-stone-400 text-[12px] font-bold uppercase tracking-[0.6em] mb-16 px-4">SINHA SOURCING HUB LTD — GLOBAL ARCHITECTURE & OPERATIONS CENTRE</p>
+      <section className="pt-32 pb-32 text-center border-t border-stone-50 bg-white">
+         <p className="text-stone-400 text-[12px] font-bold uppercase tracking-[0.6em] mb-16 px-4">SINHA SOURCING HUB LTD — GLOBAL ARCHITECTURE &amp; OPERATIONS CENTRE</p>
          <Link href="/" className="inline-flex items-center gap-6 text-stone-900 hover:text-accent transition-all group">
             <span className="h-px w-24 bg-stone-300 group-hover:bg-accent transition-all duration-700" />
             <span className="text-sm font-black uppercase tracking-[0.3em]">Return to Base</span>
             <span className="h-px w-24 bg-stone-300 group-hover:bg-accent transition-all duration-700" />
          </Link>
-      </footer>
+      </section>
     </div>
   )
 }

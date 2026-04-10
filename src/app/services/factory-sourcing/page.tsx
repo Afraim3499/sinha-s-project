@@ -7,11 +7,30 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Factory Sourcing & Supplier Alignment | Sinha Sourcing Hub Ltd",
   description: "Identify and align the right manufacturing partner based on category capability, volume, quality, and commercial fit.",
+  alternates: { canonical: "/services/factory-sourcing" },
+  openGraph: {
+    title: "Factory Sourcing & Supplier Alignment | Sinha Sourcing Hub Ltd",
+    description: "Identify and align the right manufacturing partner based on category capability, volume, quality, and commercial fit.",
+    url: "https://sinhasourcinghub.com/services/factory-sourcing",
+    images: [{ url: "/hero_factory_cinematic_flare.png", width: 1200, height: 630, alt: "Factory Sourcing" }],
+  },
 }
 
 export default function FactorySourcingPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sinhasourcinghub.com" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://sinhasourcinghub.com/services" },
+      { "@type": "ListItem", "position": 3, "name": "Factory Sourcing", "item": "https://sinhasourcinghub.com/services/factory-sourcing" }
+    ]
+  }
+
   return (
-    <div className="pt-24 bg-background">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <div className="pt-24 bg-background">
       {/* 1. HERO */}
       <section className="py-24 border-b border-border bg-stone-50">
         <div className="container mx-auto px-4 md:px-8">
@@ -37,7 +56,7 @@ export default function FactorySourcingPage() {
       {/* 2. REGIONAL LOGIC */}
       <section className="py-32 bg-stone-950 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <Image src="/hero-2.png" alt="Sourcing Map" fill className="object-cover scale-105" />
+          <Image src="/service-factory.png" alt="Global factory sourcing network" fill className="object-cover scale-105" sizes="100vw" />
         </div>
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
@@ -142,5 +161,6 @@ export default function FactorySourcingPage() {
         </div>
       </section>
     </div>
+    </>
   )
 }

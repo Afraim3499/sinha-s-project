@@ -35,7 +35,7 @@ export default function ServicesPage() {
     },
     {
       title: "Sampling & Development Coordination",
-      href: "/services/sampling", // NEW ROUTE
+      href: "/services/sampling",
       desc: "Coordination of sample rounds, construction review, communication, and revision handling before bulk production begins.",
       img: "/category-knitwear.png",
       icon: <Box className="w-5 h-5" />,
@@ -69,8 +69,9 @@ export default function ServicesPage() {
             src="/hero-factory.webp" 
             alt="Factory Production Floor" 
             fill 
-            className="object-cover opacity-30 grayscale" 
+            className="object-cover opacity-30 grayscale-0 md:grayscale" 
             priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-stone-950/80 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-b from-stone-950 via-stone-950/40 to-stone-950" />
@@ -254,7 +255,7 @@ export default function ServicesPage() {
       {/* 5. CINEMATIC FINAL CTA */}
       <section className="py-32 lg:py-48 bg-stone-950 text-white text-center relative overflow-hidden border-t border-white/5 selection:bg-accent selection:text-white">
         <div className="absolute inset-0 z-0 opacity-15">
-           <Image src="/hero-real-logistics.jpg" alt="Logistics Sourcing" fill className="object-cover scale-105 grayscale" />
+           <Image src="/hero-real-logistics.jpg" alt="Logistics Sourcing" fill className="object-cover scale-105 grayscale" sizes="100vw" />
            <div className="absolute inset-0 bg-stone-950/60 mix-blend-multiply" />
         </div>
         

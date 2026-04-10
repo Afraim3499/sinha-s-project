@@ -24,14 +24,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://sinhasourcinghub.com"),
   title: "Sinha Sourcing Hub Ltd | Global Sourcing & Product Development",
   description: "Your One-Stop Global Sourcing & Product Development Partner. Connecting brands with trusted manufacturing partners across Bangladesh, South Asia, China, and globally.",
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     title: "Sinha Sourcing Hub Ltd | Global Sourcing & Product Development",
     description: "Your One-Stop Global Sourcing & Product Development Partner.",
     url: "https://sinhasourcinghub.com",
     siteName: "Sinha Sourcing Hub Ltd",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Sinha Sourcing Hub Ltd" }],
     locale: "en_US",
     type: "website",
   },

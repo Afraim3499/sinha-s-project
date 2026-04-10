@@ -7,11 +7,30 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Materials & Trim Sourcing | Sinha Sourcing Hub Ltd",
   description: "Support for sourcing fabrics, trims, components, and accessories with attention to quality, suitability, pricing, and development requirements.",
+  alternates: { canonical: "/services/material-sourcing" },
+  openGraph: {
+    title: "Materials & Trim Sourcing | Sinha Sourcing Hub Ltd",
+    description: "Support for sourcing fabrics, trims, components, and accessories with attention to quality, suitability, pricing, and development requirements.",
+    url: "https://sinhasourcinghub.com/services/material-sourcing",
+    images: [{ url: "/images/materials/threads-variety.jpg", width: 1200, height: 630, alt: "Materials Sourcing" }],
+  },
 }
 
 export default function MaterialSourcingPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sinhasourcinghub.com" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://sinhasourcinghub.com/services" },
+      { "@type": "ListItem", "position": 3, "name": "Material Sourcing", "item": "https://sinhasourcinghub.com/services/material-sourcing" }
+    ]
+  }
+
   return (
-    <div className="pt-24 bg-background">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <div className="pt-24 bg-background">
       {/* 1. HERO */}
       <section className="py-24 border-b border-border bg-stone-50">
         <div className="container mx-auto px-4 md:px-8">
@@ -37,7 +56,7 @@ export default function MaterialSourcingPage() {
       {/* 2. WHAT WE SUPPORT */}
       <section className="py-32 bg-stone-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <Image src="/service-materials.png" alt="Materials Background" fill className="object-cover grayscale scale-105" />
+          <Image src="/service-materials.png" alt="Materials Background" fill className="object-cover grayscale scale-105" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-stone-900 via-stone-900/90 to-transparent" />
         </div>
         <div className="container mx-auto px-4 md:px-8 relative z-10">
@@ -79,6 +98,7 @@ export default function MaterialSourcingPage() {
                   alt="Materials Detail" 
                   fill 
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
              </div>
              <div className="space-y-10">
@@ -109,5 +129,6 @@ export default function MaterialSourcingPage() {
         </div>
       </section>
     </div>
+    </>
   )
 }

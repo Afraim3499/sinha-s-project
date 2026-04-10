@@ -58,7 +58,7 @@ export function Navbar() {
           "w-full pointer-events-auto transition-all duration-500 ease-in-out border-b border-white/[0.08]",
           isScrolled 
             ? "bg-stone-950/95 backdrop-blur-xl py-4 shadow-[0_8px_32px_rgba(0,0,0,0.5)]" 
-            : "bg-stone-900/20 backdrop-blur-[2px] py-6"
+            : "bg-stone-950/60 backdrop-blur-md py-6"
         )}
       >
         <div className="container mx-auto px-6 md:px-12 flex items-center justify-between relative z-10 gap-8">
@@ -68,16 +68,17 @@ export function Navbar() {
                transition={{ duration: 0.6, ease: PREMIUM_EASE }}
                className="w-10 h-10 bg-linear-to-br from-accent-highlight to-accent flex items-center justify-center relative overflow-hidden"
             >
-              <div className="w-7 h-7 border border-stone-950/20 rounded-full" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-4 h-4 border border-stone-950/30 rounded-full" />
-              </div>
+              {/* Refined Thread Loops - High Contrast Sketch Pattern */}
+              <div className="absolute w-[65%] h-[65%] border-[1px] border-stone-950/50 rounded-full translate-x-[-1px] translate-y-[1px]" />
+              <div className="absolute w-[62%] h-[68%] border-[1px] border-stone-950/45 rounded-full rotate-[15deg] translate-x-[2px] translate-y-[-1px]" />
+              <div className="absolute w-[68%] h-[62%] border-[1px] border-stone-950/40 rounded-full rotate-[-25deg] translate-x-[-1px] translate-y-[-2px]" />
+              <div className="absolute w-[64%] h-[64%] border-[1px] border-stone-950/55 rounded-full rotate-[110deg] translate-x-[1px] translate-y-[2px]" />
             </motion.div>
             <div className="flex flex-col">
               <span className="text-[14px] font-serif font-bold text-transparent bg-clip-text bg-linear-to-r from-accent via-accent-highlight to-accent leading-none whitespace-nowrap tracking-tight pb-0.5">
                 Sinha Sourcing Hub <span className="italic font-normal">Ltd</span>
               </span>
-              <span className="text-[8px] uppercase tracking-[0.4em] text-white/40 mt-1 font-mono whitespace-nowrap hidden sm:block">EST. 1993 — LONDON / DHAKA</span>
+              <span className="text-[8px] uppercase tracking-[0.4em] text-white/60 mt-1 font-mono whitespace-nowrap hidden sm:block">EST. 1993 — LONDON / DHAKA / MELBOURNE</span>
             </div>
           </Link>
 

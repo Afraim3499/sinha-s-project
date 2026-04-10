@@ -50,12 +50,12 @@ export default function ContactPage() {
   return (
     <div className="bg-background min-h-screen">
       {/* 1. HERO (Locked to Viewport) */}
-      <section className="relative h-screen min-h-[700px] flex items-center pt-32 md:pt-24 pb-12 overflow-hidden bg-stone-50 border-b border-border">
+      <section className="relative min-h-[90vh] md:h-screen flex items-center pt-32 md:pt-24 pb-12 overflow-hidden bg-stone-50 border-b border-border">
         {/* Subtle Background Pattern */}
         <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:24px_24px]" />
         
         <div className="container mx-auto px-4 md:px-8 relative z-10 w-full">
-          <Link href="/" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-foreground/40 hover:text-accent transition-colors mb-24 lg:mb-32">
+          <Link href="/" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-foreground/40 hover:text-accent transition-colors mb-10 lg:mb-16">
             <ArrowLeft className="w-3 h-3" /> Back to Home
           </Link>
           <div className="max-w-5xl space-y-12">
@@ -204,7 +204,7 @@ export default function ContactPage() {
                           </div>
                           <div className="space-y-2">
                             <label htmlFor="contact-category" className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">Product Category</label>
-                            <select id="contact-category" name="category" className="w-full bg-white/5 border border-white/10 text-white/70 h-12 px-3 text-sm focus:outline-none focus:ring-1 focus:ring-accent">
+                            <select id="contact-category" name="category" className="w-full bg-white/5 border border-white/10 text-white/70 h-12 px-3 text-sm focus:outline-none focus:ring-1 focus:ring-accent focus-visible:ring-1 focus-visible:ring-accent">
                               <option value="" className="bg-stone-950">Select a category...</option>
                               <option value="apparel" className="bg-stone-950">Apparel (Knits, Woven, Denim)</option>
                               <option value="outerwear" className="bg-stone-950">Outerwear & Jackets</option>

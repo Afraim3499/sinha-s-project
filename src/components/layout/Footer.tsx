@@ -29,7 +29,12 @@ export function Footer() {
           {/* Brand & Manifesto */}
           <div className="lg:col-span-5 space-y-12">
             <div className="space-y-6">
-              <Link href="/" className="inline-block group">
+              <Link href="/" className="inline-flex items-center gap-4 group">
+                <div className="w-8 h-8 bg-linear-to-br from-accent-highlight to-accent flex items-center justify-center relative overflow-hidden shrink-0">
+                  <div className="absolute w-[65%] h-[65%] border-[1px] border-stone-950/40 rounded-full translate-x-[-1px] translate-y-[1px]" />
+                  <div className="absolute w-[62%] h-[68%] border-[1px] border-stone-950/35 rounded-full rotate-[15deg] translate-x-[2px] translate-y-[-1px]" />
+                  <div className="absolute w-[64%] h-[64%] border-[1px] border-stone-950/45 rounded-full rotate-[110deg] translate-x-[1px] translate-y-[2px]" />
+                </div>
                 <span className="text-3xl font-serif font-bold tracking-tight text-transparent bg-clip-text bg-linear-to-r from-accent via-accent-highlight to-accent pb-1">
                   Sinha Sourcing Hub <span className="italic font-normal">Ltd</span>
                 </span>
