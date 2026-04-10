@@ -17,8 +17,8 @@ export function Footer() {
   return (
     <footer className="bg-stone-950 text-stone-100 pt-48 pb-24 border-t border-white/5 relative overflow-hidden">
       {/* Background Signature Accent */}
-      <div className="absolute bottom-4 inset-x-0 sm:inset-x-auto sm:right-0 pointer-events-none opacity-[0.03] select-none flex justify-center sm:block transition-all duration-700 px-6 sm:px-0">
-        <h2 className="text-[18vw] sm:text-[15rem] md:text-[20rem] lg:text-[30rem] font-serif font-bold whitespace-nowrap leading-[0.7] tracking-tighter sm:translate-x-10 text-center sm:text-right">
+      <div className="absolute bottom-4 inset-x-0 pointer-events-none opacity-[0.03] select-none flex justify-center transition-all duration-700">
+        <h2 className="text-[18vw] sm:text-[15rem] md:text-[20rem] lg:text-[30rem] font-serif font-bold whitespace-nowrap leading-[0.7] tracking-tighter text-center">
           SINHA
         </h2>
       </div>
