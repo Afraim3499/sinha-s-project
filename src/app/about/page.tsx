@@ -50,7 +50,7 @@ export default function AboutPage() {
                  src="/heritage_expert_worker.png" 
                  alt="Heritage Fabric" 
                  fill 
-                 className="object-cover grayscale-0 md:grayscale md:hover:grayscale-0 transition-all duration-1000"
+                 className="object-cover  transition-all duration-1000"
                  sizes="(max-width: 1024px) 100vw, 50vw"
                />
                <TechnicalOverlay label="ORIGIN_AXIS" coordinates="23.7104° N, 90.4074° E" />
@@ -84,7 +84,7 @@ export default function AboutPage() {
       {/* 3. WHY DEVELOPMENT STAGE MATTERS */}
       <section className="py-32 bg-stone-950 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <Image src="/service-pd.png" alt="Development" fill className="object-cover grayscale scale-105" />
+          <Image src="/service-pd.png" alt="Development" fill className="object-cover scale-105" />
         </div>
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <MotionSection className="max-w-4xl mx-auto space-y-10 text-center">

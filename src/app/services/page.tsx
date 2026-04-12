@@ -21,7 +21,7 @@ export default function ServicesPage() {
       title: "Factory Sourcing & Alignment",
       href: "/services/factory-sourcing",
       desc: "Identifying and vetting manufacturing partners based on product category, production scale, quality needs, and operational fit.",
-      img: "/service-factory.png",
+      img: "/factory-sourcing-professional.png",
       icon: <Factory className="w-5 h-5" />,
       tag: "02 / Sourcing"
     },
@@ -37,7 +37,7 @@ export default function ServicesPage() {
       title: "Sampling & Development Coordination",
       href: "/services/sampling",
       desc: "Coordination of sample rounds, construction review, communication, and revision handling before bulk production begins.",
-      img: "/category-knitwear.png",
+      img: "/ladies-knitwear-premium.png",
       icon: <Box className="w-5 h-5" />,
       tag: "04 / Sampling"
     },
@@ -69,7 +69,7 @@ export default function ServicesPage() {
             src="/hero-factory.webp" 
             alt="Factory Production Floor" 
             fill 
-            className="object-cover opacity-30 grayscale-0 md:grayscale" 
+            className="object-cover opacity-60" 
             priority
             sizes="100vw"
           />
@@ -202,7 +202,7 @@ export default function ServicesPage() {
                           src={service.img} 
                           alt={service.title} 
                           fill 
-                          className="object-cover max-md:grayscale-0 max-md:opacity-100 max-md:scale-100 grayscale group-hover:grayscale-0 scale-105 group-hover:scale-100 opacity-60 group-hover:opacity-100 transition-all duration-1000 ease-out"
+                          className="object-cover max-md:-0 max-md:opacity-100 max-md:scale-100 group-hover:opacity-100 scale-105 group-hover:scale-100 opacity-60 group-hover:opacity-100 transition-all duration-1000 ease-out"
                        />
                        <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/80 to-transparent md:bg-gradient-to-l max-md:opacity-40 opacity-80 group-hover:opacity-40 transition-opacity duration-1000" />
                     </div>
@@ -255,7 +255,7 @@ export default function ServicesPage() {
       {/* 5. CINEMATIC FINAL CTA */}
       <section className="py-32 lg:py-48 bg-stone-950 text-white text-center relative overflow-hidden border-t border-white/5 selection:bg-accent selection:text-white">
         <div className="absolute inset-0 z-0 opacity-15">
-           <Image src="/hero-real-logistics.jpg" alt="Logistics Sourcing" fill className="object-cover scale-105 grayscale" sizes="100vw" />
+           <Image src="/hero-real-logistics.jpg" alt="Logistics Sourcing" fill className="object-cover scale-105 " sizes="100vw" />
            <div className="absolute inset-0 bg-stone-950/60 mix-blend-multiply" />
         </div>
         

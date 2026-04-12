@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { PREMIUM_EASE } from "@/components/ui/motion-section"
+import { SinhaLogoIcon } from "@/components/ui/sinha-logo-icon"
 
 import { usePathname } from "next/navigation"
 
@@ -63,17 +64,7 @@ export function Navbar() {
       >
         <div className="container mx-auto px-6 md:px-12 flex items-center justify-between relative z-10 gap-8">
           <Link href="/" className="flex items-center gap-4 group shrink-0">
-            <motion.div 
-               whileHover={{ scale: 1.05 }}
-               transition={{ duration: 0.6, ease: PREMIUM_EASE }}
-               className="w-10 h-10 bg-linear-to-br from-accent-highlight to-accent flex items-center justify-center relative overflow-hidden"
-            >
-              {/* Refined Thread Loops - High Contrast Sketch Pattern */}
-              <div className="absolute w-[65%] h-[65%] border-[1px] border-stone-950/50 rounded-full translate-x-[-1px] translate-y-[1px]" />
-              <div className="absolute w-[62%] h-[68%] border-[1px] border-stone-950/45 rounded-full rotate-[15deg] translate-x-[2px] translate-y-[-1px]" />
-              <div className="absolute w-[68%] h-[62%] border-[1px] border-stone-950/40 rounded-full rotate-[-25deg] translate-x-[-1px] translate-y-[-2px]" />
-              <div className="absolute w-[64%] h-[64%] border-[1px] border-stone-950/55 rounded-full rotate-[110deg] translate-x-[1px] translate-y-[2px]" />
-            </motion.div>
+            <SinhaLogoIcon className="w-10 h-10" />
             <div className="flex flex-col">
               <span className="text-[14px] font-serif font-bold text-transparent bg-clip-text bg-linear-to-r from-accent via-accent-highlight to-accent leading-none whitespace-nowrap tracking-tight pb-0.5">
                 Sinha Sourcing Hub <span className="italic font-normal">Ltd</span>

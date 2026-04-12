@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Sinha Sourcing Hub Ltd | Our Story & Expertise",
     description: "Our story, heritage, and technical approach to global sourcing.",
-    images: [{ url: "/about-detail.png" }],
+    images: [{ url: "/about-technical-new.png" }],
   },
 }
 

@@ -14,14 +14,14 @@ const APPAREL_CATEGORIES = [
     items: ["Sweatshirts", "T-shirts", "Tops", "Polo Shirts"],
     desc: "Everyday essentials that require high-volume consistency and material stability.",
     icon: <Zap className="w-5 h-5 text-accent" />,
-    images: ["/images/apparel/casual-clothing-1.jpg", "/category-apparel-variety.png"]
+    images: ["/images/apparel/casual-clothing-1.jpg", "/apparel-focus-hero.png"]
   },
   {
     title: "Formal & Corporate",
     items: ["Formal Shirts", "Casual Shirts", "Structured Tops"],
     desc: "Technical construction for shirts where collar stability and stitching precision are paramount.",
     icon: <Scissors className="w-5 h-5 text-accent" />,
-    images: ["/images/apparel/shirts-formal-varied-1.jpg", "/images/apparel/shirts-formal-varied-2.jpg"]
+    images: ["/formal-shirts-clean.png", "/images/apparel/shirts-formal-varied-2.jpg"]
   },
   {
     title: "Bottoms & Denim",
@@ -35,7 +35,7 @@ const APPAREL_CATEGORIES = [
     items: ["Child Cloths", "Jackets", "Outerwear"],
     desc: "Niche production requirements for safety compliance (kids) and weather-resistant finishing.",
     icon: <Factory className="w-5 h-5 text-accent" />,
-    images: ["/category-childrens-wear.png", "/category-outerwear.png"]
+    images: ["/category-childrens-wear.png", "/outerwear-jacket-premium.png"]
   }
 ]
 
@@ -53,7 +53,7 @@ export default function ApparelPage() {
            className="absolute inset-0 z-0"
          >
             <Image 
-              src="/hero-real-qc.jpg" 
+              src="/hero-qc-south-asian.webp" 
               alt="Quality control and apparel inspection" 
               fill 
               priority
@@ -69,7 +69,7 @@ export default function ApparelPage() {
             
             <MotionSection className="max-w-5xl space-y-8">
                <span className="text-[10px] font-bold uppercase tracking-[0.6em] text-accent block">The Primary Focus</span>
-               <h1 className="text-4xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.05]">
+               <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-[1.05]">
                  Apparel Sourcing & <br/>
                  <span className="italic font-normal text-white/80">Production Management.</span>
                </h1>
@@ -114,7 +114,7 @@ export default function ApparelPage() {
 
                {/* Right Product Grid */}
                <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                   {APPAREL_CATEGORIES.map((cat: any, i) => (
+                   {APPAREL_CATEGORIES.map((cat: { title: string; desc: string; icon: React.ReactNode; image: string }, i: number) => (
                     <MotionSection key={i} delay={i * 0.1} className="bg-stone-50 p-8 lg:p-10 rounded-3xl border border-stone-100 hover:border-accent/30 transition-all duration-500 group shadow-sm hover:shadow-xl flex flex-col h-full">
                        <div className="flex-1">
                           <div className="w-12 h-12 mb-8 rounded-2xl bg-white flex items-center justify-center shadow-sm border border-stone-100 group-hover:scale-110 transition-transform">
@@ -131,7 +131,7 @@ export default function ApparelPage() {
                                      src={img} 
                                      alt={`${cat.title} variation ${idx + 1}`} 
                                      fill 
-                                     className="object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-700"
+                                     className="object-cover  transition-all duration-700"
                                      sizes="(max-width: 768px) 50vw, 20vw"
                                    />
                                 </div>
@@ -184,7 +184,7 @@ export default function ApparelPage() {
 
       {/* 4. FINAL CTA SECTION */}
       <section className="py-32 lg:py-48 bg-stone-950 text-white text-center relative overflow-hidden">
-         <div className="absolute inset-0 opacity-10 grayscale">
+         <div className="absolute inset-0 opacity-20">
             <Image src="/images/sustainability/artisans-manual-precision.png" alt="Sourcing focus" fill className="object-cover" sizes="100vw" />
          </div>
          <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-4xl space-y-12">

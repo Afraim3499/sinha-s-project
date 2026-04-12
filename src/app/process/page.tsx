@@ -151,7 +151,7 @@ export default function ProcessPage() {
             className="max-w-3xl mx-auto space-y-12"
           >
             <p className="text-xl md:text-3xl text-stone-300 leading-relaxed font-light italic">
-              "We don&apos;t just build products; we architect the operational infrastructure that sustains your brand's growth."
+              &quot;We don&apos;t just build products; we architect the operational infrastructure that sustains your brand&apos;s growth.&quot;
             </p>
             
             <div className="flex items-center justify-center gap-8 pt-8">
@@ -307,7 +307,7 @@ export default function ProcessPage() {
                  <span className="text-stone-500">mastered through art.</span>
                </h2>
                <p className="text-white/40 text-xl md:text-4xl font-light leading-relaxed italic max-w-3xl mx-auto">
-                 "Architecture is not just about lines; it&apos;s about the strength of the foundation. We build your supply chain to last."
+                 &quot;Architecture is not just about lines; it&apos;s about the strength of the foundation. We build your supply chain to last.&quot;
                </p>
                <div className="pt-16 flex flex-col md:flex-row items-center justify-center gap-10">
                   <Button variant="outline" size="lg" className="px-24 h-20 text-[12px] uppercase font-black tracking-[0.5em] border-white/20 text-white hover:bg-accent hover:text-stone-950 hover:border-accent transition-all rounded-none backdrop-blur-md shadow-2xl" asChild>

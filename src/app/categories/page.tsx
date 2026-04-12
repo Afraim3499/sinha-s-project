@@ -13,7 +13,7 @@ export default function CategoriesPage() {
       title: "Apparel",
       desc: "Our primary expertise across Sweatshirts, T-shirts, Polo Shirts, Formal & Casual Shirts, Tops, Baggy Pants, Denim (Jeans), Jackets, and Childrenswear.",
       cta: "Explore Apparel Sourcing",
-      img: "/category-apparel-variety.png",
+      img: "/apparel-focus-hero.png",
       tag: "Category / 01",
       href: "/categories/apparel"
     },
@@ -37,7 +37,7 @@ export default function CategoriesPage() {
       title: "Home Textiles",
       desc: "Home textile categories require consistency, material suitability, and dependable production control. We support selected home textile sourcing and development needs where execution and quality are central.",
       cta: "Discuss a Home Textiles Project",
-      img: "/category-knitwear.png",
+      img: "/ladies-knitwear-premium.png",
       tag: "Category / 04",
       href: "/contact"
     },
@@ -61,7 +61,7 @@ export default function CategoriesPage() {
             src="/hero-materials.webp" 
             alt="Materials and Categories" 
             fill 
-            className="object-cover opacity-30 grayscale" 
+            className="object-cover opacity-60" 
             priority
             sizes="100vw"
           />
@@ -91,7 +91,7 @@ export default function CategoriesPage() {
                animate={{ opacity: 1, y: 0 }}
                transition={{ duration: 1, delay: 0.2 }}
             >
-               <h1 className="text-4xl md:text-6xl lg:text-[5rem] xl:text-[5.5rem] font-serif font-bold leading-[1.05]">
+               <h1 className="text-4xl md:text-5xl lg:text-[4rem] xl:text-[4.5rem] font-serif font-bold leading-[1.05]">
                  Focused sourcing support across <br className="hidden lg:block"/>
                  <span className="italic font-normal text-white/80">key consumer categories.</span>
                </h1>
@@ -127,7 +127,7 @@ export default function CategoriesPage() {
                      src={cat.img} 
                      alt={cat.title} 
                      fill 
-                     className="object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 md:opacity-30 group-hover:opacity-60 group-hover:scale-105 transition-all duration-[2000ms] ease-out"
+                     className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-[2000ms] ease-out"
                      sizes="100vw"
                   />
                   {/* Complex Gradients for text legibility and deep cinematic contrast */}
@@ -178,7 +178,7 @@ export default function CategoriesPage() {
       {/* 3. CINEMATIC FINAL CTA */}
       <section className="py-32 lg:py-48 bg-stone-950 text-white text-center relative overflow-hidden selection:bg-accent selection:text-white">
         <div className="absolute inset-0 z-0 opacity-15">
-           <Image src="/hero-factory.webp" alt="Factory Sourcing" fill className="object-cover scale-105 grayscale" sizes="100vw" />
+           <Image src="/hero-factory.webp" alt="Factory Sourcing" fill className="object-cover scale-105" sizes="100vw" />
            <div className="absolute inset-0 bg-stone-950/60 mix-blend-multiply" />
         </div>
         

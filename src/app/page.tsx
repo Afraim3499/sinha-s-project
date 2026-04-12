@@ -15,7 +15,7 @@ import { getTestimonials } from "@/app/actions/testimonials"
 
 const HERO_SLIDES = [
   {
-    src: "/hero-pd.webp",
+    src: "/hero-pd-new.webp",
     alt: "Product development meeting with technical fabric samples",
     eyebrow: "Global sourcing & product development",
     heading: "From concept to \nbulk production.",
@@ -24,7 +24,7 @@ const HERO_SLIDES = [
     gradient: "bg-gradient-to-l from-black/60 via-black/10 to-transparent"
   },
   {
-    src: "/hero-factory.webp",
+    src: "/hero-factory-south-asian.webp",
     alt: "Modern garment factory production line in Bangladesh",
     eyebrow: "Factory Sourcing",
     heading: "Matching capability \nto requirements.",
@@ -42,7 +42,7 @@ const HERO_SLIDES = [
     gradient: "bg-gradient-to-l from-black/60 via-black/10 to-transparent"
   },
   {
-    src: "/hero-qc.webp",
+    src: "/hero-qc-south-asian.webp",
     alt: "Quality control specialist inspecting finished apparel",
     eyebrow: "Quality & Compliance",
     heading: "Verification throughout \nthe process.",
@@ -51,7 +51,7 @@ const HERO_SLIDES = [
     gradient: "bg-gradient-to-l from-black/60 via-black/10 to-transparent"
   },
   {
-    src: "/hero-logistics.webp",
+    src: "/hero-logistics-new.webp",
     alt: "Organized shipping containers at a global logistics hub",
     eyebrow: "Logistics & Handover",
     heading: "Controlled handover \nof goods.",
@@ -61,7 +61,7 @@ const HERO_SLIDES = [
   },
   {
     type: "collage",
-    src: "/home-category-apparel.png",
+    src: "/apparel-focus-hero.png",
     alt: "Collage of different apparel categories from denim to casual wear",
     eyebrow: "Product Specialization",
     heading: "Multi-category \nsourcing support.",
@@ -75,7 +75,7 @@ import { CapabilityBoard } from "@/components/ui/capability-board"
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = React.useState(0)
-  const [testimonials, setTestimonials] = React.useState<any>([])
+  const [testimonials, setTestimonials] = React.useState<{id?: string; content?: string; author?: string; [key: string]: unknown}[]>([])
   
   React.useEffect(() => {
     getTestimonials().then(setTestimonials)
@@ -106,7 +106,7 @@ export default function HomePage() {
                  <div className="grid grid-cols-2 md:grid-cols-12 md:grid-rows-2 gap-0 w-full h-full opacity-90 transition-all duration-1000">
                     {/* Main Category: Apparel */}
                      <div className="col-span-2 md:col-span-6 row-span-1 md:row-span-2 relative overflow-hidden">
-                        <Image src="/home-category-apparel.png" alt="Apparel Sourcing" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+                        <Image src="/apparel-focus-hero.png" alt="Apparel Sourcing" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                         <div className="absolute bottom-4 left-4">
                            <p className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-white/80">Category_01 // Apparel</p>
                         </div>
@@ -189,10 +189,10 @@ export default function HomePage() {
                      initial={{ x: 20, opacity: 0 }}
                      animate={{ x: currentSlide === idx ? 0 : 20, opacity: currentSlide === idx ? 1 : 0 }}
                      transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                     className="max-w-[800px] w-full"
+                     className="max-w-[620px] w-full"
                    >
                       <motion.h1 
-                        className="text-5xl md:text-[64px] lg:text-[72px] font-serif font-light italic leading-[0.9] text-white/95 tracking-tight drop-shadow-sm"
+                        className="text-4xl md:text-[52px] lg:text-[60px] font-serif font-light italic leading-[0.9] text-white/95 tracking-tight drop-shadow-sm"
                       >
                         {slide.heading}
                       </motion.h1>
@@ -225,7 +225,7 @@ export default function HomePage() {
                 className="group relative"
                 aria-label={`Go to slide ${idx + 1}`}
               >
-                <div className={`relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border transition-all duration-700 ${currentSlide === idx ? 'border-accent scale-110 ring-2 ring-accent/20' : 'border-white/10 scale-90 grayscale opacity-40 hover:opacity-100 hover:scale-100'}`}>
+                <div className={`relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border transition-all duration-700 ${currentSlide === idx ? 'border-accent scale-110 ring-2 ring-accent/20' : 'border-white/10 scale-90 opacity-40 hover:opacity-100 hover:scale-100'}`}>
                   <Image 
                     src={slide.src} 
                     alt={`View ${slide.eyebrow}`} 
@@ -263,10 +263,10 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
              <MotionSection className="relative aspect-video lg:aspect-[4/3] bg-stone-100 overflow-hidden shadow-sm max-h-[500px]">
                 <Image 
-                  src="/about-detail.png" 
+                  src="/about-technical-new.png" 
                   alt="Product Development" 
                   fill 
-                  className="object-cover grayscale-0 md:grayscale md:hover:grayscale-0 transition-all duration-1000"
+                  className="object-cover  transition-all duration-1000"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
              </MotionSection>
@@ -312,7 +312,7 @@ export default function HomePage() {
               ].map((service, i) => (
                 <MotionSection key={i} delay={i * 0.1} className="relative p-12 space-y-6 group overflow-hidden min-h-[380px] flex flex-col justify-end bg-stone-900">
                    <div className="absolute inset-0 z-0">
-                     <Image src={service.image} alt={service.title} fill className="object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 md:opacity-50 group-hover:opacity-70 transition-all duration-700 group-hover:scale-105" />
+                     <Image src={service.image} alt={service.title} fill className="object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105" />
                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/40 to-stone-950/10" />
                    </div>
                    <div className="relative z-10 space-y-6">
@@ -354,7 +354,7 @@ export default function HomePage() {
 
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
               {[
-                { title: "Apparel", desc: "From everyday garments to more structured product lines. Support for development, sourcing, and production coordination.", image: "/home-category-apparel.png" },
+                { title: "Apparel", desc: "From everyday garments to more structured product lines. Support for development, sourcing, and production coordination.", image: "/apparel-focus-hero.png" },
                 { title: "Footwear & Trainers", desc: "Projects that require careful handling of materials, construction details, fit development, and supplier alignment.", image: "/home-category-footwear.png" },
                 { title: "Bags & Travel Gear", desc: "Functional and commercial bag categories with attention to materials, trims, durability, and finishing.", image: "/home-category-bags.png" },
                 { title: "Home Textiles", desc: "Selected home textile categories where quality, consistency, material choice, and production management are critical.", image: "/home-category-home.png" },
@@ -459,7 +459,7 @@ export default function HomePage() {
               {/* The Cinematic Right Column */}
               <MotionSection delay={0.2} direction="left" className="relative aspect-video lg:aspect-[4/3] max-h-[500px] w-full shadow-2xl overflow-hidden group">
                  <Image 
-                   src="/about-detail.png" 
+                   src="/about-technical-new.png" 
                    alt="Heritage and Production" 
                    fill 
                    className="object-cover max-md:scale-100 max-md:brightness-100 scale-105 group-hover:scale-100 brightness-95 group-hover:brightness-100 transition-all duration-1000 ease-out"
@@ -537,7 +537,7 @@ export default function HomePage() {
       {/* 11. FINAL CTA */}
       <section className="py-40 bg-stone-900 text-white text-center relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10">
-           <Image src="/hero-pd.webp" alt="Sourcing" fill className="object-cover scale-105 grayscale" />
+           <Image src="/hero-pd-new.webp" alt="Sourcing" fill className="object-cover scale-105" />
         </div>
         <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-4xl">
            <MotionSection className="space-y-10">

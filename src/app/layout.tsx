@@ -8,6 +8,7 @@ import { MusicProvider } from "@/components/audio/MusicProvider"
 import { MusicCursor } from "@/components/audio/MusicCursor"
 import { FloatingMusicButton } from "@/components/audio/FloatingMusicButton"
 import { PageViewTracker } from "@/components/analytics/PageViewTracker"
+import { LoadingScreen } from "@/components/ui/loading-screen"
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -96,6 +97,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-background text-foreground tracking-tight selection:bg-accent/30 selection:text-foreground antialiased font-sans">
         <PageViewTracker />
         <MusicProvider>
+          <LoadingScreen />
           <MusicCursor />
           <FloatingMusicButton />
           <Navbar />
