@@ -75,7 +75,14 @@ import { CapabilityBoard } from "@/components/ui/capability-board"
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = React.useState(0)
-  const [testimonials, setTestimonials] = React.useState<{id?: string; content?: string; author?: string; [key: string]: unknown}[]>([])
+  const [testimonials, setTestimonials] = React.useState<{
+    id?: string;
+    name: string;
+    company: string | null;
+    content: string;
+    role: string | null;
+    image_url: string | null;
+  }[]>([])
   
   React.useEffect(() => {
     getTestimonials().then(setTestimonials)

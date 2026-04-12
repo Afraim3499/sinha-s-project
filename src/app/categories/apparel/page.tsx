@@ -114,7 +114,7 @@ export default function ApparelPage() {
 
                {/* Right Product Grid */}
                <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                   {APPAREL_CATEGORIES.map((cat: { title: string; desc: string; icon: React.ReactNode; image: string }, i: number) => (
+                   {APPAREL_CATEGORIES.map((cat: { title: string; items: string[]; desc: string; icon: React.ReactNode; images: string[] }, i: number) => (
                     <MotionSection key={i} delay={i * 0.1} className="bg-stone-50 p-8 lg:p-10 rounded-3xl border border-stone-100 hover:border-accent/30 transition-all duration-500 group shadow-sm hover:shadow-xl flex flex-col h-full">
                        <div className="flex-1">
                           <div className="w-12 h-12 mb-8 rounded-2xl bg-white flex items-center justify-center shadow-sm border border-stone-100 group-hover:scale-110 transition-transform">
