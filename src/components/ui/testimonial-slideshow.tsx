@@ -108,7 +108,7 @@ export const TestimonialSlideshow: React.FC<{ testimonials?: Testimonial[] }> = 
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(180,140,80,0.03),transparent_70%)] pointer-events-none" />
 
-      <div className="container mx-auto px-4 md:px-8 mb-16 text-center">
+      <div className="container mx-auto px-6 md:px-12 mb-16 text-center">
         <motion.div
            initial={{ opacity: 0, y: 20 }}
            whileInView={{ opacity: 1, y: 0 }}

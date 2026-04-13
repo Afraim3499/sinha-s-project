@@ -127,7 +127,7 @@ export function PrincipleNode({ principle, index }: { principle: Principle, inde
 export function PrinciplesEngine() {
   return (
     <div className="bg-[#0a0a0a] overflow-hidden">
-      <div className="container mx-auto px-4 md:px-8 max-w-6xl">
+      <div className="container mx-auto px-6 md:px-12 max-w-6xl">
         <div className="py-12">
           {PRINCIPLES.map((principle, i) => (
             <PrincipleNode 

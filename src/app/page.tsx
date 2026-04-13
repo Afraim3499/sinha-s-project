@@ -186,7 +186,7 @@ export default function HomePage() {
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
               className="absolute inset-0"
             >
-              <div className="container mx-auto px-4 md:px-8 h-full flex flex-col justify-between py-24 md:py-32">
+              <div className="container mx-auto px-6 md:px-12 h-full flex flex-col justify-between py-24 md:py-32">
                 {/* REMOVED TOP MARKERS & EYEBROWS FOR CLEANER LOOK */}
                 <div />
 
@@ -259,14 +259,14 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(180,140,80,0.02),transparent_70%)] pointer-events-none" />
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/5 to-transparent" />
         
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
+        <div className="container mx-auto px-6 md:px-12 relative z-10">
            <CapabilityBoard />
         </div>
       </section>
 
       {/* 3. BRAND INTRODUCTION */}
       <section className="py-16 lg:py-20 bg-background text-foreground">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
              <MotionSection className="relative aspect-video lg:aspect-[4/3] bg-stone-100 overflow-hidden shadow-sm max-h-[500px]">
                 <Image 
@@ -302,7 +302,7 @@ export default function HomePage() {
 
       {/* 4. SERVICES SNAPSHOT */}
       <section className="py-16 lg:py-24 bg-stone-50 border-y border-border/50">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
            <MotionSection className="mb-20 space-y-6 text-center max-w-3xl mx-auto">
               <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Where we support the process</span>
               <h2 className="text-4xl md:text-6xl font-serif font-bold italic">Services Snapshot</h2>
@@ -348,7 +348,7 @@ export default function HomePage() {
 
       {/* 6. PRODUCT CATEGORIES */}
       <section className="py-16 lg:py-24 bg-background">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
            <div className="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8">
               <MotionSection className="space-y-6 max-w-2xl">
                  <h2 className="text-4xl md:text-6xl font-serif font-bold"><span className="italic font-normal">Multi-category</span> <br />sourcing support</h2>
@@ -391,7 +391,7 @@ export default function HomePage() {
 
       {/* 6. HOW WE WORK PREVIEW */}
       <section className="py-12 lg:py-16 bg-stone-950 text-white">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
            <MotionSection className="mb-6 lg:mb-8 space-y-2 text-center max-w-2xl mx-auto">
               <h2 className="text-2xl md:text-4xl font-serif font-bold italic">A process designed to reduce uncertainty</h2>
               <p className="text-white/60 text-sm font-light">Clearer process reduces risk. We guide projects through practical stages so decisions are made earlier, communication is tighter, and production issues are easier to manage.</p>
@@ -412,7 +412,7 @@ export default function HomePage() {
         {/* Subtle background glow */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(180,140,80,0.05),transparent_50%)] pointer-events-none" />
         
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
+        <div className="container mx-auto px-6 md:px-12 relative z-10">
            <div className="mb-8 lg:mb-12 text-center space-y-2 lg:space-y-4">
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight">Why buyers look for <br className="lg:hidden" /><span className="italic font-normal text-foreground/60">structured support</span></h2>
               <p className="text-foreground/60 text-sm md:text-base font-light leading-relaxed max-w-2xl mx-auto">
@@ -445,7 +445,7 @@ export default function HomePage() {
 
       {/* 9. HERITAGE PREVIEW */}
       <section className="py-16 lg:py-20 bg-stone-100 border-y border-border">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <MotionSection className="relative bg-white p-8 lg:p-12 border border-border shadow-xl z-20">
                  <div className="space-y-6 relative z-10">
@@ -485,7 +485,7 @@ export default function HomePage() {
         {/* Cinematic Backdrop */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(180,140,80,0.05),transparent_50%)] pointer-events-none" />
         
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
+        <div className="container mx-auto px-6 md:px-12 relative z-10">
            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
               
               {/* Sustainability - Left Dark Column */}
@@ -546,7 +546,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0 opacity-10">
            <Image src="/hero-pd-new.webp" alt="Sourcing" fill className="object-cover scale-105" />
         </div>
-        <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-4xl">
+        <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-4xl">
            <MotionSection className="space-y-10">
               <h2 className="text-4xl md:text-7xl font-serif font-bold italic leading-tight">Ready to discuss a product or sourcing requirement?</h2>
               <p className="text-xl text-white/60 font-light max-w-2xl mx-auto leading-relaxed">

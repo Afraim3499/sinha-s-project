@@ -242,7 +242,7 @@ export default function FAQPage() {
       <section className="relative h-screen flex items-center pt-24 overflow-hidden border-b border-border bg-stone-50">
         <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:24px_24px]" />
         
-        <div className="container mx-auto px-4 md:px-8 relative z-10 w-full">
+        <div className="container mx-auto px-6 md:px-12 relative z-10 w-full">
           <Link href="/" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-foreground/40 hover:text-accent transition-colors mb-24 lg:mb-32">
             <ArrowLeft className="w-3 h-3" /> Back to Home
           </Link>
@@ -270,7 +270,7 @@ export default function FAQPage() {
 
       {/* 2. FAQS (Categorized) */}
       <section className="py-24 md:py-40 bg-white">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
            <div className="space-y-40">
               {categories.map((category) => (
                 <div key={category.id} className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
@@ -311,7 +311,7 @@ export default function FAQPage() {
         {/* Decorative background element */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_0%,rgba(180,140,80,0.1),transparent_70%)] pointer-events-none" />
         
-        <div className="container mx-auto px-4 md:px-8 max-w-4xl space-y-12 relative z-10">
+        <div className="container mx-auto px-6 md:px-12 max-w-4xl space-y-12 relative z-10">
            <div className="flex flex-col items-center gap-6">
               <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Strategic Consultation</span>
               <h2 className="text-4xl md:text-6xl font-serif font-bold italic leading-[1.1] tracking-tight">

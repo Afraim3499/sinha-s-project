@@ -17,7 +17,7 @@ export default function AboutPage() {
         {/* Subtle Background Pattern */}
         <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:24px_24px]" />
         
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
+        <div className="container mx-auto px-6 md:px-12 relative z-10">
           <MotionSection className="max-w-5xl mx-auto text-center space-y-12">
             <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.4em] text-accent flex items-center justify-center gap-4">
                <span className="w-8 h-px bg-accent/30" />
@@ -43,7 +43,7 @@ export default function AboutPage() {
 
       {/* 2. HERITAGE / ORIGIN */}
       <section className="py-32">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="relative aspect-[4/5] bg-stone-100 overflow-hidden shadow-xl border border-border">
                <Image 
@@ -86,7 +86,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 opacity-10">
           <Image src="/service-pd.png" alt="Development" fill className="object-cover scale-105" />
         </div>
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
+        <div className="container mx-auto px-6 md:px-12 relative z-10">
           <MotionSection className="max-w-4xl mx-auto space-y-10 text-center">
              <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent">Development Focus</span>
              <h2 className="text-4xl md:text-6xl font-serif font-bold italic leading-tight">
@@ -106,7 +106,7 @@ export default function AboutPage() {
 
       {/* 4. WHAT WE BRING (SKILLS GRID) */}
       <section className="py-32 bg-stone-50">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
           <MotionSection className="mb-20 space-y-4 max-w-3xl">
             <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Core Competencies</span>
             <h2 className="text-4xl md:text-5xl font-serif font-bold">What <span className="italic font-normal">We Bring.</span></h2>
@@ -135,7 +135,7 @@ export default function AboutPage() {
 
       {/* 5 & 6. MISSION AND VISION */}
       <section className="py-32 bg-white border-y border-border">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-24 lg:gap-32">
             <MotionSection className="space-y-10 border-l px-8 border-accent/20">
               <h3 className="text-[11px] font-bold uppercase tracking-[0.4em] text-accent">Our Mission</h3>
@@ -155,7 +155,7 @@ export default function AboutPage() {
 
       {/* 7. VALUES (WHAT GUIDES OUR WORK) */}
       <section className="py-32 bg-stone-100">
-         <div className="container mx-auto px-4 md:px-8">
+         <div className="container mx-auto px-6 md:px-12">
             <MotionSection className="text-center mb-20 space-y-4 max-w-2xl mx-auto">
                <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Principles</span>
                <h2 className="text-4xl md:text-5xl font-serif font-bold italic">What guides our work</h2>
@@ -187,7 +187,7 @@ export default function AboutPage() {
 
       {/* 8. FAQ FOR SEO, AEO, AIO, SXO, GEO */}
       <section className="py-32 bg-background border-t border-border">
-         <div className="container mx-auto px-4 md:px-8">
+         <div className="container mx-auto px-6 md:px-12">
             <MotionSection className="text-center mb-16 max-w-3xl mx-auto">
                <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Knowledge Base</span>
                <h2 className="text-4xl md:text-5xl font-serif font-bold italic mt-4">Frequently Asked Questions</h2>
@@ -265,7 +265,7 @@ export default function AboutPage() {
 
       {/* 9. CLOSING CTA */}
       <section className="py-40 bg-stone-900 text-white text-center">
-        <div className="container mx-auto px-4 md:px-8 max-w-3xl">
+        <div className="container mx-auto px-6 md:px-12 max-w-3xl">
           <MotionSection className="space-y-12">
             <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight italic">
               Looking for a partner capable of more than an introduction?

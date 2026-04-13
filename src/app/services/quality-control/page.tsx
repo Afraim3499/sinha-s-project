@@ -33,7 +33,7 @@ export default function QualityControlPage() {
       <div className="pt-24 bg-background">
       {/* 1. HERO */}
       <section className="py-24 border-b border-border bg-stone-50">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
           <Link href="/services" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-foreground/40 hover:text-accent transition-colors mb-12">
             <ArrowLeft className="w-3 h-3" /> Back to Services
           </Link>
@@ -55,7 +55,7 @@ export default function QualityControlPage() {
 
       {/* 2. WHAT WE SUPPORT */}
       <section className="py-32 bg-background">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
           <div className="mb-16 space-y-4">
              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Inspection Scope</span>
              <h2 className="text-3xl md:text-5xl font-serif font-bold italic">Quality and compliance-related coordination</h2>
@@ -82,7 +82,7 @@ export default function QualityControlPage() {
 
       {/* 3. A NOTE ON COMPLIANCE */}
       <section className="py-32 bg-stone-950 text-white relative overflow-hidden">
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
+        <div className="container mx-auto px-6 md:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
              <div className="space-y-10">
                 <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Ethical Stance</span>
@@ -109,7 +109,7 @@ export default function QualityControlPage() {
 
       {/* 4. CTA */}
       <section className="py-32 bg-stone-100 text-center">
-        <div className="container mx-auto px-4 md:px-8 max-w-3xl space-y-10">
+        <div className="container mx-auto px-6 md:px-12 max-w-3xl space-y-10">
            <h2 className="text-3xl md:text-5xl font-serif font-bold italic leading-tight">
              Need stronger visibility over production quality and supplier standards?
            </h2>

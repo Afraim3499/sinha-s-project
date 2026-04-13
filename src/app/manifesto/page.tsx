@@ -21,7 +21,7 @@ export default function ApproachPage() {
         {/* Subtle background glow */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(180,140,80,0.08),transparent_70%)] pointer-events-none" />
         
-        <div className="container mx-auto px-4 md:px-8 relative z-10 w-full">
+        <div className="container mx-auto px-6 md:px-12 relative z-10 w-full">
           <Link href="/" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-white/30 hover:text-accent transition-colors mb-12 lg:mb-16">
             <ArrowLeft className="w-3 h-3" /> Back to Home
           </Link>
@@ -52,7 +52,7 @@ export default function ApproachPage() {
 
       {/* 3. MANIFESTO FAQ (SEO, AEO, AIO Focus) */}
       <section className="py-32 bg-[#050505] border-t border-white/5">
-         <div className="container mx-auto px-4 md:px-8">
+         <div className="container mx-auto px-6 md:px-12">
             <div className="text-center mb-16 max-w-3xl mx-auto">
                <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Core Philosophy</span>
                <h2 className="text-4xl md:text-5xl font-serif font-bold italic mt-4 text-white">Understanding Our Approach</h2>
@@ -99,7 +99,7 @@ export default function ApproachPage() {
            <div className="absolute inset-0 bg-stone-950/60" />
         </div>
         
-        <div className="container mx-auto px-4 md:px-8 max-w-4xl space-y-16 relative z-10">
+        <div className="container mx-auto px-6 md:px-12 max-w-4xl space-y-16 relative z-10">
            <div className="space-y-6">
               <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent">Commitment to Execution</span>
               <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold italic leading-tight">

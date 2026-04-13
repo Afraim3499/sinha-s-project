@@ -23,7 +23,7 @@ export function Footer() {
         </h2>
       </div>
 
-      <div className="container px-4 md:px-8 mx-auto relative z-10">
+      <div className="container px-6 md:px-12 mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 lg:gap-32 mb-40">
           
           {/* Brand & Manifesto */}

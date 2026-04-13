@@ -43,7 +43,7 @@ export function SustainabilityHero() {
       </div>
 
       {/* 2. TEXT AREA (High Contrast, Site Standard Typography) */}
-      <div className="container mx-auto px-4 md:px-8 relative z-10 w-full flex items-center">
+      <div className="container mx-auto px-6 md:px-12 relative z-10 w-full flex items-center">
         
         <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 items-center">
           

@@ -24,7 +24,7 @@ export function SustainabilityContent() {
       {/* Subtle Background Decorator (Bright & Simple) */}
       <div className="absolute top-0 right-0 w-[60%] h-full opacity-5 bg-gradient-to-bl from-accent/20 to-transparent pointer-events-none" />
       
-      <div className="container mx-auto px-4 md:px-8 relative z-10 w-full max-w-7xl">
+      <div className="container mx-auto px-6 md:px-12 relative z-10 w-full max-w-7xl">
         {/* Editorial Section Header */}
         <motion.div 
           initial={{ opacity: 0, y: 15 }}

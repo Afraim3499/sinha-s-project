@@ -33,7 +33,7 @@ export default function FactorySourcingPage() {
       <div className="pt-24 bg-background">
       {/* 1. HERO */}
       <section className="py-24 border-b border-border bg-stone-50">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
           <Link href="/services" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-foreground/40 hover:text-accent transition-colors mb-12">
             <ArrowLeft className="w-3 h-3" /> Back to Services
           </Link>
@@ -58,7 +58,7 @@ export default function FactorySourcingPage() {
         <div className="absolute inset-0 opacity-10">
           <Image src="/factory-sourcing-professional.png" alt="Global factory sourcing network" fill className="object-cover scale-105" sizes="100vw" />
         </div>
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
+        <div className="container mx-auto px-6 md:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
              <div className="space-y-10">
                 <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Sourcing Geography</span>
@@ -92,7 +92,7 @@ export default function FactorySourcingPage() {
 
       {/* 3. WHAT WE ASSESS & 4. WHAT BUYERS NEED */}
       <section className="py-32 bg-stone-50">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
              {/* What factory alignment should consider */}
              <div className="space-y-12">
@@ -149,7 +149,7 @@ export default function FactorySourcingPage() {
 
       {/* 5. CTA */}
       <section className="py-32 text-center border-t border-border bg-white">
-        <div className="container mx-auto px-4 md:px-8 max-w-3xl space-y-10">
+        <div className="container mx-auto px-6 md:px-12 max-w-3xl space-y-10">
            <h2 className="text-3xl md:text-5xl font-serif font-bold italic leading-tight">
              Need help identifying the right manufacturing partner?
            </h2>

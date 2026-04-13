@@ -54,7 +54,7 @@ export default function ContactPage() {
         {/* Subtle Background Pattern */}
         <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:24px_24px]" />
         
-        <div className="container mx-auto px-4 md:px-8 relative z-10 w-full">
+        <div className="container mx-auto px-6 md:px-12 relative z-10 w-full">
           <Link href="/" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-foreground/40 hover:text-accent transition-colors mb-10 lg:mb-16">
             <ArrowLeft className="w-3 h-3" /> Back to Home
           </Link>
@@ -97,7 +97,7 @@ export default function ContactPage() {
 
       {/* 2. CONTACT + FORM */}
       <section id="inquiry" className="py-32 scroll-mt-32">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
               
               {/* Contact Sidebar */}

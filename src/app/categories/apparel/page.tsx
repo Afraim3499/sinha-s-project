@@ -62,7 +62,7 @@ export default function ApparelPage() {
             <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-stone-950 to-transparent" />
          </motion.div>
 
-         <div className="container mx-auto px-4 md:px-8 relative z-10 w-full mb-10">
+         <div className="container mx-auto px-6 md:px-12 relative z-10 w-full mb-10">
             <Link href="/categories" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-white/50 hover:text-accent transition-colors mb-12 lg:mb-20">
                <ArrowLeft className="w-3 h-3" /> All Categories
             </Link>
@@ -90,7 +90,7 @@ export default function ApparelPage() {
 
       {/* 2. CATEGORY CLASSIFICATIONS (The Requested Increase) */}
       <section className="py-24 md:py-32 lg:py-48 relative overflow-hidden bg-white">
-         <div className="container mx-auto px-4 md:px-8 relative z-10 w-full max-w-7xl">
+         <div className="container mx-auto px-6 md:px-12 relative z-10 w-full max-w-7xl">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
                {/* Left Narrative Pillar */}
                <div className="lg:col-span-5 space-y-12">
@@ -156,7 +156,7 @@ export default function ApparelPage() {
 
       {/* 3. TECHNICAL PERSPECTIVE (The 'Execution' Column) */}
       <section className="py-24 bg-stone-50 border-y border-stone-200/50">
-         <div className="container mx-auto px-4 md:px-8 w-full max-w-5xl text-center space-y-16">
+         <div className="container mx-auto px-6 md:px-12 w-full max-w-5xl text-center space-y-16">
             <MotionSection className="space-y-6">
                <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent">Execution Philosophy</span>
                <h2 className="text-3xl md:text-5xl font-serif font-bold italic text-stone-950 leading-tight">
@@ -187,7 +187,7 @@ export default function ApparelPage() {
          <div className="absolute inset-0 opacity-20">
             <Image src="/images/sustainability/artisans-manual-precision.png" alt="Sourcing focus" fill className="object-cover" sizes="100vw" />
          </div>
-         <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-4xl space-y-12">
+         <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-4xl space-y-12">
             <h2 className="text-3xl md:text-6xl font-serif font-bold italic leading-tight shadow-xl">
                Ready to discuss your specialized <br className="hidden md:block"/> apparel project?
             </h2>

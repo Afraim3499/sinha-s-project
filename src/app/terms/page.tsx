@@ -14,7 +14,7 @@ export default function TermsPage() {
   return (
     <div className="pt-24 bg-background min-h-screen">
       <section className="py-24 border-b border-border bg-stone-50">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
           <Link href="/" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-foreground/40 hover:text-accent transition-colors mb-12">
             <ArrowLeft className="w-3 h-3" /> Back to Home
           </Link>
@@ -34,7 +34,7 @@ export default function TermsPage() {
       </section>
 
       <section className="py-24">
-        <div className="container mx-auto px-4 md:px-8 max-w-4xl">
+        <div className="container mx-auto px-6 md:px-12 max-w-4xl">
            <div className="prose prose-stone max-w-none prose-headings:font-serif prose-headings:font-bold prose-p:font-light prose-p:leading-relaxed text-foreground/80">
              <p>Welcome to Sinha Sourcing Hub Ltd. By accessing our website, you agree to these terms.</p>
              

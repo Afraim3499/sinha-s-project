@@ -33,7 +33,7 @@ export default function SamplingCoordinationPage() {
       <div className="pt-24 bg-background">
       {/* 1. HERO */}
       <section className="py-24 border-b border-border bg-stone-50">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
           <Link href="/services" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-foreground/40 hover:text-accent transition-colors mb-12">
             <ArrowLeft className="w-3 h-3" /> Back to Services
           </Link>
@@ -59,7 +59,7 @@ export default function SamplingCoordinationPage() {
           <Image src="/category-knitwear.png" alt="Sampling Process" fill className="object-cover scale-105" sizes="100vw" />
           <div className="absolute inset-0 bg-stone-900/60" />
         </div>
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
+        <div className="container mx-auto px-6 md:px-12 relative z-10">
           <div className="mb-16 space-y-4 max-w-2xl">
              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Process Support</span>
              <h2 className="text-3xl md:text-5xl font-serif font-bold italic">How we support the sampling stage</h2>
@@ -86,7 +86,7 @@ export default function SamplingCoordinationPage() {
 
       {/* 3. PROCESS IN ACTION (The Extension) */}
       <section className="py-24 bg-background border-b border-border">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
            <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
               <div className="space-y-4 max-w-2xl">
                  <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Visual Verification</span>
@@ -124,7 +124,7 @@ export default function SamplingCoordinationPage() {
 
       {/* 4. WHY BRANDS NEED THIS */}
       <section className="py-32 bg-background">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-4xl mx-auto text-center space-y-10">
              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Risk Management</span>
              <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight italic">
@@ -139,7 +139,7 @@ export default function SamplingCoordinationPage() {
 
       {/* 4. CTA */}
       <section className="py-32 bg-stone-100 text-center border-t border-border">
-        <div className="container mx-auto px-4 md:px-8 max-w-3xl space-y-10">
+        <div className="container mx-auto px-6 md:px-12 max-w-3xl space-y-10">
            <h2 className="text-3xl md:text-5xl font-serif font-bold italic leading-tight">
              Need support before moving from samples to production?
            </h2>

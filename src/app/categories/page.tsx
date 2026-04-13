@@ -69,7 +69,7 @@ export default function CategoriesPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-stone-950 via-stone-950/20 to-stone-950" />
         </div>
 
-        <div className="container mx-auto px-4 md:px-8 relative z-10 w-full">
+        <div className="container mx-auto px-6 md:px-12 relative z-10 w-full">
           <Link href="/" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-white/40 hover:text-accent transition-colors mb-12 lg:mb-16 relative z-20">
             <ArrowLeft className="w-3 h-3" /> Back to Home
           </Link>
@@ -135,7 +135,7 @@ export default function CategoriesPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent opacity-80" />
                </div>
 
-               <div className="container mx-auto px-4 md:px-8 relative z-10 w-full">
+               <div className="container mx-auto px-6 md:px-12 relative z-10 w-full">
                   <div className={`grid grid-cols-1 lg:grid-cols-12 gap-12 ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
                      
                      {/* Text Block */}
@@ -182,7 +182,7 @@ export default function CategoriesPage() {
            <div className="absolute inset-0 bg-stone-950/60 mix-blend-multiply" />
         </div>
         
-        <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-4xl space-y-10 mt-10">
+        <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-4xl space-y-10 mt-10">
            <MotionSection className="space-y-12">
               <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent block">Strategic Review</span>
               <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold italic leading-tight">

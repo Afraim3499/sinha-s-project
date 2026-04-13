@@ -123,7 +123,7 @@ export default function ProcessPage() {
         </motion.div>
         
         {/* Content Overlay */}
-        <div className="container mx-auto px-4 md:px-8 relative z-10 w-full text-center max-w-6xl">
+        <div className="container mx-auto px-6 md:px-12 relative z-10 w-full text-center max-w-6xl">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -175,7 +175,7 @@ export default function ProcessPage() {
 
       {/* 2. THE INFOGRAPHIC JOURNEY (Transitioning to Light Journey) */}
       <section className="py-32 relative bg-[#fcfbf9]">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
            
            <div className="space-y-32 md:space-y-48">
               {steps.map((step, idx) => (
@@ -294,7 +294,7 @@ export default function ProcessPage() {
       </section>
 
       {/* 3. THE INFOGRAPHIC CTA */}
-      <section className="container mx-auto px-4 md:px-8 mt-48 mb-48">
+      <section className="container mx-auto px-6 md:px-12 mt-48 mb-48">
          <div className="bg-stone-950 rounded-[3rem] md:rounded-[5rem] py-32 md:py-64 px-8 md:px-12 text-center text-white relative overflow-hidden group shadow-[0_64px_128px_rgba(0,0,0,0.3)]">
             <div className="absolute inset-0 opacity-20 contrast-[1.5] grayscale pointer-events-none">
                <Image src="/images/process/technical-overview.png" alt="Sourcing architecture" fill className="object-cover max-md:scale-100 scale-110 group-hover:scale-100 transition-transform duration-[12000ms]" />

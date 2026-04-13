@@ -14,7 +14,7 @@ export default function ConceptDesignPage() {
     <div className="pt-24 bg-background">
       {/* 1. HERO */}
       <section className="py-24 border-b border-border bg-stone-50">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
           <Link href="/services" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-foreground/40 hover:text-accent transition-colors mb-12">
             <ArrowLeft className="w-3 h-3" /> Back to Services
           </Link>
@@ -36,7 +36,7 @@ export default function ConceptDesignPage() {
 
       {/* 2. WHAT WE SUPPORT */}
       <section className="py-32">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-24">
             <div className="lg:col-span-5 space-y-8">
               <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Scope of Work</span>
@@ -66,7 +66,7 @@ export default function ConceptDesignPage() {
 
       {/* 3. WHY IT MATTERS & IMAGE */}
       <section className="py-32 bg-stone-950 text-white relative overflow-hidden">
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
+        <div className="container mx-auto px-6 md:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
              <div className="relative aspect-[4/5] bg-stone-800 overflow-hidden shadow-2xl border border-white/5">
                 <Image 
@@ -92,7 +92,7 @@ export default function ConceptDesignPage() {
 
       {/* 4. CTA */}
       <section className="py-32 bg-stone-100 text-center">
-        <div className="container mx-auto px-4 md:px-8 max-w-3xl space-y-10">
+        <div className="container mx-auto px-6 md:px-12 max-w-3xl space-y-10">
            <h2 className="text-3xl md:text-5xl font-serif font-bold italic leading-tight">
              Looking for help refining your product specifications before production?
            </h2>

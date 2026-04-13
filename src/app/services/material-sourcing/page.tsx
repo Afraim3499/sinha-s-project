@@ -33,7 +33,7 @@ export default function MaterialSourcingPage() {
       <div className="pt-24 bg-background">
       {/* 1. HERO */}
       <section className="py-24 border-b border-border bg-stone-50">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
           <Link href="/services" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-foreground/40 hover:text-accent transition-colors mb-12">
             <ArrowLeft className="w-3 h-3" /> Back to Services
           </Link>
@@ -59,7 +59,7 @@ export default function MaterialSourcingPage() {
           <Image src="/service-materials.png" alt="Materials Background" fill className="object-cover grayscale scale-105" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-stone-900 via-stone-900/90 to-transparent" />
         </div>
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
+        <div className="container mx-auto px-6 md:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-5 space-y-8">
               <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Support Scope</span>
@@ -90,7 +90,7 @@ export default function MaterialSourcingPage() {
 
       {/* 3. WHY IT MATTERS */}
       <section className="py-32">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
              <div className="relative aspect-square lg:aspect-[4/5] bg-stone-100 overflow-hidden shadow-sm border border-border">
                 <Image 
@@ -117,7 +117,7 @@ export default function MaterialSourcingPage() {
 
       {/* 4. CTA */}
       <section className="py-32 bg-stone-100 text-center border-t border-border">
-        <div className="container mx-auto px-4 md:px-8 max-w-3xl space-y-10">
+        <div className="container mx-auto px-6 md:px-12 max-w-3xl space-y-10">
            <h2 className="text-3xl md:text-5xl font-serif font-bold italic leading-tight">
              Looking for support with fabrics, trims, or material planning?
            </h2>

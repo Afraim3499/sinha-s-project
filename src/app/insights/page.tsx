@@ -92,7 +92,7 @@ export default async function InsightsPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-stone-950/40" />
         </div>
 
-        <div className="container mx-auto px-4 md:px-8 relative z-10 w-full md:pb-24">
+        <div className="container mx-auto px-6 md:px-12 relative z-10 w-full md:pb-24">
           {/* Back Link */}
           <Link href="/" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-white/30 hover:text-accent transition-colors mb-12 lg:mb-16 group">
             <ArrowLeft className="w-3 h-3 group-hover:-translate-x-2 transition-transform" /> Back to Home
@@ -178,7 +178,7 @@ export default async function InsightsPage() {
           <Image src="/hero-factory.webp" alt="Insights Background" fill className="object-cover scale-105" sizes="100vw" />
           <div className="absolute inset-0 bg-stone-950/80" />
         </div>
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
+        <div className="container mx-auto px-6 md:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {featuredPathways.map((pathway) => (
               <Link key={pathway.link} href={pathway.link} className="p-10 border border-white/10 bg-white/5 hover:bg-white/[0.08] hover:border-accent/40 transition-all group backdrop-blur-sm">
@@ -196,7 +196,7 @@ export default async function InsightsPage() {
 
       {/* 3. LATEST POSTS & BROWSE (EXPLORER) */}
       <section id="articles-start" className="py-32 bg-background relative">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
           <div className="mb-20">
              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Knowledge Discovery</span>
              <h2 className="text-3xl md:text-5xl font-serif font-bold italic mt-4">Articles & Navigational Guides</h2>
@@ -208,7 +208,7 @@ export default async function InsightsPage() {
 
       {/* 4. CTA */}
       <section className="py-32 bg-stone-950 text-center border-t border-white/5 text-white">
-        <div className="container mx-auto px-4 md:px-8 max-w-3xl space-y-10">
+        <div className="container mx-auto px-6 md:px-12 max-w-3xl space-y-10">
            <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Practical Next Steps</span>
            <h2 className="text-3xl md:text-5xl font-serif font-bold italic leading-tight">
              Looking for answers to specific <br />

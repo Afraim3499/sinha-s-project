@@ -22,7 +22,7 @@ export default function SustainabilityPage() {
 
       {/* 4. VERIFIED INFORMATION CARD (Visual/Editorial Split) */}
       <section className="py-24 md:py-32 bg-white overflow-hidden">
-        <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div className="container mx-auto px-6 md:px-12 max-w-7xl">
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
               
               <div className="relative aspect-square lg:aspect-[4/5] bg-stone-100 rounded-3xl overflow-hidden shadow-2xl group order-2 lg:order-1">
@@ -70,7 +70,7 @@ export default function SustainabilityPage() {
         <div className="absolute top-0 right-0 w-[40%] h-full bg-[radial-gradient(circle_at_50%_30%,rgba(16,185,129,0.04),transparent_70%)] pointer-events-none" />
         <div className="absolute -bottom-24 -left-24 w-[30%] aspect-square bg-[#f59e0b]/[0.02] rounded-full blur-[100px] pointer-events-none" />
         
-        <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
+        <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
             
             <div className="lg:col-span-5 space-y-12">
@@ -175,7 +175,7 @@ export default function SustainabilityPage() {
             <span className="text-[20rem] md:text-[30rem] lg:text-[40rem] font-bold text-black/[0.02] tracking-tighter uppercase leading-none">FAQS</span>
          </div>
 
-         <div className="container mx-auto px-4 md:px-8 relative z-10 w-full max-w-7xl">
+         <div className="container mx-auto px-6 md:px-12 relative z-10 w-full max-w-7xl">
             <div className="text-center mb-24 max-w-3xl mx-auto space-y-6">
                <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-emerald-500 block px-4 py-2 bg-emerald-500/5 rounded-full border border-emerald-500/10 w-fit mx-auto">Responsibility Q&A</span>
                <h2 className="text-4xl md:text-6xl font-serif font-bold italic leading-tight text-stone-900">Ethical Sourcing & Compliance</h2>
@@ -231,7 +231,7 @@ export default function SustainabilityPage() {
          {/* Overlays for textual pop */}
          <div className="absolute inset-0 bg-stone-950/20 max-md:backdrop-blur-none backdrop-blur-[1px] group-hover:backdrop-blur-none transition-all duration-1000" />
          
-         <div className="container mx-auto px-4 md:px-8 relative z-10 text-center space-y-10">
+         <div className="container mx-auto px-6 md:px-12 relative z-10 text-center space-y-10">
             <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-emerald-400 drop-shadow-lg block">Take Action</span>
             <h2 className="text-3xl md:text-6xl font-serif font-bold italic leading-tight text-white max-w-4xl mx-auto drop-shadow-2xl">
               Need sourcing support that takes responsibility seriously?

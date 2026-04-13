@@ -77,7 +77,7 @@ export default function ServicesPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-stone-950 via-stone-950/40 to-stone-950" />
         </div>
 
-        <div className="container mx-auto px-4 md:px-8 relative z-10 w-full">
+        <div className="container mx-auto px-6 md:px-12 relative z-10 w-full">
           <div className="max-w-4xl space-y-12">
             <motion.div 
                initial={{ opacity: 0, y: 20 }}
@@ -125,7 +125,7 @@ export default function ServicesPage() {
          {/* Subtle Glow */}
          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
          
-         <div className="container mx-auto px-4 md:px-8 relative z-10">
+         <div className="container mx-auto px-6 md:px-12 relative z-10">
             <MotionSection className="max-w-3xl mx-auto space-y-8">
                <h2 className="text-3xl md:text-5xl font-serif font-bold italic">Bringing structure to global sourcing.</h2>
                <div className="space-y-6 text-white/60 text-lg lg:text-xl leading-relaxed font-light">
@@ -142,7 +142,7 @@ export default function ServicesPage() {
 
       {/* 3. OVERVIEW OF SERVICES (Sticky Scroll Layout) */}
       <section className="py-24 lg:py-32 bg-stone-950 relative">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-6 md:px-12">
            <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 relative items-start">
               
               {/* Sticky Left Column: Overarching Title */}
@@ -219,7 +219,7 @@ export default function ServicesPage() {
       <section className="py-24 lg:py-32 bg-stone-950 text-white border-t border-white/5 relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(180,140,80,0.03),transparent_70%)] pointer-events-none" />
         
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
+        <div className="container mx-auto px-6 md:px-12 relative z-10">
           <MotionSection className="mb-16 md:mb-20 space-y-4 max-w-3xl text-center md:text-left">
             <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Audience</span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight">A partner for <br className="md:hidden" /><span className="italic font-normal text-white/60">disciplined brands.</span></h2>
@@ -259,7 +259,7 @@ export default function ServicesPage() {
            <div className="absolute inset-0 bg-stone-950/60 mix-blend-multiply" />
         </div>
         
-        <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-4xl">
+        <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-4xl">
           <MotionSection className="space-y-12">
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight italic">
               Not sure where your project fits?
