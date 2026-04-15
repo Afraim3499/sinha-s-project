@@ -42,7 +42,7 @@ const HERO_SLIDES = [
     gradient: "bg-gradient-to-l from-black/60 via-black/10 to-transparent"
   },
   {
-    src: "/hero-qc-south-asian.webp",
+    src: "/hero-real-qc.jpg",
     alt: "Quality control specialist inspecting finished apparel",
     eyebrow: "Quality & Compliance",
     heading: "Verification throughout \nthe process.",
@@ -165,7 +165,7 @@ export default function HomePage() {
                      fill
                      priority={idx <= 1}
                      sizes="100vw"
-                     className="object-cover"
+                     className="object-cover object-center"
                    />
                  )}
                 <div className={`absolute inset-0 ${slide.gradient} pointer-events-none`} />
@@ -187,8 +187,8 @@ export default function HomePage() {
               className="absolute inset-0"
             >
               <div className="container mx-auto px-6 md:px-12 h-full flex flex-col justify-between py-24 md:py-32">
-                {/* REMOVED TOP MARKERS & EYEBROWS FOR CLEANER LOOK */}
-                <div />
+                {/* OPTIMIZED PADDING FOR CENTERED LOOK WITHOUT THE TOP SPACER */}
+                <div className="h-0" />
 
                 {/* CENTRAL DESIGN HUB (MINIMALIST EDITORIAL) */}
                 <div className="w-full pointer-events-auto text-right flex flex-col items-end">
@@ -207,7 +207,7 @@ export default function HomePage() {
                 </div>
 
                 {/* BOTTOM SUBTITLE (FILM STYLE) */}
-                <div className="flex justify-end items-end pt-6 pb-20 md:pb-8">
+                <div className="flex justify-end items-end pt-6 pb-12">
                    <motion.p 
                      key={`sub-${idx}`}
                      initial={{ opacity: 0, x: 10 }}

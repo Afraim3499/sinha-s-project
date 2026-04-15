@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Factory, FileSearch, ShieldCheck, Clock } from "lucide-react"
+import { Factory, FileSearch, ShieldCheck, Clock, LineChart, Globe } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { MotionSection } from "@/components/ui/motion-section"
@@ -29,7 +29,7 @@ export default function AboutPage() {
               <span className="italic font-normal">design intent to delivered product.</span>
             </h1>
             <p className="text-xl md:text-2xl text-foreground/60 leading-relaxed font-light max-w-2xl mx-auto border-t border-accent/10 pt-10">
-              Sinha Sourcing Hub Ltd is a UK-headquartered product development and sourcing partner. We help brands build better supply chains across Bangladesh, wider South Asia, and China.
+              Sinha Sourcing Hub Ltd is a UK-based Global Sourcing & Product Development Partner. Built on 25+ years of combined industry experience, we connect global brands with trusted manufacturing partners across Bangladesh and Asia.
             </p>
           </MotionSection>
         </div>
@@ -63,14 +63,14 @@ export default function AboutPage() {
             <MotionSection delay={0.2} className="space-y-12">
               <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Heritage</span>
               <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight">
-                Built on trade heritage, <br className="hidden lg:block"/> shaped by <span className="italic font-normal">hands-on product understanding.</span>
+                25+ Years of experience, <br className="hidden lg:block"/> shaped by <span className="italic font-normal">hands-on product understanding.</span>
               </h2>
               <div className="space-y-6 text-foreground/70 leading-relaxed text-lg font-light">
                 <p>
-                  We come from a background rooted in a family trading heritage connected to Bangladesh&apos;s jute industry—historically known as the &ldquo;Golden Fiber&rdquo; for its role in the global textile trade.
+                  We bring together over 25 years of combined industry experience rooted in a family trading heritage connected to Bangladesh&apos;s jute industry—historically known as the &ldquo;Golden Fiber&rdquo; for its role in the global textile trade.
                 </p>
                 <p>
-                  Today, our business operates between the UK and key manufacturing hubs in Asia. We bring together a deep understanding of multi-disciplinary supply chain operations, financial strategy, and <Link href="/process" className="text-foreground hover:text-accent font-medium underline decoration-border/50 underline-offset-4 transition-colors">hands-on product execution</Link>.
+                  Today, our business operates between the UK and key manufacturing hubs in Asia. We provide A–Z sourcing support from concept development to bulk shipment, bringing a deep understanding of multi-disciplinary supply chain operations, financial strategy, and <Link href="/process" className="text-foreground hover:text-accent font-medium underline decoration-border/50 underline-offset-4 transition-colors">hands-on product execution</Link>.
                 </p>
                 <p>
                   We grew up understanding what actual factory floors look like, how negotiations work, and where delays usually happen. We use that experience to give brands a more reliable way to manage development and production.
@@ -112,12 +112,14 @@ export default function AboutPage() {
             <h2 className="text-4xl md:text-5xl font-serif font-bold">What <span className="italic font-normal">We Bring.</span></h2>
           </MotionSection>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border/40 border border-border/40">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border/40 border border-border/40">
             {[
-              { title: "Industrial Alignment", desc: "Matching product categories with the right manufacturing facility.", icon: <Factory className="w-5 h-5" /> },
-              { title: "Development Clarity", desc: "Helping brands refine instructions, tech packs, and sampling.", icon: <FileSearch className="w-5 h-5" /> },
-              { title: "Quality Discipline", desc: "Coordinating structured inspections and compliance requirements.", icon: <ShieldCheck className="w-5 h-5" /> },
-              { title: "Execution Focus", desc: "Managing timelines, communication, and delivery readiness.", icon: <Clock className="w-5 h-5" /> }
+              { title: "Reliable Factory Network", desc: "Access to a vetted Bangladesh and Asian manufacturing network aligned with your specific category.", icon: <Globe className="w-5 h-5" /> },
+              { title: "Development Clarity", desc: "Helping brands refine instructions, tech packs, and sampling to ensure concept matches production.", icon: <FileSearch className="w-5 h-5" /> },
+              { title: "Quality & Compliance", desc: "Structured quality discipline, mid-line inspections, and rigorous compliance management support.", icon: <ShieldCheck className="w-5 h-5" /> },
+              { title: "Commercial Advantage", desc: "Focusing on competitive pricing models and cost-effective material sourcing without compromising quality.", icon: <LineChart className="w-5 h-5" /> },
+              { title: "Execution & Delivery", desc: "Managing timelines, project communication, and on-time bulk delivery readiness.", icon: <Clock className="w-5 h-5" /> },
+              { title: "Technical Heritage", desc: "Leveraging 25+ years of combined experience in product development and factory floor management.", icon: <Factory className="w-5 h-5" /> }
             ].map((skill) => (
               <MotionSection key={skill.title} delay={0.1} className="bg-white p-10 space-y-8 group hover:bg-stone-100 transition-colors">
                 <div className="w-12 h-12 flex items-center justify-center border border-border/50 text-accent group-hover:scale-110 transition-transform duration-500">
@@ -220,7 +222,15 @@ export default function AboutPage() {
                     "name": "Which product categories do you specialize in sourcing?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "We focus our expertise on key consumer goods: structured apparel, complex footwear, durable bags, premium home textiles, and verified eco-products. We align each category with highly capable, vetted manufacturers."
+                      "text": "We focus our expertise on key categories: structured apparel, accessories, footwear & leather, bags & travel luggage, home textiles, and jute & eco-products. We align each category with highly capable, vetted manufacturers."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Does Sinha Sourcing Hub manage the entire process?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes, we provide A–Z sourcing support, meaning we manage everything from initial concept development and tech packs to quality control, compliance management, and final bulk shipment."
                     }
                   },
                   {
@@ -247,11 +257,11 @@ export default function AboutPage() {
                  },
                  {
                    q: "Which product categories do you specialize in sourcing?",
-                   a: "We focus our expertise on key consumer goods: structured apparel, complex footwear, durable bags, premium home textiles, and verified eco-products. We align each category with highly capable, vetted manufacturers."
+                   a: "We support a wide range of goods including Apparel, Accessories, Bags & Travel Luggage, Footwear & Leather, Home Textiles, and Eco-friendly Jute products."
                  },
                  {
-                   q: "Why is the development stage critical for bulk production?",
-                   a: "Most manufacturing delays stem from unclear development. By clarifying tech packs, identifying material risks, and perfecting sampling upfront, we reduce avoidable errors and ensure smoother bulk production."
+                   q: "Do you offer A-Z sourcing support?",
+                   a: "Yes, we provide comprehensive support from concept development and tech pack creation to competitive pricing negotiation, production management, and bulk shipment."
                  }
                 ].map((faq) => (
                   <MotionSection key={faq.q} delay={0.1} className="bg-stone-50 p-8 md:p-10 border border-border/50 hover:bg-stone-100 transition-colors">
