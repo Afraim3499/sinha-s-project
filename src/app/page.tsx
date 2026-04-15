@@ -30,7 +30,8 @@ const HERO_SLIDES = [
     heading: "Matching capability \nto requirements.",
     subheading: "Identifying and aligning suitable manufacturing partners based on your specific quality and scale.",
     align: "right",
-    gradient: "bg-gradient-to-l from-black/60 via-black/10 to-transparent"
+    gradient: "bg-gradient-to-l from-black/60 via-black/10 to-transparent",
+    imageClass: "max-md:object-[35%_center] md:object-center"
   },
   {
     src: "/hero-materials.webp",
@@ -57,7 +58,8 @@ const HERO_SLIDES = [
     heading: "Controlled handover \nof goods.",
     subheading: "Coordinating documentation and delivery readiness so execution remains organized to the end.",
     align: "right",
-    gradient: "bg-gradient-to-l from-black/60 via-black/10 to-transparent"
+    gradient: "bg-gradient-to-l from-black/60 via-black/10 to-transparent",
+    imageClass: "max-md:object-[45%_center] md:object-center"
   },
   {
     type: "collage",
@@ -72,6 +74,7 @@ const HERO_SLIDES = [
 ]
 
 import { CapabilityBoard } from "@/components/ui/capability-board"
+import { CinematicShowcase } from "@/components/ui/cinematic-showcase"
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = React.useState(0)
@@ -134,14 +137,14 @@ export default function HomePage() {
                      </div>
                     {/* Denim Sourcing (New Variation) */}
                     <div className="col-span-1 md:col-span-4 row-span-1 relative overflow-hidden group">
-                       <Image src="/images/apparel/denim-pants-1.jpg" alt="Denim Sourcing" fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
+                       <Image src="/images/apparel/denim-pants-1.jpg" alt="Denim Sourcing" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-110 transition-transform duration-1000" />
                        <div className="absolute bottom-4 left-4">
                           <p className="text-[8px] font-bold uppercase tracking-widest text-white/60">Cat_04 // Denim</p>
                        </div>
                     </div>
                     {/* Casual Sourcing (New Variation) */}
                     <div className="col-span-1 md:col-span-2 row-span-1 relative overflow-hidden group">
-                       <Image src="/images/apparel/casual-clothing-1.jpg" alt="Casual Clothing Range" fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
+                       <Image src="/images/apparel/casual-clothing-1.jpg" alt="Casual Clothing Range" fill sizes="(max-width: 768px) 100vw, 25vw" className="object-cover group-hover:scale-110 transition-transform duration-1000" />
                        <div className="absolute bottom-4 left-4">
                           <p className="text-[8px] font-bold uppercase tracking-widest text-white/60">Cat_05 // Casual</p>
                        </div>
@@ -165,7 +168,7 @@ export default function HomePage() {
                      fill
                      priority={idx <= 1}
                      sizes="100vw"
-                     className="object-cover object-center"
+                     className={`object-cover ${'imageClass' in slide && typeof slide.imageClass === 'string' ? slide.imageClass : 'object-center'}`}
                    />
                  )}
                 <div className={`absolute inset-0 ${slide.gradient} pointer-events-none`} />
@@ -230,6 +233,7 @@ export default function HomePage() {
                 key={`indicator-${idx}`}
                 onClick={() => setCurrentSlide(idx)}
                 className="group relative"
+                style={{ position: "relative" }}
                 aria-label={`Go to slide ${idx + 1}`}
               >
                 <div className={`relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border transition-all duration-700 ${currentSlide === idx ? 'border-accent scale-110 ring-2 ring-accent/20' : 'border-white/10 scale-90 opacity-40 hover:opacity-100 hover:scale-100'}`}>
@@ -245,13 +249,17 @@ export default function HomePage() {
                 {currentSlide === idx && (
                   <motion.div 
                     layoutId="hero-active-pill"
-                    className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-accent rounded-full"
+                    className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full"
+                    style={{ position: "absolute", backgroundColor: "#c89454" }}
                   />
                 )}
               </button>
            ))}
         </div>
       </section>
+
+      {/* 1.5 CINEMATIC SHOWCASE (VIDEO) */}
+      <CinematicShowcase />
 
       {/* 2. CAPABILITY INFOGRAPHIC */}
       <section className="py-24 lg:py-32 bg-[#0a0a0a] text-white border-b border-white/5 relative overflow-hidden">

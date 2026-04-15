@@ -36,13 +36,16 @@ export const MusicProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const sourceRef = useRef<MediaElementAudioSourceNode | null>(null)
   const rafRef = useRef<number | null>(null)
 
-  const initAudio = () => {
+  const initAudio = async () => {
     if (isInitialized) {
       if (audioRef.current && !isPlaying && !isManualPause) {
-        audioContextRef.current?.resume().then(() => {
-          audioRef.current?.play()
+        try {
+          await audioContextRef.current?.resume()
+          await audioRef.current?.play()
           setIsPlaying(true)
-        })
+        } catch (e) {
+          // Fail silently
+        }
       }
       return
     }
@@ -67,16 +70,17 @@ export const MusicProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
     setIsInitialized(true)
     
-    context.resume().then(() => {
-      audio.play().then(() => {
-        setIsPlaying(true)
-      }).catch(err => {
-        console.warn("Autoplay blocked, waiting for interaction", err)
-      })
-    })
+    try {
+      await context.resume()
+      await audio.play()
+      setIsPlaying(true)
+    } catch (err) {
+      // Autoplay blocked - browser requires more definite interaction
+    }
+  }
 
-    const updateBeat = () => {
-      if (!analyserRef.current || !audioRef.current) {
+  const updateBeat = () => {
+    if (!analyserRef.current || !audioRef.current) {
         rafRef.current = requestAnimationFrame(updateBeat)
         return
       }
@@ -101,42 +105,54 @@ export const MusicProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       const averageBass = bassRange.reduce((a, b) => a + b, 0) / bassRange.length
       const factor = Math.min(Math.max((averageBass - 100) / 100, 0), 1)
       setBeatFactor(factor)
-
       rafRef.current = requestAnimationFrame(updateBeat)
     }
 
-    rafRef.current = requestAnimationFrame(updateBeat)
-  }
+  // Kickstart loop on init success
+  useEffect(() => {
+    if (isInitialized && !rafRef.current) {
+      rafRef.current = requestAnimationFrame(updateBeat)
+    }
+  }, [isInitialized])
+  const tryingToInitRef = useRef(false)
 
   useEffect(() => {
-    const handleGesture = () => {
-      initAudio()
-      // Once initialized and playing, we can remove these
-      // if (isInitialized && isPlaying) { // This condition was removed as per the instruction
-      //   window.removeEventListener("scroll", handleGesture)
-      //   window.removeEventListener("click", handleGesture)
-      //   window.removeEventListener("mousedown", handleGesture)
-      //   window.removeEventListener("touchstart", handleGesture)
-      // }
+    const handleGesture = async () => {
+      if (isManualPause || tryingToInitRef.current || isPlaying) return
+      
+      tryingToInitRef.current = true
+      try {
+        await initAudio()
+        // If it worked, we have isPlaying as true now (or soon)
+      } catch (e) {
+        // Silently catch to avoid console spam
+      } finally {
+        tryingToInitRef.current = false
+      }
     }
 
-    window.addEventListener("scroll", handleGesture, { passive: true })
-    window.addEventListener("click", handleGesture)
-    window.addEventListener("mousedown", handleGesture)
-    window.addEventListener("touchstart", handleGesture)
+    const removeListeners = () => {
+      window.removeEventListener("touchstart", handleGesture)
+      window.removeEventListener("mousedown", handleGesture)
+      window.removeEventListener("keydown", handleGesture)
+      window.removeEventListener("pointerdown", handleGesture)
+      window.removeEventListener("click", handleGesture)
+    }
 
-    // Also attempt immediate (for browsers that allow it)
-    initAudio()
+    // Modern browsers ONLY allow AudioContext to start on these specific "Interaction" events.
+    // 'scroll' and 'wheel' are NOT valid gestures and will only cause console errors.
+    // 'touchstart' covers the start of a scroll interaction on mobile.
+    window.addEventListener("touchstart", handleGesture, { passive: true })
+    window.addEventListener("mousedown", handleGesture, { passive: true })
+    window.addEventListener("keydown", handleGesture, { passive: true })
+    window.addEventListener("pointerdown", handleGesture, { passive: true })
+    window.addEventListener("click", handleGesture, { passive: true })
 
     return () => {
-      window.removeEventListener("scroll", handleGesture)
-      window.removeEventListener("click", handleGesture)
-      window.removeEventListener("mousedown", handleGesture)
-      window.removeEventListener("touchstart", handleGesture)
+      removeListeners()
       if (rafRef.current) cancelAnimationFrame(rafRef.current)
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isInitialized, isPlaying])
+  }, [isInitialized, isPlaying, isManualPause])
 
   useEffect(() => {
     if (audioRef.current) {
