@@ -37,7 +37,7 @@ export default function CategoriesPage() {
       title: "Home Textiles",
       desc: "Home textile categories require consistency, material suitability, and dependable production control. We support selected home textile sourcing and development needs where execution and quality are central.",
       cta: "Discuss a Home Textiles Project",
-      img: "/ladies-knitwear-premium.png",
+      img: "/home-category-home.png",
       tag: "Category / 04",
       href: "/contact"
     },
@@ -45,7 +45,7 @@ export default function CategoriesPage() {
       title: "Eco Products",
       desc: "For brands exploring more responsible or lower-impact product directions, material choice and supply chain alignment matter. We support eco-product development and sourcing with a practical, evidence-led mindset.",
       cta: "Discuss an Eco Product Project",
-      img: "/service-sustainability.png",
+      img: "/home-category-eco.png",
       tag: "Category / 05",
       href: "/contact"
     }

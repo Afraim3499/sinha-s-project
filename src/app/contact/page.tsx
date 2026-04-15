@@ -107,8 +107,8 @@ export default function ContactPage() {
                        <h3 className="text-xl font-serif font-bold italic">Email</h3>
                        <div className="flex items-center gap-4 text-foreground/70 font-light">
                           <Mail className="w-4 h-4 shrink-0" />
-                          <a href="mailto:projects@sinhasourcinghub.com" className="hover:text-accent transition-colors">
-                             projects@sinhasourcinghub.com
+                          <a href="mailto:info@sinhasourcinghub.com" className="hover:text-accent transition-colors">
+                             info@sinhasourcinghub.com
                           </a>
                        </div>
                     </div>

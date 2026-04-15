@@ -32,7 +32,7 @@ const APPAREL_CATEGORIES = [
   },
   {
     title: "Specialized Segments",
-    items: ["Child Cloths", "Jackets", "Outerwear"],
+    items: ["Childrenswear", "Jackets", "Outerwear"],
     desc: "Niche production requirements for safety compliance (kids) and weather-resistant finishing.",
     icon: <Factory className="w-5 h-5 text-accent" />,
     images: ["/category-childrens-wear.png", "/outerwear-jacket-premium.png"]

@@ -124,7 +124,7 @@ export default async function InsightsPage() {
                   <div className="text-[10px] uppercase tracking-widest text-white/30 mt-1">Topic Categories</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-serif font-bold text-accent">5+</div>
+                  <div className="text-3xl md:text-4xl font-serif font-bold text-accent">25+</div>
                   <div className="text-[10px] uppercase tracking-widest text-white/30 mt-1">Years Experience</div>
                 </div>
               </div>
