@@ -11,7 +11,20 @@ export const FloatingMusicButton: React.FC = () => {
   if (!isInitialized) return null
 
   return (
-    <div className="fixed bottom-6 right-6 z-[60] flex items-center justify-center pointer-events-auto">
+    <div className="fixed bottom-6 right-6 z-[60] flex flex-col items-center justify-center pointer-events-auto">
+      <AnimatePresence mode="wait">
+        <motion.span 
+          key={isPlaying ? "playing" : "paused"}
+          initial={{ opacity: 0, y: 5 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -5 }}
+          transition={{ duration: 0.2 }}
+          className="text-[8px] font-bold uppercase tracking-[0.2em] text-white/40 mb-2 md:hidden pointer-events-none select-none"
+        >
+          {isPlaying ? "Turn Off Music" : "Play Music"}
+        </motion.span>
+      </AnimatePresence>
+
       <motion.button
         onClick={togglePlay}
         initial={{ opacity: 0, scale: 0.8 }}
