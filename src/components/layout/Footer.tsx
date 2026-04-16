@@ -82,7 +82,7 @@ export function Footer() {
                 {[
                   { name: "Services", href: "/services" },
                   { name: "Product Categories", href: "/categories" },
-                  { name: "Our Manifesto", href: "/manifesto" },
+                  { name: "Our Story", href: "/story" },
                   { name: "Process", href: "/process" },
                   { name: "About Us", href: "/about" },
                   { name: "Sustainability", href: "/sustainability" },

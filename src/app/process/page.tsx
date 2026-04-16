@@ -39,7 +39,7 @@ export default function ProcessPage() {
       subtitle: "Project Review",
       desc: "We begin with a deep-dive into your brand's DNA, category requirements, and commercial objectives. We identify constraints early to ensure a viable path forward.",
       details: "Our discovery phase involves a series of technical consultations where we audit your current supply chain bottlenecks and define the exact 'Success Criteria' for the upcoming production cycles. We look at historical data, material availability, and speed-to-market requirements.",
-      dna: ["Category Review", "Budget Scoping", "Timeline Mapping", "Technical Handover"],
+      dna: ["Category Review", "Strategic Scoping", "Timeline Mapping", "Technical Handover"],
       icon: <Search className="w-6 h-6" />,
       color: "emerald"
     },
@@ -49,7 +49,7 @@ export default function ProcessPage() {
       subtitle: "Development Planning",
       desc: "Mapping the operational architecture. We organise material sourcing, tech pack refinement, and sample priorities before a single stitch is made.",
       details: "The blueprint phase is where we translate your vision into a production-ready manifest. We finalize the Bill of Materials (BOM), lock in the lead times for raw materials, and establish the 'Critical Path' that all stakeholders will follow.",
-      dna: ["Tech Pack Validation", "Material Vetting", "MoQ Optimisation", "Risk Mitigation"],
+      dna: ["Tech Pack Validation", "Material Vetting", "Volume Optimisation", "Risk Mitigation"],
       icon: <Settings className="w-6 h-6" />,
       color: "blue"
     },
@@ -66,10 +66,10 @@ export default function ProcessPage() {
     {
       num: "04",
       title: "Precision Prototyping",
-      subtitle: "Sampling & Costing",
-      desc: "The transition from concept to physical form. We coordinate iterative samples and bulk costing to ensure quality and commercial viability are perfectly balanced.",
-      details: "Sampling is the ultimate proof of concept. Our technicians work directly with pattern makers to ensure the 'hand-feel' and fit are exactly as intended. We perform cost-engineering at this stage to ensure your margin targets are met without compromising build quality.",
-      dna: ["Proto/SMS Support", "Bulk Quote Finalisation", "Lab Dips & Testing", "Trim Selection"],
+      subtitle: "Sampling & Development",
+      desc: "The transition from concept to physical form. We coordinate iterative samples and development reviews to ensure quality and commercial viability are perfectly balanced.",
+      details: "Sampling is the ultimate proof of concept. Our technicians work directly with pattern makers to ensure the 'hand-feel' and fit are exactly as intended. We perform development refinement at this stage to ensure your brand requirements are met without compromising build quality.",
+      dna: ["Proto/SMS Support", "Final Specification Alignment", "Lab Dips & Testing", "Trim Selection"],
       icon: <PencilRuler className="w-6 h-6" />,
       color: "purple"
     },
@@ -77,8 +77,8 @@ export default function ProcessPage() {
       num: "05",
       title: "Production Oversight",
       subtitle: "Oversight & Quality",
-      desc: "Active human oversight. We monitor production cycles and perform rigorous quality inspections (AQL 2.5/4.0) to ensure the bulk matches the gold seal sample.",
-      details: "Our inspectors are your eyes on the ground. We perform During Production (DUPRO) and Final Random Inspections (FRI). Any deviation from the 'Gold Seal' sample is flagged and corrected immediately, ensuring a 99%+ quality pass rate.",
+      desc: "Active human oversight. We monitor production cycles and perform rigorous quality inspections (AQL) to ensure the bulk matches the gold seal sample.",
+      details: "Our inspectors are your eyes on the ground. We perform During Production (DUPRO) and Final Random Inspections (FRI). Any deviation from the 'Gold Seal' sample is flagged and corrected immediately, ensuring a high quality pass rate.",
       dna: ["Inline Inspection", "Final QC Check", "AQL Standards", "Status Updates"],
       icon: <Eye className="w-6 h-6" />,
       color: "amber"
@@ -204,8 +204,8 @@ export default function ProcessPage() {
                            {step.subtitle}
                         </h2>
                         <h3 className="text-4xl md:text-7xl font-serif font-bold text-stone-950 tracking-tight">
-                          <span className="lg:hidden text-stone-200 mr-4 font-black italic">{step.num}</span>
-                          {step.title}
+                           <span className="lg:hidden text-stone-200 mr-4 font-black italic">{step.num}</span>
+                           {step.title}
                         </h3>
                       </div>
                       

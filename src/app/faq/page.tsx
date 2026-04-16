@@ -16,11 +16,11 @@ export default function FAQPage() {
   const categories = [
     { id: "sourcing", title: "Global Sourcing & Factories" },
     { id: "development", title: "Product Development & Sampling" },
-    { id: "production", title: "Manufacturing & MOQs" },
+    { id: "production", title: "Manufacturing & Scale" },
     { id: "quality", title: "Quality Control & Compliance" },
     { id: "logistics", title: "Logistics & Lead Times" },
     { id: "sustainability", title: "Sustainability & Ethical Sourcing" },
-    { id: "pricing", title: "Pricing & Commercials" }
+    { id: "commercial", title: "Commercial Strategy" }
   ]
 
   const faqs = [
@@ -87,22 +87,22 @@ export default function FAQPage() {
     {
       category: "production",
       q: "What are your standard Minimum Order Quantities (MOQs)?",
-      a: "MOQs are dictated by the factory tier and material requirements. For basic apparel, MOQs often begin at 1,000–2,500 units per style. For specialized or premium products, we can often negotiate lower volumes (300–500 units) with our boutique partners."
+      a: "MOQs are dictated by the factory tier and material requirements. We support both large-scale production for established retailers and specialized volumes for premium boutique brands. Specific minimums are negotiated based on your category."
     },
     {
       category: "production",
       q: "Do you handle small-batch production for boutique brands?",
-      a: "Yes. While our core business is scale-based, we maintain a 'Boutique Pipeline' for premium brands that require high craftsmanship in smaller volumes (MOQs starting around 300 units)."
+      a: "Yes. While our core business is scale-based, we maintain a 'Boutique Pipeline' for premium brands that require high craftsmanship in smaller volumes."
     },
     {
       category: "production",
       q: "What is your typical bulk production lead time?",
-      a: "Bulk production typically ranges from 60 to 90 days after PP sample approval. This includes 30-45 days for material procurement and 25-45 days for actual cutting, sewing, and finishing."
+      a: "Bulk production lead times depend on material procurement and seasonal capacity. We work with brands to establish a 'Critical Path' that ensures on-time delivery for their specific retail window."
     },
     {
       category: "production",
       q: "How do you manage production during peak holidays?",
-      a: "We forecast capacity 6-12 months in advance. By securing 'reserved lines' with our key factories well before peak seasons (like pre-Eid or pre-CNY), we ensure our clients' delivery slots are protected."
+      a: "We forecast capacity months in advance. By securing 'reserved lines' with our key factories well before peak seasons, we ensure our clients' delivery slots are protected."
     },
     {
       category: "production",
@@ -114,12 +114,12 @@ export default function FAQPage() {
     {
       category: "quality",
       q: "What is your QC inspection standard?",
-      a: "We primarily utilize the AQL 2.5/4.0 standard (Acceptable Quality Level) for bulk shipments. However, we can perform 100% inspection for high-value items or boutique projects that require an even higher degree of security."
+      a: "We primarily utilize the AQL (Acceptable Quality Level) standard for bulk shipments. However, we can perform 100% inspection for high-value items or boutique projects that require an even higher degree of security."
     },
     {
       category: "quality",
       q: "Do you provide third-party lab testing for materials?",
-      a: "Yes. We coordinate with accredited laboratories (like SGS, ITS, or BV) to perform fiber analysis, color fastness tests, shrinkage tests, and chemical safety checks (REACH/CPSIA)."
+      a: "Yes. We coordinate with accredited laboratories (like SGS, ITS, or BV) to perform fiber analysis, color fastness tests, shrinkage tests, and chemical safety checks."
     },
     {
       category: "quality",
@@ -129,19 +129,19 @@ export default function FAQPage() {
     {
       category: "quality",
       q: "How do you maintain quality in large-scale runs?",
-      a: "Consistency is maintained through strict in-line checkpoints at every 10% of the production run. This allows our hub leads to catch and correct any deviation in stitching, tension, or finishing early, rather than waiting for final inspection."
+      a: "Consistency is maintained through strict in-line checkpoints at key intervals of the production run. This allows our hub leads to catch and correct any deviation in stitching, tension, or finishing early."
     },
     {
       category: "quality",
       q: "Do you verify fabric composition and weight (GSM)?",
-      a: "Yes. Every bulk fabric lot is tested for weight (GSM), width, and shrinkage before cutting. This ensures the handfeel and performance of the final garment match the approved development samples."
+      a: "Yes. Every bulk fabric lot is tested for weight, width, and shrinkage before cutting. This ensures the handfeel and performance of the final garment match the approved development samples."
     },
 
     // LOGISTICS
     {
       category: "logistics",
       q: "What are your standard shipping terms (Incoterms)?",
-      a: "We primarily operate on FOB (Free on Board) terms, where we manage production up to the port of origin. However, we can also offer Ex-Works (EXW) or assist in coordinating DDP for specific regions."
+      a: "We primarily operate on FOB (Free on Board) terms, where we manage production up to the port of origin. However, we can also offer Ex-Works (EXW) or assist in coordinating specialized terms for specific regions."
     },
     {
       category: "logistics",
@@ -151,7 +151,7 @@ export default function FAQPage() {
     {
       category: "logistics",
       q: "Can you help with customs and tariff classifications?",
-      a: "Yes. We can provide HS codes for your products and advise on regional trade agreements (like GSP or EBA) that might reduce import duties."
+      a: "Yes. We can provide HS codes for your products and advise on regional trade agreements that might reduce import duties."
     },
     {
       category: "logistics",
@@ -168,7 +168,7 @@ export default function FAQPage() {
     {
       category: "sustainability",
       q: "Which environmental certifications can you verify?",
-      a: "We can help source and verify products with GOTS (Organic), GRS (Recycled), OEKO-TEX Standard 100, and FSC certifications. We ensure that every claim is backed by a valid Transaction Certificate (TC)."
+      a: "We can help source and verify products with organic, recycled, and eco-certified standards. We ensure that every claim is backed by a valid Transaction Certificate (TC)."
     },
     {
       category: "sustainability",
@@ -178,44 +178,44 @@ export default function FAQPage() {
     {
       category: "sustainability",
       q: "Is your supply chain fully transparent?",
-      a: "We offer 'Tier 1' transparency as standard and can provide 'Tier 2' (the fabric mill) and 'Tier 3' (the yarn/fiber source) transparency for brands that require deep traceability."
+      a: "We offer high-level transparency as standard and can provide deeper traceability into the material or fiber source for brands with specific documentation requirements."
     },
     {
       category: "sustainability",
       q: "How do you verify the authenticity of recycled content?",
-      a: "Every recycled lot is cross-checked with Global Recycled Standard (GRS) documentation. We track the Transaction Certificates from the fiber generator to the final garment factory."
+      a: "Every recycled lot is cross-checked with certified documentation. We track the Transaction Certificates from the fiber generator to the final garment factory."
     },
     {
       category: "sustainability",
       q: "Do you work with water-saving dyeing and finishing facilities?",
-      a: "Yes. We prioritize facilities using low-liquor-ratio machines, EIM (Environmental Impact Measuring) software for denim, and closed-loop water treatment systems to minimize effluent discharge."
+      a: "Yes. We prioritize facilities using low-liquor-ratio machines and closed-loop water treatment systems to minimize environmental impact."
     },
 
-    // PRICING
+    // COMMERCIAL
     {
-      category: "pricing",
-      q: "How do you structure your sourcing fees?",
-      a: "Depending on the project's scale and consistency, we operate on either a commission-based model (on FOB value) or a flat project management fee. We discuss and fix this structure early in our engagement."
+      category: "commercial",
+      q: "How do you structure your engagement?",
+      a: "Our engagement structure is tailored to the project's scale and consistency. We discuss and finalize the most efficient model for your brand early in our consultation process."
     },
     {
-      category: "pricing",
-      q: "Do you provide 'Open Costing'?",
-      a: "Yes. For our strategic partners, we operate on a transparent 'Open Book' basis. You see the breakdown of raw materials, CM (Cut & Make), and our management overhead."
+      category: "commercial",
+      q: "Do you provide transparent costing?",
+      a: "Yes. For our strategic partners, we operate on a transparent basis, reviewing the breakdown of materials and manufacturing inputs to ensure alignment with your brand's growth targets."
     },
     {
-      category: "pricing",
-      q: "What are your standard payment terms?",
-      a: "Standard terms for production are often 30% deposit with the balance payable upon OQC (Final Inspection) and before shipment. For sample developments, we usually require 100% payment upfront."
+      category: "commercial",
+      q: "What are your standard commercial terms?",
+      a: "Commercial milestones are established based on the project scope and production history. We align these terms to provide stability for both the brand and the manufacturing partner."
     },
     {
-      category: "pricing",
-      q: "Are there any hidden management or coordination fees?",
-      a: "No. Our pricing is inclusive of hub management, standard QC, and production oversight as per the agreed service level. Any third-party costs (like external lab tests) are quoted at cost."
+      category: "commercial",
+      q: "Are there any additional management fees?",
+      a: "Our agreements are designed to be inclusive of hub management, standard QC, and production oversight. Any third-party costs are clearly outlined in the project scope."
     },
     {
-      category: "pricing",
+      category: "commercial",
       q: "Can you provide landed cost estimates early in the process?",
-      a: "Yes. While final pricing depends on the bulk fabric order, we can provide reasonably accurate estimates based on your sample developments and projected freight rates."
+      a: "Yes. We provide estimates based on your sample developments and projected logistics requirements to help you plan your collection effectively."
     }
   ]
 
@@ -256,7 +256,7 @@ export default function FAQPage() {
               <span className="italic font-normal">strategic sourcing questions.</span>
             </h1>
             <p className="text-xl md:text-2xl text-foreground/60 leading-relaxed font-light max-w-2xl border-l border-accent/10 pl-10">
-              From MOQs to sustainability audits — we value transparency at every stage of the sourcing cycle.
+              From operational scale to sustainability audits — we value clarity at every stage of the sourcing cycle.
             </p>
           </div>
         </div>

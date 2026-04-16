@@ -1,7 +1,7 @@
 ---
 title: "Essential Quality Control Steps: Prevent Defects in 2026"
 date: "2026-03-13"
-excerpt: "Quality issues erode margins. Learn the critical inspection stages—from Pre-Production to Final AQL—to safeguard your brand in 2026."
+excerpt: "Quality issues erode operational success. Learn the critical inspection stages—from Pre-Production to Final AQL—to safeguard your brand in 2026."
 category: "Quality & Compliance"
 tags: ["QC", "Manufacturing", "AQL", "Garment Quality", "2026"]
 heroImage: "/posts/quality-control-guide.png"

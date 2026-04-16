@@ -15,9 +15,9 @@ In apparel manufacturing, an incomplete tech pack is the primary cause of sample
 
 ## Why Technical Precision Matters
 
-A single missing measurement or unclear trim specification can result in a "failed" sample. For a startup, this means paying for shipping and re-sampling fees (roughly $150 – $300 per round). For an established brand, it means missing a critical retail window.
+A single missing measurement or unclear trim specification can result in a "failed" sample. For a startup, this means additional resource requirements for shipping and re-sampling. For an established brand, it means missing a critical retail window.
 
-> **Director's Take:** 90% of sampling delays are caused by ambiguous tech packs. Solving this at the front-end saves weeks on the backend.
+> **Director's Take:** The vast majority of sampling delays are caused by ambiguous tech packs. Solving this at the front-end saves weeks on the backend.
 
 ---
 

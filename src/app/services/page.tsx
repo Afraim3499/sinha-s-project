@@ -272,7 +272,7 @@ export default function ServicesPage() {
                 <Link href="/contact">Start Your Inquiry</Link>
               </Button>
               <Button variant="outline" size="lg" className="px-12 h-14 text-[10px] uppercase tracking-[0.3em] font-bold rounded-none border-white/20 hover:bg-white hover:text-stone-950" asChild>
-                <Link href="/manifesto">Read the Manifesto</Link>
+                <Link href="/story">Read Our Story</Link>
               </Button>
             </div>
           </MotionSection>

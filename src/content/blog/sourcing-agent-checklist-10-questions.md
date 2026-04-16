@@ -14,8 +14,8 @@ In the fast-paced world of international apparel, a good sourcing agent is your 
 
 ### The Transparency & Ethics Audit
 
-**1. How do you earn your fee?**
-Are they taking a commission from the brand, or are they adding a "markup" on the factory price? Transparency here is vital to avoid conflicts of interest.
+**1. How is your compensation structured?**
+Are you operating on an agreed-upon service fee or a project-based model? Transparency here is vital to ensure long-term alignment of interests.
 
 **2. Can you provide audit reports for your active factories?**
 Don't just take their word for it. Ask to see recent BSCI, SEDEX, or Accord reports for the factories they actually use.
@@ -48,8 +48,8 @@ Do they use professional ERP/PLM systems, or is everything managed via loosely o
 **9. Can I visit the factories unannounced?**
 A confident agent with a clean supply chain will always welcome a brand visit to their manufacturing partners.
 
-**10. What are your payment terms?**
-Do they offer credit, or do they require 100% upfront? Payment terms often reflect the agent's financial stability.
+**10. What are your standard commercial milestones?**
+Do you offer flexible timelines, or are there specific project-based milestones? Commercial terms often reflect the agent's operational stability.
 
 #### Vetting FAQ
 **Q: Is it better to work with a large agency or a boutique one?**

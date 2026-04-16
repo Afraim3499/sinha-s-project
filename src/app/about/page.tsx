@@ -117,7 +117,7 @@ export default function AboutPage() {
               { title: "Reliable Factory Network", desc: "Access to a vetted Bangladesh and Asian manufacturing network aligned with your specific category.", icon: <Globe className="w-5 h-5" /> },
               { title: "Development Clarity", desc: "Helping brands refine instructions, tech packs, and sampling to ensure concept matches production.", icon: <FileSearch className="w-5 h-5" /> },
               { title: "Quality & Compliance", desc: "Structured quality discipline, mid-line inspections, and rigorous compliance management support.", icon: <ShieldCheck className="w-5 h-5" /> },
-              { title: "Commercial Advantage", desc: "Focusing on competitive pricing models and cost-effective material sourcing without compromising quality.", icon: <LineChart className="w-5 h-5" /> },
+              { title: "Commercial Advantage", desc: "Focusing on strategic value models and optimized material sourcing without compromising quality.", icon: <LineChart className="w-5 h-5" /> },
               { title: "Execution & Delivery", desc: "Managing timelines, project communication, and on-time bulk delivery readiness.", icon: <Clock className="w-5 h-5" /> },
               { title: "Technical Heritage", desc: "Leveraging 25+ years of professional experience in product development and factory floor management.", icon: <Factory className="w-5 h-5" /> }
             ].map((skill) => (

@@ -116,52 +116,23 @@ export const MusicProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   }, [isInitialized])
   const tryingToInitRef = useRef(false)
 
-  useEffect(() => {
-    const handleGesture = async () => {
-      if (isManualPause || tryingToInitRef.current || isPlaying) return
-      
-      tryingToInitRef.current = true
-      try {
-        await initAudio()
-        // If it worked, we have isPlaying as true now (or soon)
-      } catch (e) {
-        // Silently catch to avoid console spam
-      } finally {
-        tryingToInitRef.current = false
-      }
-    }
-
-    const removeListeners = () => {
-      window.removeEventListener("touchstart", handleGesture)
-      window.removeEventListener("mousedown", handleGesture)
-      window.removeEventListener("keydown", handleGesture)
-      window.removeEventListener("pointerdown", handleGesture)
-      window.removeEventListener("click", handleGesture)
-    }
-
-    // Modern browsers ONLY allow AudioContext to start on these specific "Interaction" events.
-    // 'scroll' and 'wheel' are NOT valid gestures and will only cause console errors.
-    // 'touchstart' covers the start of a scroll interaction on mobile.
-    window.addEventListener("touchstart", handleGesture, { passive: true })
-    window.addEventListener("mousedown", handleGesture, { passive: true })
-    window.addEventListener("keydown", handleGesture, { passive: true })
-    window.addEventListener("pointerdown", handleGesture, { passive: true })
-    window.addEventListener("click", handleGesture, { passive: true })
-
-    return () => {
-      removeListeners()
-      if (rafRef.current) cancelAnimationFrame(rafRef.current)
-    }
-  }, [isInitialized, isPlaying, isManualPause])
-
+  // Remove the global handleGesture effect to prevent auto-initialization
+  
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = volume
     }
   }, [volume])
 
-  const togglePlay = () => {
+  const togglePlay = async () => {
+    // If not initialized, initialize now
+    if (!isInitialized) {
+      await initAudio()
+      return
+    }
+
     if (!audioRef.current) return
+
     if (isPlaying) {
       audioRef.current.pause()
       setIsPlaying(false)

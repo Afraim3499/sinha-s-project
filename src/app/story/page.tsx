@@ -3,13 +3,13 @@ import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import type { Metadata } from "next"
-import { PrinciplesEngine } from "@/components/ui/principles-engine"
+import { StoryEngine } from "@/components/ui/story-engine"
 
 export const metadata: Metadata = {
-  title: "The Principles Behind Our Work | Sinha Sourcing Hub Ltd",
-  description: "The operational philosophy of Sinha Sourcing Hub. We believe in substance over style, execution over introduction, and evidence over claims.",
+  title: "Our Story | Sinha Sourcing Hub Ltd",
+  description: "The journey of Sinha Sourcing Hub. Built on a 25-year family heritage in the textile trade and a commitment to hands-on execution.",
   alternates: {
-    canonical: "/manifesto",
+    canonical: "/story",
   },
 }
 
@@ -28,14 +28,14 @@ export default function ApproachPage() {
           <div className="max-w-5xl space-y-8 lg:space-y-10">
             <div className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.4em] text-accent">
                <span className="w-12 h-px bg-accent/40" />
-               Our Approach
+               Our Journey
             </div>
             <h1 className="text-4xl md:text-7xl lg:text-[5.5rem] xl:text-[7rem] font-serif font-bold leading-[1.05] tracking-tight">
-              The principles <br className="hidden lg:block"/>
-              <span className="italic font-normal text-white/60">behind our work.</span>
+              Built on heritage, <br className="hidden lg:block"/>
+              <span className="italic font-normal text-white/60">refined by execution.</span>
             </h1>
             <p className="text-base md:text-xl text-white/40 leading-relaxed font-light max-w-2xl border-l border-accent/10 pl-6 md:pl-10">
-              We built Sinha Sourcing Hub Ltd on the belief that fashion supply chains need more structure and less opacity. These operational principles guide every decision we make.
+              The gap between a product concept and a successful bulk delivery is bridged by more than just an introduction. It requires a story rooted in technical understanding and hands-on legacy.
             </p>
           </div>
         </div>
@@ -47,8 +47,8 @@ export default function ApproachPage() {
         </div>
       </section>
 
-      {/* 2. THE PRINCIPLES ENGINE */}
-      <PrinciplesEngine />
+      {/* 2. THE STORY ENGINE */}
+      <StoryEngine />
 
       {/* 3. MANIFESTO FAQ (SEO, AEO, AIO Focus) */}
       <section className="py-32 bg-[#050505] border-t border-white/5">
@@ -61,20 +61,20 @@ export default function ApproachPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
                {[
                  {
-                   q: "Why prioritize execution over introduction in sourcing?",
-                   a: "Many sourcing agents act merely as middlemen making factory introductions. We prioritize execution because long-term supply chain success requires active, technical management from development to final delivery."
+                   q: "What is the 'Golden Fiber' heritage?",
+                   a: "It refers to the jute industry in Bangladesh, which was once the nation's most critical export. Our family's roots in this trade provided the foundation for our understanding of global textiles and material supply chains."
                  },
                  {
-                   q: "How does evidence-based sourcing benefit apparel brands?",
-                   a: "Instead of relying on vague sustainability claims, evidence-based sourcing demands verified documentation. This protects your brand's integrity and ensures ethical production standards are actually met."
+                   q: "How does 25 years of experience benefit modern brands?",
+                   a: "It means we have seen every major supply chain disruption and manufacturing shift over three decades. We apply that historical perspective to help brands navigate the volatility of the 2026 market."
                  },
                  {
-                   q: "What makes Sinha Sourcing Hub different?",
-                   a: "Our foundation is built on hands-on trade legacy. We treat your manufacturing process with the same operational rigor and financial discipline that we apply to our own multi-disciplinary investments."
+                   q: "Why focus on 'Execution' over 'Introduction'?",
+                   a: "Introductions are easy, but execution is difficult. Most brand failures happen in the gap between a factory intro and final delivery. We focus on bridging that gap through hands-on technical management."
                  },
                  {
-                   q: "How does transparency improve the manufacturing process?",
-                   a: "Complete transparency prevents compounding delays. By communicating issues early—whether material shortages or sampling errors—we empower brands to make informed decisions that keep production on track."
+                   q: "Is Sinha Sourcing Hub purely a technical partner?",
+                   a: "We are both technical and strategic. While we understand the factory floor, we also manage the commercial alignment and logistics that ensure a product is not just well-made, but delivered on time."
                  }
                ].map((faq, i) => (
                  <div key={i} className="bg-white/[0.02] p-8 md:p-10 border border-white/5 hover:border-accent/30 transition-colors">
@@ -90,7 +90,7 @@ export default function ApproachPage() {
       <section className="py-48 bg-[#030712] text-white text-center relative overflow-hidden">
         <div className="absolute inset-0 z-0">
            <Image 
-             src="/manifesto-cta.png" 
+             src="/story-cta.png" 
              alt="Sinha Sourcing Excellence" 
              fill 
              className="object-cover scale-105 opacity-30 grayscale" 

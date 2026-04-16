@@ -8,7 +8,13 @@ import { Play, Pause } from "lucide-react"
 export const FloatingMusicButton: React.FC = () => {
   const { isPlaying, togglePlay, beatFactor, isInitialized } = useAudioSync()
 
-  if (!isInitialized) return null
+  const [mounted, setMounted] = React.useState(false)
+  
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
 
   return (
     <div className="fixed bottom-6 right-6 z-[60] flex flex-col items-center justify-center pointer-events-auto">

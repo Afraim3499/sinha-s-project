@@ -301,7 +301,7 @@ export default function HomePage() {
                  </p>
               </div>
               <Button variant="outline" className="border-border hover:bg-stone-100 rounded-none px-10 h-10 lg:h-12 text-[10px] uppercase tracking-[0.2em] font-bold" asChild>
-                <Link href="/manifesto">Learn About Our Approach</Link>
+                <Link href="/story">Read Our Story</Link>
               </Button>
             </MotionSection>
           </div>
@@ -321,7 +321,7 @@ export default function HomePage() {
               {[
                 { title: "Product Development & Tech Packs", desc: "We help refine product concepts into clearer technical instructions, supported by specification details, measurements, construction notes, and development coordination.", icon: <Zap className="w-5 h-5" />, image: "/images/apparel/casual-clothing-1.jpg" },
                 { title: "Factory Sourcing", desc: "We identify and align suitable manufacturing partners based on product category, scale, quality needs, and operational fit.", icon: <Factory className="w-5 h-5" />, image: "/images/apparel/denim-storage.jpg" },
-                { title: "Materials & Trims", desc: "We support sourcing for fabrics, components, trims, and accessories with attention to quality, suitability, pricing, and availability.", icon: <Globe className="w-5 h-5" />, image: "/images/materials/threads-variety.jpg" },
+                { title: "Materials & Trims", desc: "We support sourcing for fabrics, components, trims, and accessories with attention to quality, suitability, commercial alignment, and availability.", icon: <Globe className="w-5 h-5" />, image: "/images/materials/threads-variety.jpg" },
                 { title: "Quality Control & Compliance", desc: "We coordinate inspections, production checks, and compliance-related support to reduce avoidable risk before goods move forward.", icon: <ShieldCheck className="w-5 h-5" />, image: "/images/apparel/denim-qc-inspection.jpg" },
                 { title: "Production & Delivery Support", desc: "We help manage communication around production planning, documentation, and delivery readiness so execution remains organised.", icon: <Ship className="w-5 h-5" />, image: "/home-service-logistics.png" }
               ].map((service, i) => (
@@ -439,8 +439,8 @@ export default function HomePage() {
                 transition={{ delay: 0.5 }}
               >
                 <Button variant="outline" className="border-accent text-accent text-[10px] uppercase tracking-[0.3em] font-bold px-12 h-10 lg:h-12 hover:bg-accent hover:text-white transition-all duration-500 rounded-none group" asChild>
-                   <Link href="/manifesto" className="flex items-center gap-4">
-                      Explore Our Manifesto <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                   <Link href="/story" className="flex items-center gap-4">
+                      Explore Our Story <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
                    </Link>
                 </Button>
               </motion.div>
@@ -451,39 +451,25 @@ export default function HomePage() {
       {/* 8. TESTIMONIALS SLIDESHOW */}
       <TestimonialSlideshow testimonials={testimonials} />
 
-      {/* 9. HERITAGE PREVIEW */}
-      <section className="py-16 lg:py-20 bg-stone-100 border-y border-border">
-        <div className="container mx-auto px-6 md:px-12">
-           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <MotionSection className="relative bg-white p-8 lg:p-12 border border-border shadow-xl z-20">
-                 <div className="space-y-6 relative z-10">
-                    <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Credibility</span>
-                    <h3 className="text-3xl lg:text-4xl font-serif font-bold italic">Built on trade heritage, shaped by hands-on product understanding.</h3>
-                    <p className="text-foreground/70 font-light leading-relaxed text-sm lg:text-base">
-                       Our background is rooted in a family trading heritage connected to Bangladesh&apos;s jute industry, alongside years of practical involvement across sourcing, product development, production, shipping, and related business functions.
-                    </p>
-                    <p className="text-foreground/70 font-light leading-relaxed text-sm lg:text-base">
-                       That combination matters. It means our perspective is not limited to introducing factories. We understand the commercial and technical decisions that influence whether a project actually moves well.
-                    </p>
-                    <Button variant="link" className="px-0 pt-4 text-[10px] font-bold uppercase tracking-[0.2em] text-stone-900 group" asChild>
-                       <Link href="/about" className="flex items-center gap-2">Read Our Story <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" /></Link>
-                    </Button>
-                 </div>
-              </MotionSection>
-
-              {/* The Cinematic Right Column */}
-              <MotionSection delay={0.2} direction="left" className="relative aspect-video lg:aspect-[4/3] max-h-[500px] w-full shadow-2xl overflow-hidden group">
-                 <Image 
-                   src="/about-technical-new.png" 
-                   alt="Heritage and Production" 
-                   fill 
-                   className="object-cover max-md:scale-100 max-md:brightness-100 scale-105 group-hover:scale-100 brightness-95 group-hover:brightness-100 transition-all duration-1000 ease-out"
-                 />
-                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-transparent to-transparent pointer-events-none max-md:opacity-40 opacity-60 group-hover:opacity-40 transition-opacity duration-1000" />
-                 <div className="absolute bottom-6 right-6 border border-white/20 backdrop-blur-md bg-stone-950/40 px-4 py-2 group-hover:bg-stone-950/60 transition-colors duration-1000">
-                    <p className="text-[9px] font-mono tracking-widest text-white/90">SINHA_ARCHIVE // 1993</p>
-                 </div>
-              </MotionSection>
+      {/* 9. HERITAGE PREVIEW (SHRINKED) */}
+      <section className="py-20 bg-stone-100 border-y border-border overflow-hidden relative">
+        <div className="absolute inset-x-0 inset-y-0 opacity-5 pointer-events-none">
+           <Image src="/about-technical-new.png" alt="Heritage" fill className="object-cover" />
+        </div>
+        <div className="container mx-auto px-6 md:px-12 relative z-10">
+           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="max-w-2xl space-y-4">
+                 <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Trade Heritage</span>
+                 <h3 className="text-3xl font-serif font-bold italic">Built on hands-on technical legacy.</h3>
+                 <p className="text-foreground/60 font-light leading-relaxed text-sm">
+                    Our foundation is rooted in a family heritage in the South Asian textile trade, bringing decades of practical involvement to modern sourcing.
+                 </p>
+              </div>
+              <Button variant="outline" className="border-border hover:bg-stone-900 hover:text-white rounded-none px-12 h-12 text-[10px] uppercase tracking-[0.2em] font-bold group" asChild>
+                 <Link href="/story" className="flex items-center gap-2">
+                    Read Our Story <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                 </Link>
+              </Button>
            </div>
         </div>
       </section>
@@ -522,14 +508,11 @@ export default function HomePage() {
                        <Link href="/faq">All Queries <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" /></Link>
                     </Button>
                  </div>
-                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {[
                       { q: "Do you support brands at early development stage?", num: "01" },
-                      { q: "Can you help if we do not yet have a full tech pack?", num: "02" },
-                      { q: "How do you select suitable factories?", num: "03" },
-                      { q: "What categories do you work with?", num: "04" },
-                      { q: "How is quality checked during production?", num: "05" },
-                      { q: "What information do you need to begin?", num: "06" }
+                      { q: "How do you select suitable factories?", num: "02" },
+                      { q: "How is quality checked during production?", num: "03" }
                     ].map((item, i) => (
                       <Link key={i} href="/faq">
                         <MotionSection delay={i * 0.1} className="relative group p-6 border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-accent/40 transition-all duration-500 overflow-hidden cursor-pointer flex flex-col justify-between min-h-[120px]">

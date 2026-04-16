@@ -36,4 +36,4 @@ To eliminate these gaps, Sinha Sourcing Hub utilizes a triple-pillar alignment f
 A: This is where "Risk Diversification" comes in. Your alignment strategy should include a contingency carrier or an alternative port of exit defined *before* the disaster hits.
 
 **Q: Should I pay early to incentivize speed?**
-A: Usually, no. Adhering to the agreed-upon payment milestones (e.g., 30% deposit, 70% at shipment) keeps the incentive structure balanced.
+A: Usually, no. Adhering to the agreed-upon payment milestones (e.g., standard commercial milestones) keeps the incentive structure balanced.
