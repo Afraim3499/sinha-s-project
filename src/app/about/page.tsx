@@ -19,11 +19,7 @@ export default function AboutPage() {
         
         <div className="container mx-auto px-6 md:px-12 relative z-10">
           <MotionSection className="max-w-5xl mx-auto text-center space-y-12">
-            <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.4em] text-accent flex items-center justify-center gap-4">
-               <span className="w-8 h-px bg-accent/30" />
-               About Us
-               <span className="w-8 h-px bg-accent/30" />
-            </p>
+
             <h1 className="text-4xl md:text-7xl lg:text-8xl font-serif font-bold leading-[1.05] tracking-tight text-stone-900">
               A clearer route from <br className="hidden lg:block" />
               <span className="italic font-normal">design intent to delivered product.</span>
@@ -36,7 +32,7 @@ export default function AboutPage() {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-30">
-           <span className="text-[9px] uppercase tracking-[0.5em] font-bold text-accent">Our Journey</span>
+
            <div className="w-px h-16 bg-gradient-to-b from-accent to-transparent" />
         </div>
       </section>
@@ -70,10 +66,10 @@ export default function AboutPage() {
                   We bring together over 25 years of professional industry experience rooted in a family trading heritage connected to Bangladesh&apos;s jute industry—historically known as the &ldquo;Golden Fiber&rdquo; for its role in the global textile trade.
                 </p>
                 <p>
-                  Today, our business operates between the UK and key manufacturing hubs in Asia. We provide A–Z sourcing support from concept development to bulk shipment, bringing a deep understanding of multi-disciplinary supply chain operations, financial strategy, and <Link href="/process" className="text-foreground hover:text-accent font-medium underline decoration-border/50 underline-offset-4 transition-colors">hands-on product execution</Link>.
+                  A few of us completed our SSC in 1993 and embarked on our professional journeys in 1998. Over the past 25+ years, we have built extensive expertise and a strong foundation across our respective fields. In 2023, we united this experience to establish our company, bringing our collective vision under one brand.
                 </p>
                 <p>
-                  We grew up understanding what actual factory floors look like, how negotiations work, and where delays usually happen. We use that experience to give brands a more reliable way to manage development and production.
+                  Guided by a passion for fashion and apparel, we are dedicated to delivering high-quality clothing and accessories with a focus on innovation, craftsmanship, and excellence. We use our decades of experience to give brands a more reliable way to manage development and production, bridging the gap between design intent and <Link href="/process" className="text-foreground hover:text-accent font-medium underline decoration-border/50 underline-offset-4 transition-colors">hands-on product execution</Link>.
                 </p>
               </div>
             </MotionSection>
