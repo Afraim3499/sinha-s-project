@@ -225,6 +225,32 @@ export default function ContactPage() {
                             />
                           </div>
 
+                          <div className="space-y-2">
+                            <label htmlFor="contact-attachment" className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">Attachments (Photo, PDF)</label>
+                            <div className="relative">
+                              <input 
+                                id="contact-attachment" 
+                                name="attachment" 
+                                type="file" 
+                                accept="image/*,.pdf"
+                                className="hidden" 
+                                onChange={(e) => {
+                                  const file = e.target.files?.[0];
+                                  const label = document.getElementById('file-label');
+                                  if (label && file) label.textContent = file.name;
+                                }}
+                              />
+                              <label 
+                                htmlFor="contact-attachment" 
+                                className="flex items-center justify-between px-4 h-12 bg-white/5 border border-white/10 text-white/40 text-xs cursor-pointer hover:bg-white/[0.08] transition-all"
+                              >
+                                <span id="file-label">Upload a file...</span>
+                                <span className="text-[9px] font-bold uppercase tracking-widest bg-white/10 px-3 py-1 text-white">Browse</span>
+                              </label>
+                            </div>
+                            <p className="text-[9px] text-white/20 italic">Max size: 10MB. Formats: JPG, PNG, PDF.</p>
+                          </div>
+
                           {status === "error" && (
                             <motion.p
                               initial={{ opacity: 0, y: -10 }}

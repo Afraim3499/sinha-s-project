@@ -1,9 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { Mail, Check, ArrowRight, FileText, UserPlus } from "lucide-react"
+import { Mail, Check, ArrowRight, FileText, UserPlus, Trash2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { updateLeadStatus } from "@/app/actions/leads"
+import { updateLeadStatus, deleteLead } from "@/app/actions/leads"
 import { useRouter } from "next/navigation"
 
 interface LeadDetailActionsProps {
@@ -21,6 +21,7 @@ interface LeadDetailActionsProps {
 export function LeadDetailActions({ lead }: LeadDetailActionsProps) {
   const [copiedType, setCopiedType] = useState<"message" | "info" | null>(null)
   const [isUpdating, setIsUpdating] = useState(false)
+  const [showConfirmDelete, setShowConfirmDelete] = useState(false)
   const router = useRouter()
 
   const copyToClipboard = (text: string, type: "message" | "info") => {
@@ -48,6 +49,25 @@ export function LeadDetailActions({ lead }: LeadDetailActionsProps) {
     // 4. Update the UI to reflect status change if needed
     router.refresh()
     setIsUpdating(false)
+  }
+
+  const handleDelete = async () => {
+    if (!showConfirmDelete) {
+      setShowConfirmDelete(true)
+      setTimeout(() => setShowConfirmDelete(false), 3000)
+      return
+    }
+
+    setIsUpdating(true)
+    const result = await deleteLead(lead.id)
+    if (result.success) {
+      router.push("/admin/leads")
+      router.refresh()
+    } else {
+      alert("Failed to delete lead")
+      setIsUpdating(false)
+      setShowConfirmDelete(false)
+    }
   }
 
   const leadInfoText = `
@@ -97,6 +117,20 @@ Status: ${lead.status}
              Copy Lead Info
            </Button>
         </div>
+
+        <Button 
+          onClick={handleDelete}
+          disabled={isUpdating}
+          variant="outline"
+          className={`h-14 px-8 border-white/10 text-[10px] font-bold uppercase tracking-[0.3em] rounded-none transition-all ${
+            showConfirmDelete 
+              ? "bg-red-500 text-white border-red-500 hover:bg-red-600" 
+              : "text-white/30 hover:text-red-500 hover:border-red-500/50 hover:bg-red-500/5"
+          }`}
+        >
+          <Trash2 className="w-3.5 h-3.5 mr-3" />
+          {showConfirmDelete ? "Confirm Delete?" : "Delete Enquiry"}
+        </Button>
       </div>
       
       {lead.status === 'new' && (

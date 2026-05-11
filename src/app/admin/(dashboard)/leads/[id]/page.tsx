@@ -114,6 +114,53 @@ export default async function LeadDetail({ params }: { params: Promise<{ id: str
                   {lead.message || <span className="italic text-white/30">No message body provided.</span>}
                 </div>
               </div>
+
+              {/* Attachment Section */}
+              {lead.attachment_url && (
+                <div className="space-y-6 pt-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/30">Associated Attachment</span>
+                    <div className="h-px flex-1 mx-6 bg-white/5" />
+                  </div>
+                  <div className="p-6 bg-stone-950/30 rounded-xl border border-white/5 flex flex-col items-center gap-6">
+                    {lead.attachment_url.match(/\.(jpg|jpeg|png|webp|gif)$|image/i) ? (
+                      <div className="relative group w-full max-w-sm aspect-video rounded-lg overflow-hidden border border-white/10">
+                        <img 
+                          src={lead.attachment_url} 
+                          alt="Attachment preview" 
+                          className="w-full h-full object-contain bg-black/40"
+                        />
+                        <a 
+                          href={lead.attachment_url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="absolute inset-0 bg-stone-950/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity"
+                        >
+                          <span className="text-[10px] font-bold uppercase tracking-widest bg-accent text-white px-6 py-2">Open Full View</span>
+                        </a>
+                      </div>
+                    ) : (
+                      <div className="flex items-center gap-6 w-full p-4 bg-white/5 border border-white/5 hover:border-white/10 transition-colors">
+                        <div className="w-12 h-12 rounded-lg bg-stone-800 flex items-center justify-center border border-white/5">
+                          <FileText className="w-5 h-5 text-accent" />
+                        </div>
+                        <div className="flex-1">
+                           <p className="text-white text-sm font-medium">Document Attachment</p>
+                           <p className="text-[10px] text-white/20 uppercase tracking-widest mt-1">PDF / Technical File</p>
+                        </div>
+                        <a 
+                          href={lead.attachment_url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="px-6 py-2 border border-accent/30 text-accent text-[9px] font-bold uppercase tracking-widest hover:bg-accent hover:text-white transition-all"
+                        >
+                          Download
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
               
               {/* Actions Section */}
               <div className="pt-8 border-t border-white/5">

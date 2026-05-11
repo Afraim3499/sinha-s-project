@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Insights & Guidance | Sinha Sourcing Hub Ltd",
     description: "Expert guidance on global sourcing, apparel production, and supply chain strategy.",
-    images: [{ url: "/posts/bangladesh-vs-vietnam.png" }],
+    images: [{ url: "/hero-pd.webp" }],
   },
 }
 
@@ -66,10 +66,10 @@ export default async function InsightsPage() {
       tag: "Case Study"
     },
     {
-      title: "Market Dynamics",
-      description: "Comparing landed costs: Bangladesh vs. Vietnam vs. India.",
-      link: "/insights/ultimate-guide-bangladesh-vs-vietnam",
-      tag: "Strategy"
+      title: "Category Expertise",
+      description: "Navigating specialized manufacturing hubs with technical precision.",
+      link: "/insights/decoding-bangladesh-garment-ecosystem",
+      tag: "Expertise"
     }
   ]
 
@@ -81,7 +81,7 @@ export default async function InsightsPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/posts/bangladesh-vs-vietnam.png"
+            src="/hero-factory.webp"
             alt="Sourcing insights editorial"
             fill
             className="object-cover opacity-30"
@@ -110,7 +110,7 @@ export default async function InsightsPage() {
                 <span className="italic font-normal text-white/50">strategic sourcing.</span>
               </h1>
               <p className="text-lg md:text-xl text-white/40 leading-relaxed font-light max-w-xl">
-                From tech-pack optimization to global landed-cost strategies — practical insights for brands building more profitable supply chains.
+                From tech-pack optimization to technical alignment strategies — practical insights for brands building more profitable supply chains.
               </p>
 
               {/* Stats Row */}

@@ -53,39 +53,20 @@ export default function FactorySourcingPage() {
         </div>
       </section>
 
-      {/* 2. REGIONAL LOGIC */}
+      {/* 2. TECHNICAL ALIGNMENT */}
       <section className="py-32 bg-stone-950 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <Image src="/factory-sourcing-professional.png" alt="Global factory sourcing network" fill className="object-cover scale-105" sizes="100vw" />
         </div>
         <div className="container mx-auto px-6 md:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-             <div className="space-y-10">
-                <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Sourcing Geography</span>
-                <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight italic">
-                  How we think about sourcing geography
-                </h2>
-                <p className="text-white/70 font-light leading-relaxed text-lg">
-                  Different categories often require different supplier strengths. We support sourcing decisions across Bangladesh, wider South Asia, China, and other relevant supply options depending on the product and project requirement.
-                </p>
-             </div>
-             <div className="relative aspect-square lg:aspect-auto lg:h-[600px] border border-white/10 bg-black/40 p-8 flex flex-col justify-between">
-                <div>
-                   <Globe className="w-8 h-8 text-accent opacity-50 mb-8" />
-                   <div className="space-y-6">
-                      {[
-                        { region: "Bangladesh", focus: "Scale, Knit, Denim, Structural" },
-                        { region: "China", focus: "Technical Materials, Complex Assembly" },
-                        { region: "South Asia", focus: "Specialized Craft, Agility" }
-                      ].map((item, i) => (
-                        <div key={i} className="flex flex-col gap-2 pb-6 border-b border-white/10 last:border-0">
-                           <h4 className="font-serif text-xl italic text-white/90">{item.region}</h4>
-                           <p className="text-[10px] font-mono uppercase tracking-widest text-accent">{item.focus}</p>
-                        </div>
-                      ))}
-                   </div>
-                </div>
-             </div>
+          <div className="max-w-4xl space-y-10">
+             <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Strategic Alignment</span>
+             <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight italic">
+               Aligning production with technical capability
+             </h2>
+             <p className="text-white/70 font-light leading-relaxed text-lg lg:text-xl border-l border-accent/20 pl-8">
+               We believe that the best production results are achieved when a project is matched with a manufacturing unit that has the specific machinery, technical expertise, and operational culture required for that category. Our role is to facilitate that alignment with precision and care.
+             </p>
           </div>
         </div>
       </section>

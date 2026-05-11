@@ -12,7 +12,7 @@ export default function ServicesPage() {
     {
       title: "Product Development & Tech Packs",
       href: "/services/concept-and-design",
-      desc: "We help translate design concepts into clear manufacturing instructions, supported by specifications, measurements, and construction guidance.",
+      desc: "Designer and Tech Pack support to translate concepts into accurate manufacturing instructions, ensuring precision from the earliest stage.",
       img: "/service-pd.png",
       icon: <Zap className="w-5 h-5" />,
       tag: "01 / Development"
@@ -20,7 +20,7 @@ export default function ServicesPage() {
     {
       title: "Factory Sourcing & Alignment",
       href: "/services/factory-sourcing",
-      desc: "Identifying and vetting manufacturing partners based on product category, production scale, quality needs, and operational fit.",
+      desc: "Vetting manufacturing partners across Asia for multi-category production, including apparel, footwear, bags, and home textiles.",
       img: "/factory-sourcing-professional.png",
       icon: <Factory className="w-5 h-5" />,
       tag: "02 / Sourcing"
@@ -28,15 +28,15 @@ export default function ServicesPage() {
     {
       title: "Materials & Trim Sourcing",
       href: "/services/material-sourcing",
-      desc: "Support for sourcing fabrics, components, trims, and accessories with attention to quality, suitability, pricing, and availability.",
+      desc: "Global access to raw materials and accessories for quality and competitive pricing, ensuring your product has the right foundation.",
       img: "/service-materials.png",
       icon: <Globe className="w-5 h-5" />,
       tag: "03 / Materials"
     },
     {
-      title: "Sampling & Development Coordination",
+      title: "Sampling & Prototype Excellence",
       href: "/services/sampling",
-      desc: "Coordination of sample rounds, construction review, communication, and revision handling before bulk production begins.",
+      desc: "Fast sampling and prototype development for trainers, apparel, and accessories, refining every detail before bulk production.",
       img: "/ladies-knitwear-premium.png",
       icon: <Box className="w-5 h-5" />,
       tag: "04 / Sampling"
@@ -44,7 +44,7 @@ export default function ServicesPage() {
     {
       title: "Quality Control & Compliance",
       href: "/services/quality-control",
-      desc: "Coordinating inspections, production checks, and compliance-related support to reduce avoidable risk during manufacturing.",
+      desc: "Rigorous inspections and high compliance standards to ensure ethical manufacturing and socially responsible operations.",
       img: "/service-qc.png",
       icon: <ShieldCheck className="w-5 h-5" />,
       tag: "05 / Quality"
@@ -52,7 +52,7 @@ export default function ServicesPage() {
     {
       title: "Production & Delivery Support",
       href: "/services/logistics",
-      desc: "Helping manage communication around production planning, shipment-related documentation, and delivery readiness.",
+      desc: "Creative solutions from concept to bulk production, managing timelines and logistics for seamless global delivery.",
       img: "/service-logistics.png",
       icon: <Ship className="w-5 h-5" />,
       tag: "06 / Execution"
@@ -215,37 +215,28 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* 4. WHO THIS IS FOR */}
-      <section className="py-24 lg:py-32 bg-stone-950 text-white border-t border-white/5 relative">
+      {/* 4. INNOVATION EXCELLENCE */}
+      <section className="py-24 lg:py-32 bg-stone-900 text-white border-t border-white/5 relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(180,140,80,0.03),transparent_70%)] pointer-events-none" />
         
         <div className="container mx-auto px-6 md:px-12 relative z-10">
-          <MotionSection className="mb-16 md:mb-20 space-y-4 max-w-3xl text-center md:text-left">
-            <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Audience</span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight">A partner for <br className="md:hidden" /><span className="italic font-normal text-white/60">disciplined brands.</span></h2>
+          <MotionSection className="mb-16 md:mb-20 space-y-4 text-center">
+            <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Innovation</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight">Creative & Technical <br /><span className="italic font-normal text-white/60">Execution.</span></h2>
           </MotionSection>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: "Technical Clarity", desc: "Brands that want fewer assumptions and clearer manufacturing instructions.", icon: <Zap className="w-5 h-5" />, num: "01" },
-              { title: "Reliable Suppliers", desc: "Buyers looking for factories that match their actual capability requirements.", icon: <Factory className="w-5 h-5" />, num: "02" },
-              { title: "Quality Standards", desc: "Brands that understand quality inspection is an ongoing requirement.", icon: <ShieldCheck className="w-5 h-5" />, num: "03" },
-              { title: "Clearer Communication", desc: "Teams that need realistic updates and proactive problem-solving.", icon: <Globe className="w-5 h-5" />, num: "04" }
-            ].map((audience, i) => (
-              <MotionSection key={i} delay={i * 0.1} className="relative bg-white/[0.02] border border-white/5 p-8 lg:p-10 space-y-8 group hover:bg-white/[0.04] hover:border-accent/30 transition-all duration-500 rounded-2xl overflow-hidden flex flex-col justify-between min-h-[280px]">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-accent/5 to-transparent max-md:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-bl-3xl" />
-                
-                <div className="flex items-center justify-between relative z-10 w-full">
-                   <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white/5 text-accent max-md:bg-accent/10 max-md:scale-110 group-hover:bg-accent/10 group-hover:scale-110 transition-all duration-500 border border-white/10">
-                     {audience.icon}
-                   </div>
-                   <span className="text-[10px] font-mono text-white/20 max-md:text-accent group-hover:text-accent font-bold tracking-widest transition-colors">TYPE // {audience.num}</span>
-                </div>
-                
-                <div className="relative z-10 mt-auto pt-8">
-                   <h4 className="text-xl font-serif font-bold mb-3 max-md:italic max-md:text-accent group-hover:italic transition-all duration-300 text-white group-hover:text-accent">{audience.title}</h4>
-                   <p className="text-white/50 leading-relaxed text-sm lg:text-[15px] font-light">{audience.desc}</p>
-                </div>
+              { title: "Prototype Development", desc: "Fast sampling and prototype development across multiple categories including trainers and apparel.", icon: <Zap className="w-5 h-5" /> },
+              { title: "Global Material Access", desc: "Global sourcing of raw materials and accessories for quality and competitive pricing.", icon: <Globe className="w-5 h-5" /> },
+              { title: "Concept to Bulk", desc: "Providing creative and technical solutions from the initial design concept to final bulk delivery.", icon: <Box className="w-5 h-5" /> }
+            ].map((item, i) => (
+              <MotionSection key={i} delay={i * 0.1} className="p-10 bg-white/5 border border-white/10 hover:border-accent/40 transition-all rounded-2xl">
+                 <div className="w-12 h-12 mb-8 rounded-full bg-accent/10 flex items-center justify-center text-accent border border-accent/20">
+                    {item.icon}
+                 </div>
+                 <h4 className="text-xl font-serif font-bold mb-4 italic">{item.title}</h4>
+                 <p className="text-white/50 leading-relaxed font-light">{item.desc}</p>
               </MotionSection>
             ))}
           </div>

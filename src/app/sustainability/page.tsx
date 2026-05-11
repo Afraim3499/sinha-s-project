@@ -98,9 +98,20 @@ export default function SustainabilityPage() {
                         <CheckCircle2 className="w-5 h-5" />
                      </div>
                      <div>
-                        <h4 className="text-stone-900 text-[10px] uppercase font-bold tracking-[0.3em] mb-2">Specialized Education</h4>
+                        <h4 className="text-stone-900 text-[10px] uppercase font-bold tracking-[0.3em] mb-2">Operational Integrity</h4>
                         <p className="text-sm text-stone-400 leading-relaxed max-w-sm">
-                           Financing and sustaining facilities for children with special needs across our sourcing regions.
+                           Continuous monitoring and evaluation of suppliers to ensure high compliance and ethical manufacturing standards.
+                        </p>
+                     </div>
+                  </div>
+                  <div className="flex items-start gap-6 group">
+                     <div className="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center shrink-0 border border-emerald-100 max-md:bg-emerald-500 max-md:text-white group-hover:bg-emerald-500 group-hover:text-white transition-all duration-500">
+                        <ShieldCheck className="w-5 h-5" />
+                     </div>
+                     <div>
+                        <h4 className="text-stone-900 text-[10px] uppercase font-bold tracking-[0.3em] mb-2">Worker Welfare</h4>
+                        <p className="text-sm text-stone-400 leading-relaxed max-w-sm">
+                           Support programs for workers and staff in production units, ensuring safe conditions and fair treatment.
                         </p>
                      </div>
                   </div>
@@ -109,9 +120,9 @@ export default function SustainabilityPage() {
                         <Heart className="w-5 h-5" />
                      </div>
                      <div>
-                        <h4 className="text-stone-900 text-[10px] uppercase font-bold tracking-[0.3em] mb-2">Family & Student Empowerment</h4>
+                        <h4 className="text-stone-900 text-[10px] uppercase font-bold tracking-[0.3em] mb-2">Community Empowerment</h4>
                         <p className="text-sm text-stone-400 leading-relaxed max-w-sm">
-                           Direct distribution of books and educational materials to marginalized students and their families.
+                           Establishing orphanages and child-support centers, providing assistance for basic needs and facilitating capacity-building initiatives.
                         </p>
                      </div>
                   </div>

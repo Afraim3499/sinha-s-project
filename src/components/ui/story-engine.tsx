@@ -16,7 +16,7 @@ const STORY_CHAPTERS = [
     title: "A Professional Legacy",
     tag: "CH_02 / PERSPECTIVE",
     stamp: "25+ Years Experience",
-    desc: "With over 25 years of hands-on involvement, we have witnessed the transformation of global supply chains. From the traditional trading models of the 90s to the high-speed digital architecture of 2026, we've remained anchored in professional discipline.",
+    desc: "With a professional journey beginning in 1998, we have witnessed the transformation of global supply chains. From the traditional trading models of the late 90s to the high-speed digital architecture of 2026, we've remained anchored in professional discipline.",
     icon: <Clock className="w-6 h-6 text-accent" />
   },
   {

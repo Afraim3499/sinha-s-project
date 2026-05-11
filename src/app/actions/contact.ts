@@ -29,6 +29,34 @@ export async function submitContactForm(formData: FormData) {
   }
 
   const { name, company, email, category, message } = validated.data
+  const file = formData.get("attachment") as File | null
+  let attachmentUrl = null
+
+  // 2. Handle File Upload if exists
+  if (file && file.size > 0) {
+    try {
+      const fileExt = file.name.split('.').pop()
+      const fileName = `${Math.random().toString(36).substring(2)}-${Date.now()}.${fileExt}`
+      const filePath = `leads/${fileName}`
+
+      const { error: uploadError } = await supabase.storage
+        .from('attachments')
+        .upload(filePath, file)
+
+      if (uploadError) {
+        console.error("Storage upload error:", uploadError)
+        // We continue without the attachment if upload fails, or we could return error
+      } else {
+        const { data: { publicUrl } } = supabase.storage
+          .from('attachments')
+          .getPublicUrl(filePath)
+        
+        attachmentUrl = publicUrl
+      }
+    } catch (err) {
+      console.error("File processing error:", err)
+    }
+  }
 
   try {
     const { error } = await supabase
@@ -40,7 +68,8 @@ export async function submitContactForm(formData: FormData) {
           email: email.toLowerCase().trim(), 
           category, 
           message,
-          status: 'new' // Explicitly set initial status
+          attachment_url: attachmentUrl, // Store the attachment URL
+          status: 'new'
         }
       ])
 

@@ -84,3 +84,47 @@ export async function updateLeadNotes(id: string, notes: string) {
     return { success: false, error: "Failed to save notes" }
   }
 }
+
+export async function deleteLead(id: string) {
+  const session = await verifySession()
+  if (!session) throw new Error("Unauthorized")
+
+  try {
+    // 1. Get the lead first to check for attachments
+    const { data: lead, error: fetchError } = await supabase
+      .from("leads")
+      .select("attachment_url")
+      .eq("id", id)
+      .single()
+
+    if (fetchError) throw fetchError
+
+    // 2. Delete attachment from storage if it exists
+    if (lead?.attachment_url) {
+      try {
+        // Extract path from URL (assuming format: .../storage/v1/object/public/attachments/leads/filename)
+        const pathMatch = lead.attachment_url.match(/attachments\/(.+)$/)
+        if (pathMatch && pathMatch[1]) {
+          const filePath = pathMatch[1]
+          await supabase.storage.from("attachments").remove([filePath])
+        }
+      } catch (storageErr) {
+        console.error("Error deleting attachment from storage:", storageErr)
+        // We continue even if storage delete fails
+      }
+    }
+
+    // 3. Delete lead from database
+    const { error: deleteError } = await supabase
+      .from("leads")
+      .delete()
+      .eq("id", id)
+
+    if (deleteError) throw deleteError
+
+    return { success: true }
+  } catch (err) {
+    console.error("Error deleting lead:", err)
+    return { success: false, error: "Failed to delete enquiry" }
+  }
+}

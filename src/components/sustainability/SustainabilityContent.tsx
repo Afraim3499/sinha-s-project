@@ -56,11 +56,11 @@ export function SustainabilityContent() {
              className="lg:col-span-5 space-y-12"
            >
               <motion.div variants={childVariants} className="space-y-6 text-stone-600 font-light leading-relaxed text-lg lg:text-xl">
-                 <p className="border-l-2 border-accent/30 pl-8 relative">
-                   Most mass-market production relies heavily on fossil fuels, heavy automation, and high-carbon infrastructures. We view sustainability through a fundamentally different paradigm.
+                 <p className="border-l-2 border-accent/30 pl-8 relative font-serif italic text-stone-900">
+                   &quot;We believe in the interconnectedness of all production factors and integrating sustainability into every operation.&quot;
                  </p>
                  <p className="pl-8 text-stone-400">
-                   By empowering a vast workforce of dedicated artisans and manual experts, we deliver superior, pinpoint apparel precision while significantly reducing reliance on oil-guzzling automation. True sustainability starts with human capability.
+                   Our goal is to deliver products and services that balance cost efficiency with premium quality, while prioritizing environmental preservation and high compliance standards across all facilities.
                  </p>
               </motion.div>
 

@@ -63,13 +63,16 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 text-foreground/70 leading-relaxed text-lg font-light">
                 <p>
-                  We bring together over 25 years of professional industry experience rooted in a family trading heritage connected to Bangladesh&apos;s jute industry—historically known as the &ldquo;Golden Fiber&rdquo; for its role in the global textile trade.
+                  Our journey began long before Sinha Sourcing Hub Ltd was officially formed. Growing up in Bangladesh, we were surrounded by a family deeply involved in trade and craftsmanship.
                 </p>
                 <p>
-                  A few of us completed our SSC in 1993 and embarked on our professional journeys in 1998. Over the past 25+ years, we have built extensive expertise and a strong foundation across our respective fields. In 2023, we united this experience to establish our company, bringing our collective vision under one brand.
+                  Our ancestors and parents were active in the Jute/Golden Fiber trading industry from the British era until 1982, laying a foundation of knowledge in textiles, fabrics, and business management. This legacy shaped our passion for apparel, accessories, and leather goods.
                 </p>
                 <p>
-                  Guided by a passion for fashion and apparel, we are dedicated to delivering high-quality clothing and accessories with a focus on innovation, craftsmanship, and excellence. We use our decades of experience to give brands a more reliable way to manage development and production, bridging the gap between design intent and <Link href="/process" className="text-foreground hover:text-accent font-medium underline decoration-border/50 underline-offset-4 transition-colors">hands-on product execution</Link>.
+                  A few of us started to work on clothing lines from our school days, immersing ourselves in creative experimentation — designing custom uniforms, modifying waistbands, and hand-drawing graphics on T-shirts. This hands-on experience cultivated our deep understanding of design, materials, and production early on.
+                </p>
+                <p>
+                  We began working professionally from 1998, gaining extensive experience across merchandising, sourcing, quality control, production management, and logistics. We united this collective expertise in 2023 to establish Sinha Sourcing Hub Ltd, providing <Link href="/process" className="text-foreground hover:text-accent font-medium underline decoration-border/50 underline-offset-4 transition-colors">reliable, transparent sourcing solutions</Link> to the global industry.
                 </p>
               </div>
             </MotionSection>
@@ -137,16 +140,44 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-24 lg:gap-32">
             <MotionSection className="space-y-10 border-l px-8 border-accent/20">
               <h3 className="text-[11px] font-bold uppercase tracking-[0.4em] text-accent">Our Mission</h3>
-              <p className="text-3xl font-serif italic text-foreground tracking-tight leading-relaxed">
-                &ldquo;To provide brands with a more transparent, organized, and reliable path from product concept to bulk delivery.&rdquo;
+              <p className="text-3xl font-serif italic text-stone-900 tracking-tight leading-relaxed">
+                &ldquo;To provide high-quality, reliable, and transparent sourcing solutions to the global apparel and accessories industry.&rdquo;
               </p>
             </MotionSection>
             <MotionSection delay={0.2} className="space-y-10 border-l px-8 border-accent/20">
               <h3 className="text-[11px] font-bold uppercase tracking-[0.4em] text-accent">Our Vision</h3>
-              <p className="text-3xl font-serif italic text-foreground tracking-tight leading-relaxed">
-                &ldquo;To build sourcing relationships that brands can rely on for long-term supply chain stability.&rdquo;
-              </p>
+              <div className="space-y-6">
+                <p className="text-3xl font-serif italic text-stone-900 tracking-tight leading-relaxed">
+                  &ldquo;To become a trusted global sourcing partner, leveraging combined expertise to provide sustainable and efficient product solutions.&rdquo;
+                </p>
+              </div>
             </MotionSection>
+          </div>
+        </div>
+      </section>
+
+      {/* 6.5 OUR COMMITMENT */}
+      <section className="py-32 bg-white">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-4xl mx-auto space-y-16">
+            <MotionSection className="text-center space-y-4">
+              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Dedication</span>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold">Our <span className="italic font-normal">Commitment.</span></h2>
+            </MotionSection>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              {[
+                { title: "High-Quality Delivery", desc: "Delivering excellence across apparel, footwear, bags, home textiles, and eco products." },
+                { title: "Ethical Supply Chain", desc: "Ensuring transparent, ethical, and responsible management at every stage of the journey." },
+                { title: "End-to-End Solutions", desc: "Providing support from initial concept and tech pack development to final bulk production." },
+                { title: "Operational Support", desc: "Assisting buyers with QC, compliance, raw material sourcing, and logistics management." }
+              ].map((item, i) => (
+                <MotionSection key={i} delay={i * 0.1} className="space-y-4 border-b border-border pb-8">
+                  <h4 className="text-lg font-serif font-bold italic text-stone-900">{item.title}</h4>
+                  <p className="text-foreground/60 leading-relaxed font-light">{item.desc}</p>
+                </MotionSection>
+              ))}
+            </div>
           </div>
         </div>
       </section>
