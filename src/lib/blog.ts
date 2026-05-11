@@ -33,8 +33,17 @@ export const getSortedPostsData = unstable_cache(async () => {
     return []
   }
 
-  // Map to the format the frontend expects but ensure we return exactly what we need
-  return data.map(post => ({
+  // 1. Filter out comparison-based content that should no longer be public
+  const excludedSlugs = [
+    'ultimate-guide-bangladesh-vs-vietnam',
+    'calculating-landed-costs-comparison',
+    'comparing-regional-lead-times'
+  ]
+
+  const filteredPosts = data.filter(post => !excludedSlugs.includes(post.slug))
+
+  // 2. Map to the format the frontend expects but ensure we return exactly what we need
+  return filteredPosts.map(post => ({
     ...post,
     heroImage: post.hero_image || "/hero-pd.webp",
     readingTime: post.reading_time || "5 min read",
@@ -51,7 +60,13 @@ export const getPostData = unstable_cache(async (slug: string) => {
     // .eq("published", true) // uncomment to strictly enforce
     .single()
 
-  if (error || !data) {
+  const excludedSlugs = [
+    'ultimate-guide-bangladesh-vs-vietnam',
+    'calculating-landed-costs-comparison',
+    'comparing-regional-lead-times'
+  ]
+
+  if (error || !data || excludedSlugs.includes(slug)) {
     if (error && error.code !== 'PGRST116') {
       console.error(`Error fetching post ${slug}:`, error)
     }
@@ -83,7 +98,15 @@ export const getAllPostSlugs = unstable_cache(async () => {
     return []
   }
 
-  return data.map(row => ({
-    slug: row.slug
-  }))
+  const excludedSlugs = [
+    'ultimate-guide-bangladesh-vs-vietnam',
+    'calculating-landed-costs-comparison',
+    'comparing-regional-lead-times'
+  ]
+
+  return data
+    .filter(row => !excludedSlugs.includes(row.slug))
+    .map(row => ({
+      slug: row.slug
+    }))
 }, ['post-slugs'], { revalidate: 3600, tags: ['posts'] })
