@@ -1,7 +1,7 @@
 import { supabase } from "@/lib/supabase"
 import { notFound } from "next/navigation"
 import Link from "next/link"
-import { ChevronLeft, Mail, Calendar, Building, Tag, ArrowRight, Clock, User, Fingerprint } from "lucide-react"
+import { ChevronLeft, Mail, Calendar, Building, Tag, ArrowRight, Clock, User, Fingerprint, FileText } from "lucide-react"
 import { LeadStatusForm } from "./status-form"
 import { LeadNotesForm } from "./notes-form"
 import { LeadDetailActions } from "./detail-actions"
