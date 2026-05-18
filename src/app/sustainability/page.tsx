@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { ShieldCheck, Leaf, Zap, CheckCircle2, Heart } from "lucide-react"
+import { ShieldCheck, Leaf, Zap, CheckCircle2, Heart, Utensils, Activity, GraduationCap } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import type { Metadata } from "next"
@@ -89,40 +89,40 @@ export default function SustainabilityPage() {
                   &quot;To be responsible is to care for the vulnerable as much as the viable.&quot;
                 </p>
                 <p className="pl-[2.2rem]">
-                  At Sinha, we believe that sustainable enterprise is only possible when the community thrives alongside us. This is why we dedicate significant resources to empowering the next generation through direct, evidence-led support.
+                  At Sinha, we believe that sustainable enterprise must be judged by the world it leaves behind for the next generation. This is why we dedicate a core portion of our resources and profits directly to children—ensuring they grow up fed, healthy, and educated in the very communities that support global trade.
                 </p>
                 
                 <div className="pl-8 grid grid-cols-1 gap-8 pt-4">
                   <div className="flex items-start gap-6 group">
                      <div className="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center shrink-0 border border-emerald-100 max-md:bg-emerald-500 max-md:text-white group-hover:bg-emerald-500 group-hover:text-white transition-all duration-500">
-                        <CheckCircle2 className="w-5 h-5" />
+                        <Utensils className="w-5 h-5" />
                      </div>
                      <div>
-                        <h4 className="text-stone-900 text-[10px] uppercase font-bold tracking-[0.3em] mb-2">Operational Integrity</h4>
+                        <h4 className="text-stone-900 text-[10px] uppercase font-bold tracking-[0.3em] mb-2">Eradicating Child Hunger</h4>
                         <p className="text-sm text-stone-400 leading-relaxed max-w-sm">
-                           Continuous monitoring and evaluation of suppliers to ensure high compliance and ethical manufacturing standards.
+                           No child can build a future on an empty stomach. We fund nutritious meals and food security programs, ensuring children in manufacturing communities have the vital nourishment they need to play, learn, and grow.
                         </p>
                      </div>
                   </div>
                   <div className="flex items-start gap-6 group">
                      <div className="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center shrink-0 border border-emerald-100 max-md:bg-emerald-500 max-md:text-white group-hover:bg-emerald-500 group-hover:text-white transition-all duration-500">
-                        <ShieldCheck className="w-5 h-5" />
+                        <Activity className="w-5 h-5" />
                      </div>
                      <div>
-                        <h4 className="text-stone-900 text-[10px] uppercase font-bold tracking-[0.3em] mb-2">Worker Welfare</h4>
+                        <h4 className="text-stone-900 text-[10px] uppercase font-bold tracking-[0.3em] mb-2">Child Healthcare Support</h4>
                         <p className="text-sm text-stone-400 leading-relaxed max-w-sm">
-                           Support programs for workers and staff in production units, ensuring safe conditions and fair treatment.
+                           Every child deserves to experience the world in a healthy, vibrant way. We fund pediatric medical screenings, baseline healthcare checkups, and hygiene programs to protect their growth and well-being.
                         </p>
                      </div>
                   </div>
                   <div className="flex items-start gap-6 group">
                      <div className="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center shrink-0 border border-emerald-100 max-md:bg-emerald-500 max-md:text-white group-hover:bg-emerald-500 group-hover:text-white transition-all duration-500">
-                        <Heart className="w-5 h-5" />
+                        <GraduationCap className="w-5 h-5" />
                      </div>
                      <div>
-                        <h4 className="text-stone-900 text-[10px] uppercase font-bold tracking-[0.3em] mb-2">Community Empowerment</h4>
+                        <h4 className="text-stone-900 text-[10px] uppercase font-bold tracking-[0.3em] mb-2">Children's Education Pathways</h4>
                         <p className="text-sm text-stone-400 leading-relaxed max-w-sm">
-                           Establishing orphanages and child-support centers, providing assistance for basic needs and facilitating capacity-building initiatives.
+                           Education is the ultimate equalizer. We finance community learning spaces, distribute books, uniforms, and digital materials, giving children the tools to unlock their boundless potential and build a brighter tomorrow.
                         </p>
                      </div>
                   </div>

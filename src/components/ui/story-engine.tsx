@@ -10,41 +10,41 @@ const STORY_CHAPTERS = [
     tag: "CH_01 / HERITAGE",
     stamp: "Rooted in Trade",
     desc: "Our story began decades ago in the jute industry of South Asia. Known as the 'Golden Fiber', jute was the bedrock of global textile trade. This family heritage in raw material trading instilled in us a fundamental respect for the origins of every product.",
+    icon: <History className="w-6 h-6 text-accent" />
+  },
+  {
+    title: "The Schoolboy Spark",
+    tag: "CH_02 / PASSION",
+    stamp: "TinTin & Tailoring",
+    desc: "Long before our professional careers, our passion ignited in school. We hand-painted graphics, modified uniforms, and custom-made TinTin T-shirts to sell to our classmates. This schoolboy hustle became our first classroom in merchandising, demand, and hands-on production.",
     icon: <Box className="w-6 h-6 text-accent" />
   },
   {
     title: "A Professional Legacy",
-    tag: "CH_02 / PERSPECTIVE",
+    tag: "CH_03 / PERSPECTIVE",
     stamp: "25+ Years Experience",
-    desc: "With a professional journey beginning in 1998, we have witnessed the transformation of global supply chains. From the traditional trading models of the late 90s to the high-speed digital architecture of 2026, we've remained anchored in professional discipline.",
+    desc: "Starting our professional journey in 1998, we built decades of hands-on expertise. Rather than limiting ourselves to one vertical, our founders specialized across Garments, Shipping, IT, and Finance & Accounts. This multi-industry wisdom gives us a rare edge in global trade.",
     icon: <Clock className="w-6 h-6 text-accent" />
   },
   {
-    title: "The Technical Shift",
-    tag: "CH_03 / EXECUTION",
-    stamp: "Beyond Introduction",
-    desc: "Sourcing is often misunderstood as merely making introductions. Our transition from traditional trade to a technical hub was driven by a single realization: brands don't need more contacts; they need more execution. We moved deep into technical tech packs and quality systems.",
-    icon: <Factory className="w-6 h-6 text-accent" />
-  },
-  {
-    title: "Bridging the Realities",
-    tag: "CH_04 / SYNERGY",
-    stamp: "UK to Asia",
-    desc: "Operating between our base in the UK and manufacturing hubs across Asia, we act as the essential bridge. We translate Western design intent into the technical reality of Asian production floors, ensuring nothing is lost in translation.",
-    icon: <Globe className="w-6 h-6 text-accent" />
-  },
-  {
-    title: "Hands-on Heritage",
-    tag: "CH_05 / REALITY",
-    stamp: "Factory Floor Roots",
-    desc: "We grew up in the environment we now manage. We understand the smell of the tanneries, the rhythm of the sewing lines, and the logistics of the ports. This hands-on understanding is what allows us to identify risks before they become delays.",
+    title: "The COVID Delay",
+    tag: "CH_04 / RESILIENCE",
+    stamp: "Partnership Over Profit",
+    desc: "We envisioned uniting this multi-disciplinary expertise much earlier, but when COVID-19 struck, we delayed our launch. We chose to prioritize supporting our existing manufacturing partners through the supply chain crisis rather than rush a commercial launch.",
     icon: <Shield className="w-6 h-6 text-accent" />
+  },
+  {
+    title: "Technical Execution",
+    tag: "CH_05 / EXECUTION",
+    stamp: "Beyond Introduction",
+    desc: "Sourcing is often misunderstood as merely making introductions. Our transition to a technical hub was driven by a single realization: brands don't need more contacts; they need flawless execution. We moved deep into technical tech packs, sample reviews, and strict quality systems.",
+    icon: <Factory className="w-6 h-6 text-accent" />
   },
   {
     title: "Foundational Stability",
     tag: "CH_06 / VISION",
     stamp: "The Long Anchor",
-    desc: "Today, Sinha Sourcing Hub Ltd stands as an anchor for brands in a volatile market. We leverage our multi-generational legacy to provide the stability, transparency, and organized execution that modern fashion supply chains demand.",
+    desc: "Officially established in 2023, Sinha Sourcing Hub Ltd stands as an anchor for brands in a volatile market. We leverage our multi-generational legacy and multi-disciplinary experience to provide the stability, transparency, and organized execution modern supply chains demand.",
     icon: <Anchor className="w-6 h-6 text-accent" />
   }
 ]
