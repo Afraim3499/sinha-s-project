@@ -69,7 +69,7 @@ export function Navbar() {
               <span className="text-[14px] font-serif font-bold text-transparent bg-clip-text bg-linear-to-r from-accent via-accent-highlight to-accent leading-none whitespace-nowrap tracking-tight pb-0.5">
                 Sinha Sourcing Hub <span className="italic font-normal">Ltd</span>
               </span>
-              <span className="text-[8px] uppercase tracking-[0.4em] text-white/60 mt-1 font-mono whitespace-nowrap hidden sm:block">EST. 1993 — LONDON / DHAKA / MELBOURNE</span>
+              <span className="text-[8px] uppercase tracking-[0.4em] text-white/60 mt-1 font-mono whitespace-nowrap hidden sm:block">EST. 1993 — LONDON / DHAKA</span>
             </div>
           </Link>
 

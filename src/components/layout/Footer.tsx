@@ -64,8 +64,7 @@ export function Footer() {
               <ul className="space-y-6">
                 {[
                   { name: "Concept Hub", city: "London, UK", coords: "51.50° N, 0.12° W" },
-                  { name: "Production Axis", city: "Dhaka, BD", coords: "23.81° N, 90.41° E" },
-                  { name: "Regional Hub", city: "Melbourne, AU", coords: "37.81° S, 144.96° E" }
+                  { name: "Production Axis", city: "Dhaka, BD", coords: "23.81° N, 90.41° E" }
                 ].map((hub) => (
                   <li key={hub.city} className="group cursor-default">
                     <p className="text-[9px] font-mono text-accent/60 group-hover:text-accent transition-colors">{hub.coords}</p>
