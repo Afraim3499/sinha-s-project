@@ -18,6 +18,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { motion, useScroll, useSpring, AnimatePresence, useTransform } from "framer-motion"
 import React from "react"
+import { ProcessRoadmap } from "@/components/ui/process-roadmap"
 
 export default function ProcessPage() {
   const { scrollYProgress } = useScroll()
@@ -171,6 +172,21 @@ export default function ProcessPage() {
            <p className="text-[10px] font-bold uppercase tracking-[0.4em] mb-4">Initialize Descent</p>
            <div className="w-px h-24 bg-gradient-to-b from-accent to-transparent" />
         </motion.div>
+      </section>
+
+      {/* 1.5 STRATEGIC WORKFLOW ROADMAP */}
+      <section className="py-20 lg:py-28 bg-stone-950 text-white border-b border-white/10 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(180,140,80,0.06),transparent_70%)] pointer-events-none" />
+        <div className="container mx-auto px-6 md:px-12 relative z-10">
+          <div className="mb-12 lg:mb-16 text-center space-y-4 max-w-2xl mx-auto">
+            <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent">Workflow Overview</span>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold italic text-white">A process designed to reduce uncertainty</h2>
+            <p className="text-white/60 text-sm md:text-base font-light leading-relaxed">
+              Clearer process reduces risk. We guide projects through practical stages so decisions are made earlier, communication is tighter, and production issues are easier to manage.
+            </p>
+          </div>
+          <ProcessRoadmap />
+        </div>
       </section>
 
       {/* 2. THE INFOGRAPHIC JOURNEY (Transitioning to Light Journey) */}

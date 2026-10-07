@@ -120,7 +120,7 @@ export default function SustainabilityPage() {
                         <GraduationCap className="w-5 h-5" />
                      </div>
                      <div>
-                        <h4 className="text-stone-900 text-[10px] uppercase font-bold tracking-[0.3em] mb-2">Children's Education Pathways</h4>
+                        <h4 className="text-stone-900 text-[10px] uppercase font-bold tracking-[0.3em] mb-2">Children&apos;s Education Pathways</h4>
                         <p className="text-sm text-stone-400 leading-relaxed max-w-sm">
                            Education is the ultimate equalizer. We finance community learning spaces, distribute books, uniforms, and digital materials, giving children the tools to unlock their boundless potential and build a brighter tomorrow.
                         </p>

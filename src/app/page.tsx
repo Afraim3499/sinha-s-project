@@ -8,8 +8,6 @@ import { ArrowRight, Zap, Factory, Globe, ShieldCheck, Ship, Leaf } from "lucide
 
 import { Button } from "@/components/ui/button"
 import { MotionSection, PREMIUM_EASE } from "@/components/ui/motion-section"
-import { ProcessRoadmap } from "@/components/ui/process-roadmap"
-import { PainPointInfographic } from "@/components/ui/pain-point-infographic"
 import { TestimonialSlideshow } from "@/components/ui/testimonial-slideshow"
 import { getTestimonials } from "@/app/actions/testimonials"
 
@@ -397,84 +395,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. HOW WE WORK PREVIEW */}
-      <section className="py-12 lg:py-16 bg-stone-950 text-white">
-        <div className="container mx-auto px-6 md:px-12">
-           <MotionSection className="mb-6 lg:mb-8 space-y-2 text-center max-w-2xl mx-auto">
-              <h2 className="text-2xl md:text-4xl font-serif font-bold italic">A process designed to reduce uncertainty</h2>
-              <p className="text-white/60 text-sm font-light">Clearer process reduces risk. We guide projects through practical stages so decisions are made earlier, communication is tighter, and production issues are easier to manage.</p>
-           </MotionSection>
-
-           <ProcessRoadmap />
-
-           <div className="mt-8 lg:mt-10 text-center">
-              <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white rounded-none text-[10px] uppercase tracking-[0.2em] font-bold px-12 h-10" asChild>
-                 <Link href="/process">See the Full Process</Link>
-              </Button>
-           </div>
-        </div>
-      </section>
-
-      {/* 7. WHY BRANDS WORK WITH US */}
-      <section className="py-16 lg:py-20 bg-stone-50 text-foreground overflow-hidden relative border-y border-border/50">
-        {/* Subtle background glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(180,140,80,0.05),transparent_50%)] pointer-events-none" />
-        
-        <div className="container mx-auto px-6 md:px-12 relative z-10">
-           <div className="mb-8 lg:mb-12 text-center space-y-2 lg:space-y-4">
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight">Why buyers look for <br className="lg:hidden" /><span className="italic font-normal text-foreground/60">structured support</span></h2>
-              <p className="text-foreground/60 text-sm md:text-base font-light leading-relaxed max-w-2xl mx-auto">
-                Supply chains are often fragile due to avoidable gaps. We bring more structure to development, sourcing, and delivery preparation.
-              </p>
-           </div>
-
-           <div className="flex flex-col items-center justify-center gap-8 lg:gap-12">
-              {/* Infographic fits exactly here */}
-              <PainPointInfographic />
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5 }}
-              >
-                <Button variant="outline" className="border-accent text-accent text-[10px] uppercase tracking-[0.3em] font-bold px-12 h-10 lg:h-12 hover:bg-accent hover:text-white transition-all duration-500 rounded-none group" asChild>
-                   <Link href="/story" className="flex items-center gap-4">
-                      Explore Our Story <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
-                   </Link>
-                </Button>
-              </motion.div>
-           </div>
-        </div>
-      </section>
-
-      {/* 8. TESTIMONIALS SLIDESHOW */}
+      {/* 7. GLOBAL ENDORSEMENTS (TRUST CAPITAL) */}
       <TestimonialSlideshow testimonials={testimonials} />
 
-      {/* 9. HERITAGE PREVIEW (SHRINKED) */}
-      <section className="py-20 bg-stone-100 border-y border-border overflow-hidden relative">
-        <div className="absolute inset-x-0 inset-y-0 opacity-5 pointer-events-none">
-           <Image src="/about-technical-new.png" alt="Heritage" fill className="object-cover" />
-        </div>
-        <div className="container mx-auto px-6 md:px-12 relative z-10">
-           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-              <div className="max-w-2xl space-y-4">
-                 <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Trade Heritage</span>
-                 <h3 className="text-3xl font-serif font-bold italic">Built on hands-on technical legacy.</h3>
-                 <p className="text-foreground/60 font-light leading-relaxed text-sm">
-                    Our foundation is rooted in a family heritage in the South Asian textile trade, bringing decades of practical involvement to modern sourcing.
-                 </p>
-              </div>
-              <Button variant="outline" className="border-border hover:bg-stone-900 hover:text-white rounded-none px-12 h-12 text-[10px] uppercase tracking-[0.2em] font-bold group" asChild>
-                 <Link href="/story" className="flex items-center gap-2">
-                    Read Our Story <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
-                 </Link>
-              </Button>
-           </div>
-        </div>
-      </section>
-
-      {/* 9. SUSTAINABILITY PREVIEW & 10. FAQ PREVIEW */}
+      {/* 8. SUSTAINABILITY PREVIEW & 9. FAQ PREVIEW */}
       <section className="py-16 lg:py-24 bg-stone-950 text-white relative overflow-hidden">
         {/* Cinematic Backdrop */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(180,140,80,0.05),transparent_50%)] pointer-events-none" />

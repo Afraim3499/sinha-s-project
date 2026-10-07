@@ -8,6 +8,7 @@ import { Factory, FileSearch, ShieldCheck, Clock, LineChart, Globe } from "lucid
 import { Button } from "@/components/ui/button"
 import { MotionSection } from "@/components/ui/motion-section"
 import { TechnicalOverlay } from "@/components/ui/technical-overlay"
+import { PainPointInfographic } from "@/components/ui/pain-point-infographic"
 
 export default function AboutPage() {
   return (
@@ -100,6 +101,24 @@ export default function AboutPage() {
                 </p>
              </div>
           </MotionSection>
+        </div>
+      </section>
+
+      {/* 3.5 WHY BUYERS LOOK FOR STRUCTURED SUPPORT */}
+      <section className="py-24 lg:py-32 bg-stone-50 text-foreground overflow-hidden relative border-b border-border/50">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(180,140,80,0.05),transparent_50%)] pointer-events-none" />
+        <div className="container mx-auto px-6 md:px-12 relative z-10">
+          <div className="mb-12 lg:mb-16 text-center space-y-4 max-w-2xl mx-auto">
+            <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-accent">Risk Mitigation</span>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight">
+              Why buyers look for <br className="lg:hidden" /><span className="italic font-normal text-foreground/60">structured support</span>
+            </h2>
+            <p className="text-foreground/60 text-sm md:text-base font-light leading-relaxed max-w-2xl mx-auto">
+              Supply chains are often fragile due to avoidable gaps. We bring more structure to development, sourcing, and delivery preparation.
+            </p>
+          </div>
+
+          <PainPointInfographic />
         </div>
       </section>
 
