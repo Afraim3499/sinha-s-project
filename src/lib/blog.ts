@@ -108,7 +108,7 @@ function getLocalPostFallback(slug: string): BlogPost | null {
   }
 }
 
-export const getSortedPostsData = unstable_cache(async () => {
+export const getSortedPostsData = unstable_cache(async (): Promise<BlogPost[]> => {
   try {
     const { data, error } = await supabase
       .from("posts")
@@ -129,7 +129,7 @@ export const getSortedPostsData = unstable_cache(async () => {
       readingTime: post.reading_time || "5 min read",
       metaTitle: post.meta_title || post.title,
       metaDescription: post.meta_description || post.excerpt,
-    })) as BlogPost
+    })) as BlogPost[]
   } catch (err) {
     console.warn("Supabase connection exception, using local fallback:", err)
     return getLocalPostsFallback()

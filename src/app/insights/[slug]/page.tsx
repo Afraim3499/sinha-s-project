@@ -1,4 +1,4 @@
-import { getPostData, getAllPostSlugs } from "@/lib/blog";
+import { getPostData, getAllPostSlugs, type BlogPost } from "@/lib/blog";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
@@ -244,16 +244,15 @@ export default async function BlogPostPage({ params }: PostPageProps) {
 
 async function RelatedPosts({ currentSlug, category }: { currentSlug: string; category: string }) {
   const { getSortedPostsData } = await import("@/lib/blog");
-  type BlogPostWithId = Awaited<ReturnType<typeof getSortedPostsData>>[0];
   const allPosts = await getSortedPostsData();
   
   // Try to find posts in the same category first, then fallback to any recent posts
-  let related = allPosts.filter((p: BlogPostWithId) => p.slug !== currentSlug && p.category === category).slice(0, 3);
+  let related = allPosts.filter((p: BlogPost) => p.slug !== currentSlug && p.category === category).slice(0, 3);
   
   if (related.length < 3) {
     const remaining = 3 - related.length;
     const additional = allPosts
-      .filter((p: BlogPostWithId) => p.slug !== currentSlug && !related.find((r: BlogPostWithId) => r.slug === p.slug))
+      .filter((p: BlogPost) => p.slug !== currentSlug && !related.find((r: BlogPost) => r.slug === p.slug))
       .slice(0, remaining);
     related = [...related, ...additional];
   }
@@ -273,7 +272,7 @@ async function RelatedPosts({ currentSlug, category }: { currentSlug: string; ca
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-        {related.map((post: BlogPostWithId) => (
+        {related.map((post: BlogPost) => (
           <Link key={post.slug} href={`/insights/${post.slug}`} className="group flex flex-col">
             <div className="relative aspect-[4/3] overflow-hidden bg-stone-100 mb-6">
               <Image 
